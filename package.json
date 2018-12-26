@@ -1,6 +1,6 @@
 {
   "name": "embonor-utils",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Common services utilities",
   "main": "index.js",
   "scripts": {
