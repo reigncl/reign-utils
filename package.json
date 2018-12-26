@@ -1,6 +1,6 @@
 {
   "name": "services-utilities",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Common services utilities",
   "main": "index.js",
   "scripts": {
