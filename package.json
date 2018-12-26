@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Embonor-CocaCola/services-utilities/issues"
   },
-  "homepage": "https://github.com/Embonor-CocaCola/services-utilities#readme"
+  "homepage": "https://github.com/Embonor-CocaCola/services-utilities#readme",
+  "dependencies": {
+    "winston": "^3.1.0"
+  }
 }

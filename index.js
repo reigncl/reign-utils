@@ -1,6 +1,6 @@
-const logger = require('./Utils/logger/logger');
-const errors = require('./Utils/errors/baseError');
-const example = require('./Utils/example/example');
+const logger = require('./utils/logger/logger');
+const errors = require('./utils/errors/baseError');
+const example = require('./utils/example/example');
 
 module.exports = {
   logger,
