@@ -9,9 +9,7 @@ const {
     timestamp,
     splat,
   } = format;
-  
-  const config = require('../config');
-  
+    
   const lbl = label({ label: 'embonor-authentication-service' });
   const fancyFormat = printf(info => (
     `${info.timestamp} [${info.label}] ${info.level.toUpperCase()}: ${info.message}`
@@ -27,7 +25,7 @@ const {
   });
   
   /* istanbul ignore next */
-  if (config.env === 'test') {
+  if (process.env === 'test') {
     // eslint-disable-next-line no-param-reassign
     logger.transports.forEach((t) => { t.silent = true; });
   }
