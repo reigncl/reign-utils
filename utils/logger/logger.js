@@ -30,7 +30,7 @@ const {
     logger.transports.forEach((t) => { t.silent = true; });
   }
 
-  if(!process.env.SERVICE_NAME){
+  if(!process.env.APPLICATION_NAME){
     logger.warn('[WARNING] Environment variable APPLICATION_NAME is unset');
   }
   
