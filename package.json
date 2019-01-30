@@ -4,7 +4,7 @@
   "description": "Common services utilities",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests/**/*.js --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,12 @@
   },
   "homepage": "https://github.com/Embonor-CocaCola/services-utilities#readme",
   "dependencies": {
+    "express-jwt": "^5.3.1",
+    "path-to-regexp": "^3.0.0",
     "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
   }
 }

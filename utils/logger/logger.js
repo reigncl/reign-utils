@@ -10,7 +10,7 @@ const {
     splat,
   } = format;
     
-  const lbl = label({ label: 'embonor-authentication-service' });
+  const lbl = label({ label: process.env.SERVICE_NAME || 'unnamed-service' });
   const fancyFormat = printf(info => (
     `${info.timestamp} [${info.label}] ${info.level.toUpperCase()}: ${info.message}`
   ));
@@ -28,6 +28,10 @@ const {
   if (process.env === 'test') {
     // eslint-disable-next-line no-param-reassign
     logger.transports.forEach((t) => { t.silent = true; });
+  }
+
+  if(!process.env.SERVICE_NAME){
+    logger.warn('[WARNING] Environment variable SERVICE_NAME is unset');
   }
   
   module.exports = logger;
