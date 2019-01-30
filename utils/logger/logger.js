@@ -10,7 +10,7 @@ const {
     splat,
   } = format;
     
-  const lbl = label({ label: process.env.SERVICE_NAME || 'unnamed-service' });
+  const lbl = label({ label: process.env.APPLICATION_NAME || 'unnamed-service' });
   const fancyFormat = printf(info => (
     `${info.timestamp} [${info.label}] ${info.level.toUpperCase()}: ${info.message}`
   ));
@@ -31,7 +31,7 @@ const {
   }
 
   if(!process.env.SERVICE_NAME){
-    logger.warn('[WARNING] Environment variable SERVICE_NAME is unset');
+    logger.warn('[WARNING] Environment variable APPLICATION_NAME is unset');
   }
   
   module.exports = logger;
