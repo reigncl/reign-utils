@@ -25,14 +25,13 @@ const {
   });
   
   /* istanbul ignore next */
-  if (process.env === 'test') {
+  if ((process.env.NODE_ENV === 'test' || process.env.ENV === 'test') && process.env.DEBUG_TEST !== 'true') {
     // eslint-disable-next-line no-param-reassign
     logger.transports.forEach((t) => { t.silent = true; });
   }
-
   if(!process.env.APPLICATION_NAME){
     logger.warn('[WARNING] Environment variable APPLICATION_NAME is unset');
   }
-  
+
   module.exports = logger;
   module.exports.buildPrefix = (...prefixes) => (`[${prefixes.join('][')}]:`);

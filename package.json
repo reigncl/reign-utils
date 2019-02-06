@@ -4,7 +4,7 @@
   "description": "Common services utilities",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/**/*.js --reporter spec"
+    "test": "ENV=test mocha tests/**/*.js --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "dependencies": {
     "express-jwt": "^5.3.1",
     "path-to-regexp": "^3.0.0",
+    "sinon": "^7.2.3",
     "winston": "^3.1.0"
   },
   "devDependencies": {
