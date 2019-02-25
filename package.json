@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Embonor-CocaCola/services-utilities#readme",
   "dependencies": {
     "express-jwt": "^5.3.1",
+    "jsonwebtoken": "^8.5.0",
     "path-to-regexp": "^3.0.0",
     "sinon": "^7.2.3",
     "winston": "^3.1.0"

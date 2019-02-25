@@ -87,4 +87,26 @@ describe('jwt-acl-middleware', () => {
       done();
     });
   });
+
+  it('ACL should not trust in untrusted-sources', (done) => {
+    authACL({
+      serviceName: '/no-this-service',
+      secret: config.secret,
+      custom: true,
+      allowTrustedSources: true,
+    })({ headers: { authorization: jwtBearer, 'untrusted-source': true }, originalUrl: '/url', method: 'POST' }, {
+      status: () => ({ send: () => done() }),
+    }, () => done(new Error('authorization given, but should not')));
+  });
+
+  it('ACL should trust in trusted sources', (done) => {
+    authACL({
+      serviceName: '/no-this-service',
+      secret: config.secret,
+      custom: true,
+      allowTrustedSources: true,
+    })({ headers: { authorization: jwtBearer }, originalUrl: '/url', method: 'POST' }, {
+      status: () => ({ send: () => done() }),
+    }, () => done());
+  });
 });

@@ -1,5 +1,6 @@
 const auth = require('express-jwt');
 const pathToRegexp = require('path-to-regexp');
+const jwt = require('jsonwebtoken');
 
 function replaceAllStars(string) {
   let maxLoop = 25;
@@ -47,19 +48,28 @@ module.exports = (options) => {
     else {
       generalOptions.secret = options.secret;
       generalOptions.serviceName = options.serviceName;
+      generalOptions.allowTrustedSources = options.allowTrustedSources;
     }
   }
-  return (req, res, next) => auth({ secret: currentOptions.secret })(req, res, (error) => {
-    if (error) return next(error);
-    const { approved, resources } = checkAction(req, currentOptions, req.user.ACL);
-    if (!approved) {
-      return res.status(401).send({
-        status: 401,
-        code: 'UNAUTHORIZED',
-        description: `Unauthorized action: '${req.method} /${currentOptions.serviceName}${req.originalUrl}'`,
-      });
+  return (req, res, next) => {
+    if(currentOptions.allowTrustedSources && String(req.headers['untrusted-source']).toLowerCase() !== 'true'){
+      const token = req.headers["authorization"].split(' ').pop(); 
+      req.user = jwt.decode(token);
+      req.ACL = { resources: {} };
+      return next();
     }
-    req.ACL = { resources };
-    return next();
-  });
+    return auth({ secret: currentOptions.secret })(req, res, (error) => {
+      if (error) return next(error);
+      const { approved, resources } = checkAction(req, currentOptions, req.user.ACL);
+      if (!approved) {
+        return res.status(401).send({
+          status: 401,
+          code: 'UNAUTHORIZED',
+          description: `Unauthorized action: '${req.method} /${currentOptions.serviceName}${req.originalUrl}'`,
+        });
+      }
+      req.ACL = { resources };
+      return next();
+    });
+  }
 };
