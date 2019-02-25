@@ -53,8 +53,12 @@ module.exports = (options) => {
   }
   return (req, res, next) => {
     if(currentOptions.allowTrustedSources && String(req.headers['untrusted-source']).toLowerCase() !== 'true'){
+      try {
       const token = req.headers["authorization"].split(' ').pop(); 
       req.user = jwt.decode(token);
+      } catch (e) {
+        req.user = {};
+      }
       req.ACL = { resources: {} };
       return next();
     }
