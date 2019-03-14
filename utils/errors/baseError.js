@@ -1,5 +1,7 @@
 const { inspect } = require('util');
 
+let globalPrintStack = false;
+
 module.exports = class BaseError extends Error {
   constructor(status, code, _description, metadata) {
     if (!status) {
@@ -20,7 +22,28 @@ module.exports = class BaseError extends Error {
     this.metadata = metadata || {};
   }
 
+  static setPrintStack(value) {
+    globalPrintStack = value;
+  }
+
+  setPrintStack(value){
+    this.printStack = value;
+  }
+
   toString() {
     return `[${this.code}] ${this.message} - metadata: ${inspect(this.metadata)}`;
+  }
+
+  toJson() {
+    const jsonError = {
+      code: this.code,
+      status: this.status,
+      description: this.description,
+    }
+    if(this.metadata) { jsonError.metadata = this.metadata; }
+    if((this.printStack === undefined && globalPrintStack) || (this.printStack !==undefined && this.printStack)) {
+      jsonError.stack = this.stack;
+    }
+    return jsonError;
   }
 };
