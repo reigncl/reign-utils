@@ -34,7 +34,7 @@ module.exports = class BaseError extends Error {
     return `[${this.code}] ${this.message} - metadata: ${inspect(this.metadata)}`;
   }
 
-  toJson() {
+  toJSON() {
     const jsonError = {
       code: this.code,
       status: this.status,
