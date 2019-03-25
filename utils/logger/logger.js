@@ -16,7 +16,7 @@ const {
   ));
   
   const logger = createLogger({
-    level: 'info',
+    level: process.env.LOG_LEVEL || 'info',
     format: combine(splat(), lbl, timestamp(), fancyFormat),
     exitOnError: false,
     transports: [
