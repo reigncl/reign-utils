@@ -1,5 +1,5 @@
 {
-  "name": "embonor-utils",
+  "name": "reigndesign-utils",
   "version": "1.0.7",
   "description": "Common services utilities",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Embonor-CocaCola/services-utilities.git"
+    "url": "git+https://github.com/reigndesign/reigndesign-utils.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Embonor-CocaCola/services-utilities/issues"
+    "url": "https://github.com/reigndesign/reigndesign-utils/issues"
   },
-  "homepage": "https://github.com/Embonor-CocaCola/services-utilities#readme",
+  "homepage": "https://github.com/reigndesign/reigndesign-utils#readme",
   "dependencies": {
     "express-jwt": "^5.3.1",
     "jsonwebtoken": "^8.5.0",
