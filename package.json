@@ -1,5 +1,5 @@
 {
-  "name": "embonor-utils",
+  "name": "reign-utils",
   "version": "1.0.7",
   "description": "Common services utilities",
   "main": "index.js",
@@ -8,8 +8,12 @@
     "npm": "^6.7.0"
   },
   "scripts": {
-    "test": "ENV=test mocha tests/**/*.js --reporter spec"
+    "test": "ENV=test mocha tests/**/*.js --reporter spec",
+    "build": "tsc --listEmittedFiles"
   },
+  "pre-commit": [
+    "build"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/reigndesign/reigndesign-utils.git"
@@ -23,13 +27,18 @@
   "homepage": "https://github.com/reigndesign/reigndesign-utils#readme",
   "dependencies": {
     "express-jwt": "^5.3.1",
-    "jsonwebtoken": "^8.5.0",
+    "jsonwebtoken": "^8.5.1",
     "path-to-regexp": "^3.0.0",
+    "pre-commit": "^1.2.2",
     "sinon": "^7.2.3",
     "winston": "^3.1.0"
   },
   "devDependencies": {
+    "@types/express-jwt": "0.0.42",
+    "@types/jsonwebtoken": "^8.3.2",
+    "@types/node": "^11.12.2",
     "chai": "^4.2.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "typescript": "^3.4.1"
   }
 }
