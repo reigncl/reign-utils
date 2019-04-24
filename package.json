@@ -1,6 +1,6 @@
 {
-  "name": "reign-utils",
-  "version": "1.0.7",
+  "name": "@reignmodule/utils",
+  "version": "1.0.0-beta.0",
   "description": "Common services utilities",
   "main": "index.js",
   "engines": {
@@ -9,9 +9,12 @@
   },
   "scripts": {
     "test": "ENV=test mocha tests/**/*.js --reporter spec",
-    "build": "tsc --listEmittedFiles"
+    "build": "tsc --listEmittedFiles",
+    "lint": "tslint --project tsconfig.json",
+    "version": "tsc"
   },
   "pre-commit": [
+    "lint",
     "build"
   ],
   "repository": {
@@ -30,15 +33,18 @@
     "jsonwebtoken": "^8.5.1",
     "path-to-regexp": "^3.0.0",
     "pre-commit": "^1.2.2",
-    "sinon": "^7.2.3",
+    "sinon": "^7.3.2",
     "winston": "^3.1.0"
   },
   "devDependencies": {
     "@types/express-jwt": "0.0.42",
     "@types/jsonwebtoken": "^8.3.2",
-    "@types/node": "^11.12.2",
+    "@types/node": "^11.13.7",
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
-    "typescript": "^3.4.1"
+    "np": "^5.0.0",
+    "tslint": "^5.16.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript": "^3.4.5"
   }
 }

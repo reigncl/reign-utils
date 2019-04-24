@@ -23,7 +23,10 @@ export const logger = createLogger({
 });
 
 /* istanbul ignore next */
-if ((process.env.NODE_ENV === 'test' || process.env.ENV === 'test') && process.env.DEBUG_TEST !== 'true') {
+if (
+  (process.env.NODE_ENV === 'test' || process.env.ENV === 'test')
+  && process.env.DEBUG_TEST !== 'true'
+) {
   // eslint-disable-next-line no-param-reassign
   logger.transports.forEach((t) => { t.silent = true; });
 }

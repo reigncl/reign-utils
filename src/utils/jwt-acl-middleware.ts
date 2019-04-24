@@ -1,23 +1,23 @@
-import auth, { Options } from 'express-jwt';
+import { NextFunction, Request, Response } from 'express';
+import expressJwt, { Options } from 'express-jwt';
+import jsonwebtoken from 'jsonwebtoken';
 import pathToRegexp from 'path-to-regexp';
-import jwt, { decode } from 'jsonwebtoken';
-import { Request, Response, NextFunction } from 'express';
 
-export interface jwtACLMiddlewareRequest extends Request {
+export interface JWTACLMiddlewareRequest extends Request {
   ACL: {
-    resources: any[]
-  }
+    resources: any[],
+  };
   user?: {
     [key: string]: any
-    ACL?: any[]
-  }
+    ACL?: any[],
+  };
 }
 
 const generalOptions: {
   custom?: any
   secret?: Options['secret']
   serviceName?: any
-  allowTrustedSources?: boolean
+  allowTrustedSources?: boolean,
 } = {};
 
 function replaceAllStars(string: string) {
@@ -33,20 +33,22 @@ function replaceAllStars(string: string) {
 }
 
 export function checkAction(
-  req: jwtACLMiddlewareRequest,
+  req: JWTACLMiddlewareRequest,
   options: typeof generalOptions,
-  ACL?: any[]
+  ACL?: any[],
 ): {
   approved: boolean
-  resources: any[]
+  resources: any[],
 } {
   let approved = false;
   const resources: any[] = [];
 
-  if (!ACL) return {
-    approved,
-    resources,
-  };
+  if (!ACL) {
+    return {
+      approved,
+      resources,
+    };
+  }
 
   for (let i = 0; i < ACL.length; i += 1) {
     const item = ACL[i];
@@ -73,35 +75,39 @@ export default (options: typeof generalOptions) => {
   let currentOptions = generalOptions;
 
   if (options) {
-    if (options.custom) currentOptions = options;
-    else {
+    if (options.custom) {
+      currentOptions = options;
+    } else {
       generalOptions.secret = options.secret;
       generalOptions.serviceName = options.serviceName;
       generalOptions.allowTrustedSources = options.allowTrustedSources;
     }
   }
 
-  return (req: jwtACLMiddlewareRequest, res: Response, next: NextFunction) => {
+  return (req: JWTACLMiddlewareRequest, res: Response, next: NextFunction) => {
 
-    if (currentOptions.allowTrustedSources && String(req.headers['untrusted-source']).toLowerCase() !== 'true') {
+    if (
+      currentOptions.allowTrustedSources
+      && String(req.headers['untrusted-source']).toLowerCase() !== 'true'
+    ) {
       const { authorization = '' } = req.headers;
 
       const token = authorization.split(' ').pop();
 
       try {
-        req.user = <jwtACLMiddlewareRequest['user']>jwt.decode(<string>token);
+        req.user = <JWTACLMiddlewareRequest['user']>jsonwebtoken.decode(<string>token);
       } catch (e) {
         req.user = {};
       }
 
       req.ACL = {
-        resources: []
+        resources: [],
       };
 
       return next();
     }
 
-    return auth({ secret: <Options['secret']>currentOptions.secret })(req, res, (error) => {
+    return expressJwt({ secret: <Options['secret']>currentOptions.secret })(req, res, (error) => {
       if (error) return next(error);
 
       const { approved, resources } = checkAction(req, currentOptions, req.user && req.user.ACL);
@@ -110,6 +116,7 @@ export default (options: typeof generalOptions) => {
         return res.status(401).send({
           status: 401,
           code: 'UNAUTHORIZED',
+          // tslint:disable-next-line:max-line-length
           description: `Unauthorized action: '${req.method} /${currentOptions.serviceName}${req.originalUrl}'`,
         });
       }
@@ -120,5 +127,5 @@ export default (options: typeof generalOptions) => {
 
       return next();
     });
-  }
+  };
 };
