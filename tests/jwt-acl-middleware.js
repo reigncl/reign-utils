@@ -3,7 +3,7 @@
 const jwt = require('jsonwebtoken');
 const chai = require('chai');
 
-const authACL = require('../utils/jwt-acl-middleware');
+const { default: authACL } = require('../utils/jwt-acl-middleware');
 const config = {
   serviceName: 'service-name',
   secret: "secret",
@@ -64,13 +64,13 @@ describe('jwt-acl-middleware', () => {
     authACL()(req, {
       status: () => ({ send: done }),
     },
-    (err) => {
-      if (err) done(err);
-      expect(req.ACL).not.to.be.undefined;
-      expect(req.ACL.resources).to.be.an('array');
-      expect(req.ACL.resources.every(r => ['all', 'all2', 'resource', 'get-resource'].includes(r.type))).to.be.true;
-      done();
-    });
+      (err) => {
+        if (err) done(err);
+        expect(req.ACL).not.to.be.undefined;
+        expect(req.ACL.resources).to.be.an('array');
+        expect(req.ACL.resources.every(r => ['all', 'all2', 'resource', 'get-resource'].includes(r.type))).to.be.true;
+        done();
+      });
   });
 
   it('ACL auth should exclude resources that not match ACL', (done) => {
@@ -78,14 +78,14 @@ describe('jwt-acl-middleware', () => {
     authACL()(req, {
       status: () => ({ send: done }),
     },
-    (err) => {
-      if (err) done(err);
-      expect(req.ACL).not.to.be.undefined;
-      expect(req.ACL.resources).to.be.an('array');
-      expect(req.ACL.resources.every(r => ['all', 'all2', 'resource'].includes(r.type))).to.be.true;
-      expect(req.ACL.resources.every(r => !['get-resource'].includes(r.type))).to.be.true;
-      done();
-    });
+      (err) => {
+        if (err) done(err);
+        expect(req.ACL).not.to.be.undefined;
+        expect(req.ACL.resources).to.be.an('array');
+        expect(req.ACL.resources.every(r => ['all', 'all2', 'resource'].includes(r.type))).to.be.true;
+        expect(req.ACL.resources.every(r => !['get-resource'].includes(r.type))).to.be.true;
+        done();
+      });
   });
 
   it('ACL should not trust in untrusted-sources', (done) => {
