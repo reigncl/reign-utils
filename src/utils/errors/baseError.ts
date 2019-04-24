@@ -9,17 +9,21 @@ export default class BaseError extends Error {
   metadata: any;
   printStack: any;
 
-  constructor(status: number, code: number, _description: (arg0: any) => string, metadata: {}) {
+  constructor(
+    status: number,
+    code: number,
+    proposalDescription: (arg0: any) => string, metadata: {},
+  ) {
     if (!status) {
       throw new Error('error status is required');
     }
 
-    if (!_description) {
+    if (!proposalDescription) {
       throw new Error('error description is required');
     }
     let description: string;
-    if (typeof _description === 'function') description = _description(metadata);
-    else description = _description;
+    if (typeof proposalDescription === 'function') description = proposalDescription(metadata);
+    else description = proposalDescription;
 
     super(description);
     this.code = code;
@@ -45,16 +49,19 @@ export default class BaseError extends Error {
       code: this.code,
       status: this.status,
       description: this.description,
-      metadata: <any> null,
-      stack: <Error['stack']> <unknown> null,
-    }
+      metadata: <any>null,
+      stack: <Error['stack']><unknown>undefined,
+    };
 
     if (this.metadata) { jsonError.metadata = this.metadata; }
 
-    if ((this.printStack === undefined && globalPrintStack) || (this.printStack !== undefined && this.printStack)) {
+    if (
+      (this.printStack === undefined && globalPrintStack)
+      || (this.printStack !== undefined && this.printStack)
+    ) {
       jsonError.stack = this.stack;
     }
 
     return jsonError;
   }
-};
+}
