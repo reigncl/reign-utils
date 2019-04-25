@@ -157,6 +157,7 @@ $RECYCLE.BIN/
 
 # End of https://www.gitignore.io/api/node,windows,linux,macos
 
+!src
 .idea
 utils
 index.d.ts
