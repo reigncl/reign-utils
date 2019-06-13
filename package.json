@@ -1,6 +1,6 @@
 {
   "name": "@reignmodule/utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Common services utilities",
   "main": "index.js",
   "engines": {
@@ -40,6 +40,7 @@
     "@types/express-jwt": "0.0.42",
     "@types/jsonwebtoken": "^8.3.2",
     "@types/node": "^11.13.7",
+    "@types/winston": "^2.4.4",
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
     "np": "^5.0.0",
