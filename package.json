@@ -39,13 +39,13 @@
   "devDependencies": {
     "@types/express-jwt": "0.0.42",
     "@types/jsonwebtoken": "^8.3.2",
-    "@types/node": "^11.13.7",
+    "@types/node": "^11.13.14",
     "@types/winston": "^2.4.4",
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
-    "np": "^5.0.0",
-    "tslint": "^5.16.0",
+    "np": "^5.0.3",
+    "tslint": "^5.17.0",
     "tslint-config-airbnb": "^5.11.1",
-    "typescript": "^3.4.5"
+    "typescript": "^3.5.2"
   }
 }
