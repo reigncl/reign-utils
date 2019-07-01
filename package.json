@@ -29,18 +29,25 @@
   },
   "homepage": "https://github.com/reigndesign/reigndesign-utils#readme",
   "dependencies": {
+    "ejs": "^2.6.2",
     "express-jwt": "^5.3.1",
     "jsonwebtoken": "^8.5.1",
     "path-to-regexp": "^3.0.0",
     "pre-commit": "^1.2.2",
+    "request": "^2.88.0",
     "sinon": "^7.3.2",
-    "winston": "^3.1.0"
+    "winston": "^3.1.0",
+    "xmldom": "^0.1.27",
+    "xpath": "0.0.27"
   },
   "devDependencies": {
+    "@types/ejs": "^2.6.3",
     "@types/express-jwt": "0.0.42",
     "@types/jsonwebtoken": "^8.3.2",
     "@types/node": "^11.13.7",
+    "@types/request": "^2.48.1",
     "@types/winston": "^2.4.4",
+    "@types/xmldom": "^0.1.29",
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
     "np": "^5.0.0",
