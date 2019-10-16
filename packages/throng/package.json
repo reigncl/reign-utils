@@ -1,9 +1,12 @@
 {
   "name": "@reignmodule/throng",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Worker Threads",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "prepare": "tsc",
+    "build": "tsc"
+  },
   "keywords": [
     "worker"
   ],
