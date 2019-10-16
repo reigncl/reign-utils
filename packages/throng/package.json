@@ -1,0 +1,24 @@
+{
+  "name": "@reignmodule/throng",
+  "version": "1.0.0",
+  "description": "Worker Threads",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "worker"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reigndesign/reigndesign-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/reigndesign/reigndesign-utils/issues"
+  },
+  "homepage": "https://github.com/reigndesign/reign-utils/tree/master/packages/throng#readme",
+  "author": "Reign (https://www.reigndesign.com/)",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^12.11.1",
+    "typescript": "^3.6.4"
+  }
+}
