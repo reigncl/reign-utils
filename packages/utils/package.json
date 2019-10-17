@@ -1,6 +1,6 @@
 {
   "name": "@reignmodule/utils",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Common services utilities",
   "main": "index.js",
   "engines": {
@@ -10,6 +10,7 @@
   "scripts": {
     "test": "ENV=test mocha tests/**/*.js --reporter spec",
     "build": "tsc --listEmittedFiles",
+    "prepare": "tsc --listEmittedFiles",
     "lint": "tslint --project tsconfig.json",
     "version": "tsc"
   },
