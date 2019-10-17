@@ -5,9 +5,9 @@
 ```ts
 import throng from '@reignmodule/throng';
 
-const runServer = () => { ... }
+const workerRun = () => { ... }
 
-throng(runServer);
+throng(workerRun);
 // Server ready on port 3000
 // Server ready on port 3000
 // Server ready on port 3000
@@ -19,9 +19,7 @@ throng(runServer);
 Change option with the second property of `throng`.
 
 ```ts
-throng(runServer, {
-  workers: number,
-});
+throng(() => void, { workers?: number, env?: any, }): Worker[] | undefined;
 ```
 
 - **workers** *(`number`)*: Define workers to work, by default use `os.cpus().length`.

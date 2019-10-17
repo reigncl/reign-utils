@@ -7,15 +7,9 @@ export default (
   workerRun: () => void,
   {
     workers = defaultWorkers,
+    env = undefined as undefined | any,
   } = {},
 ) => {
-  if (isMaster) {
-    for (let n = 0; n < workers; n += 1) {
-      fork();
-    }
-  }
-
-  if (isWorker) {
-    workerRun();
-  }
+  if (isMaster) return Array(workers).fill(0).map(() => fork(env));
+  if (isWorker) workerRun();
 };
