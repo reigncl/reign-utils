@@ -63,3 +63,10 @@ client.exchangeCode(code)
     // Autorization done!!
   });
 ```
+
+## Get Token
+
+```ts
+await client.getToken();
+// => f35b70e2c0b5841a46b3279116d5f54a
+```
