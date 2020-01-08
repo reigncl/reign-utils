@@ -1,1 +1,5 @@
 /src
+/tests
+tsconfig.json
+tslint.json
+tsconfig.json

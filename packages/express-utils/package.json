@@ -1,6 +1,6 @@
 {
   "name": "@reignmodule/express-utils",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Common services express utilities",
   "main": "index.js",
   "engines": {
@@ -8,6 +8,7 @@
     "npm": "^6.7.0"
   },
   "scripts": {
+    "prepare": "tsc",
     "test": "ENV=test mocha tests/**/*.js --reporter spec",
     "build": "tsc --listEmittedFiles",
     "lint": "tslint --project tsconfig.json",
