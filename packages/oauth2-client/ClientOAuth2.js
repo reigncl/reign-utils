@@ -118,20 +118,21 @@ var ClientOAuth2 = /** @class */ (function () {
         return { uri: uri, paramsQuery: paramsQuery };
     };
     ClientOAuth2.prototype.getToken = function () {
-        var _a;
+        var _a, _b;
         return __awaiter(this, void 0, void 0, function () {
             var dataToken, timeNextRefresh;
-            return __generator(this, function (_b) {
-                switch (_b.label) {
+            return __generator(this, function (_c) {
+                switch (_c.label) {
                     case 0:
                         if (!this.storage.access_token) return [3 /*break*/, 3];
                         dataToken = jsonwebtoken_1.default.decode(this.storage.access_token);
-                        timeNextRefresh = (((_a = dataToken) === null || _a === void 0 ? void 0 : _a.exp) * 1000) - 30000;
+                        if (!((_a = dataToken) === null || _a === void 0 ? void 0 : _a.exp)) return [3 /*break*/, 2];
+                        timeNextRefresh = (((_b = dataToken) === null || _b === void 0 ? void 0 : _b.exp) * 1000) - 30000;
                         if (!(timeNextRefresh < Date.now())) return [3 /*break*/, 2];
                         return [4 /*yield*/, this.exchangeRefreshToken()];
                     case 1:
-                        _b.sent();
-                        _b.label = 2;
+                        _c.sent();
+                        _c.label = 2;
                     case 2: return [2 /*return*/, this.storage.access_token];
                     case 3: return [2 /*return*/];
                 }

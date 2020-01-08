@@ -1,9 +1,9 @@
 {
     "name": "@reignmodule/oauth2-client",
-    "version": "0.1.1-beta.2",
+    "version": "0.1.1-beta.4",
     "main": "ClientOAuth2.js",
     "scripts": {
-        "prepublish": "tsc"
+        "prepare": "tsc"
     },
     "dependencies": {
         "jsonwebtoken": "^8.5.1"
