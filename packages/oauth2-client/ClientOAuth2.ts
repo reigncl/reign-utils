@@ -108,10 +108,12 @@ export class ClientOAuth2 {
     if (this.storage.access_token) {
       const dataToken = jsonwebtoken.decode(this.storage.access_token) as { [k: string]: any };
 
-      const timeNextRefresh = (dataToken?.exp * 1000) - 30000;
-
-      if (timeNextRefresh < Date.now()) {
-        await this.exchangeRefreshToken();
+      if (dataToken?.exp) {
+        const timeNextRefresh = (dataToken?.exp * 1000) - 30000;
+        
+        if (timeNextRefresh < Date.now()) {
+          await this.exchangeRefreshToken();
+        }
       }
 
       return this.storage.access_token;
