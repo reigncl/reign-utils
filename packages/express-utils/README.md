@@ -13,7 +13,7 @@ Use it to show a listener server.
 **Sample:**
 
 ```ts
-import { listeningListener } from '@reignmodule/express-utils';
+import { listeningListener } from '@reignmodule/express-utils/listening-listener';
 
 createServerHttp(app).listen(3000, listeningListener);
 // Server ready on http://localhost:3000
@@ -35,6 +35,8 @@ requestHandlerAsync(requestHandler: (req: Request, res: Response, next: NextFunc
 **Sample**
 
 ```ts
+import { requestHandlerAsync } from '@reignmodule/express-utils/handle-async';
+
 const app = express();
 
 app.get('/', requestHandlerAsync(async (req, res) => {
@@ -52,6 +54,8 @@ errorRequestHandlerAsync(errorRequestHandler: (error: any, req: Request, res: Re
 **Sample**
 
 ```ts
+import { errorRequestHandlerAsync } from '@reignmodule/express-utils/handle-async';
+
 const app = express();
 
 app.get('/', errorRequestHandlerAsync(async (err, req, res) => {
@@ -69,6 +73,8 @@ requestParamHandlerAsync(requestParamHandler: (req: Request, res: Response, next
 **Sample**
 
 ```ts
+import { requestParamHandlerAsync } from '@reignmodule/express-utils/handle-async';
+
 const app = express();
 
 app.param('user', requestParamHandlerAsync(async (req, res, next, id, param) => {

@@ -163,3 +163,6 @@ utils
 index.d.ts
 index.js
 index.js.map
+*.js
+*.js.map
+*.d.ts
