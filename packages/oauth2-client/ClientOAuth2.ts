@@ -1,6 +1,9 @@
+import getGlobalThis from 'globalthis';
 import { randomBytes } from "crypto";
 import url from 'url';
 import jsonwebtoken from 'jsonwebtoken';
+
+const globalThis = getGlobalThis();
 
 interface Token {
   access_token?: string;
