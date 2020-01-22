@@ -1,6 +1,6 @@
 {
     "name": "@reignmodule/oauth2-client",
-    "version": "0.1.1-beta.7",
+    "version": "0.1.1-beta.8",
     "main": "ClientOAuth2.js",
     "scripts": {
         "prepare": "tsc"
