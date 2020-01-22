@@ -113,7 +113,7 @@ export class ClientOAuth2 {
 
       if (dataToken?.exp) {
         const timeNextRefresh = (dataToken?.exp * 1000) - 30000;
-        
+
         if (timeNextRefresh < Date.now()) {
           await this.exchangeRefreshToken();
         }
@@ -143,7 +143,10 @@ export class ClientOAuth2 {
   }
 
   private async runExchangeRefreshToken() {
-    const res = await fetch(this.refreshUri, {
+    const { host, path, href, search, ...uri } = url.parse(this.refreshUri, true);
+    uri.query._s = this.state ?? '';
+    const res = await fetch(url.format(uri), {
+      cache: 'force-cache',
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
