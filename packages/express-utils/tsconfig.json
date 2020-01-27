@@ -60,6 +60,8 @@
   "include": [
     "handle-async.ts",
     "listening-listener.ts",
+    "utils/express-handle-async.ts",
+    "utils/listening-listener.ts",
     "index.ts"
   ],
   "exclude": [
