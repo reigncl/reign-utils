@@ -29,19 +29,34 @@ const sysEnv = Object.entries(process.env)
 
 type ConfigPushHit = {
   baseUrl: string;
+  /** Default: `true` */
   enabled?: boolean;
+  /** Default: `process.env.NODE_ENV` */
   environment?: string;
   target?: string;
+  /** Default: `"5s"` */
   inervalPush?: string;
+  /** Default: `true` */
   indexDateStrategy?: boolean;
+  /** Default: `"America/Santiago"` */
   indexDateTimeZone?: string;
 }
 
 export class PushHit {
   private upload: any;
   private hitsCollection: string[] = [];
+  private config: ConfigPushHit & Required<Pick<ConfigPushHit, Exclude<keyof ConfigPushHit, 'environment' | 'target'>>>;
 
-  constructor(private config: ConfigPushHit) {
+  constructor(config: ConfigPushHit) {
+    this.config = {
+      ...config,
+      inervalPush: config.inervalPush ?? '5s',
+      enabled: config.enabled ?? true,
+      environment: config.environment ?? process.env.NODE_ENV,
+      indexDateStrategy: config.indexDateStrategy ?? true,
+      indexDateTimeZone: config.indexDateTimeZone ?? 'America/Santiago',
+    }
+
     const put = bent(this.config.baseUrl, 'buffer', 'POST');
 
     this.upload = throttle<any>(
@@ -59,21 +74,21 @@ export class PushHit {
 
         return res;
       },
-      ms(this.config.inervalPush ?? '5s'),
+      ms(this.config.inervalPush),
     );
   }
 
   push(hit: Hit) {
     const { _index, _type, ...dataHit } = hit;
 
-    const nexIndex = this.config.indexDateStrategy ? `${_index}-${formatToTimeZone(new Date(), 'YYYY-MM-DD', { timeZone: this.config.indexDateTimeZone ?? 'America/Santiago' })}` : _index;
+    const nexIndex = this.config.indexDateStrategy ? `${_index}-${formatToTimeZone(new Date(), 'YYYY-MM-DD', { timeZone: this.config.indexDateTimeZone })}` : _index;
 
     if (this.config.enabled === false) {
       return Promise.resolve(null);
     }
 
     const target = this.config.target;
-    const environment = this.config.environment ?? process.env.NODE_ENV;
+    const environment = this.config.environment;
 
     this.hitsCollection.push(
       JSON.stringify({ index: { _type, _index: nexIndex } }),

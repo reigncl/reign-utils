@@ -1,11 +1,11 @@
 {
   "name": "@reignmodule/push-hit",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "prepare": "tsc",
-    "test": "mocha test/test.spec.js"
+    "test": "mocha -r ts-node/register test/test.spec.ts"
   },
   "author": "Reign (https://www.reigndesign.com/)",
   "license": "ISC",
