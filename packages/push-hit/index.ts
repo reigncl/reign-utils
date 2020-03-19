@@ -1,6 +1,7 @@
 import bent from 'bent';
 import throttle from 'lodash.throttle';
 import ms from 'ms';
+import { formatToTimeZone } from 'date-fns-timezone/dist/formatToTimeZone';
 
 type Hit = {
   _index: string;
@@ -32,6 +33,8 @@ type ConfigPushHit = {
   environment?: string;
   target?: string;
   inervalPush?: string;
+  indexDateStrategy?: boolean;
+  indexDateTimeZone?: string;
 }
 
 export class PushHit {
@@ -63,7 +66,7 @@ export class PushHit {
   push(hit: Hit) {
     const { _index, _type, ...dataHit } = hit;
 
-    const nexIndex = _index;
+    const nexIndex = this.config.indexDateStrategy ? `${_index}-${formatToTimeZone(new Date(), 'YYYY-MM-DD', { timeZone: this.config.indexDateTimeZone ?? 'America/Santiago' })}` : _index;
 
     if (this.config.enabled === false) {
       return Promise.resolve(null);
