@@ -40,6 +40,11 @@ type ConfigPushHit = {
   indexDateStrategy?: boolean;
   /** Default: `"America/Santiago"` */
   indexDateTimeZone?: string;
+  /** 
+   * Default: `"YYYY.MM.DD"`
+   * @external https://github.com/prantlf/date-fns-timezone/blob/HEAD/docs/API.md#formattotimezone
+   */
+  indexDateFormat?: string;
 }
 
 export class PushHit {
@@ -55,6 +60,7 @@ export class PushHit {
       environment: config.environment ?? process.env.NODE_ENV,
       indexDateStrategy: config.indexDateStrategy ?? true,
       indexDateTimeZone: config.indexDateTimeZone ?? 'America/Santiago',
+      indexDateFormat: config.indexDateFormat ?? 'YYYY.MM.DD',
     }
 
     const put = bent(this.config.baseUrl, 'buffer', 'POST');
@@ -81,7 +87,7 @@ export class PushHit {
   push(hit: Hit) {
     const { _index, _type, ...dataHit } = hit;
 
-    const nexIndex = this.config.indexDateStrategy ? `${_index}-${formatToTimeZone(new Date(), 'YYYY-MM-DD', { timeZone: this.config.indexDateTimeZone })}` : _index;
+    const nexIndex = this.config.indexDateStrategy ? `${_index}-${formatToTimeZone(new Date(), this.config.indexDateFormat, { timeZone: this.config.indexDateTimeZone })}` : _index;
 
     if (this.config.enabled === false) {
       return Promise.resolve(null);
