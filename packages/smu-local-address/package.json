@@ -1,0 +1,23 @@
+{
+  "name": "@reignmodule/smu-local-address",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^13.9.3",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "csv-parse": "^4.8.8",
+    "ow": "^0.17.0"
+  },
+  "homepage": "https://github.com/reigndesign/reign-utils/tree/master/packages/smu-local-address#README",
+  "bugs": {
+    "url": "https://github.com/reigndesign/reign-utils/issues?q=%22smu-local-address%22"
+  }
+}
