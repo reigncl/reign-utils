@@ -1,14 +1,14 @@
-import { readFileSync } from 'fs';
-import csvParse from 'csv-parse/lib/sync';
-import ow from 'ow';
-import { relative } from 'path';
+import flatten from 'lodash.flatten';
+
+const ALL = Symbol('ALL');
 
 interface LocalAddressOptions {
-  loads?: string[];
+  loads?: LocalObject[][];
 }
 
 interface LocalObject {
   storeId: string;
+  Formato: string;
   address: string;
   comuna: string;
   region: string;
@@ -16,31 +16,25 @@ interface LocalObject {
 
 class LocalAddress {
   locals = new Map<LocalObject['storeId'], LocalObject>();
+  formats: {
+    readonly [ALL]: Map<string, LocalObject>,
+    [formato: string]: Map<string, LocalObject>,
+  };
 
   constructor(options?: LocalAddressOptions) {
-    if (options && options.loads) {
-      options.loads.forEach(load => this.loadFromFile(load));
-    }
-  }
+    const locals = flatten(options?.loads);
+    this.formats = locals.reduce(
+      (acumulator, local) => {
+        acumulator[local.Formato] = acumulator[local.Formato] ?? new Map();
 
-  loadFromFile(filePath: string) {
-    const bf = readFileSync(filePath, 'utf8');
-    const locals = csvParse(bf, {
-      columns: true,
-    }) as LocalObject[];
+        acumulator[ALL].set(local.storeId, local);
+        acumulator[local.Formato].set(local.storeId, local);
 
-    const objectValidate = ow.object.partialShape({
-      storeId: ow.string.nonEmpty,
-      address: ow.string.nonEmpty,
-      comuna: ow.string,
-      region: ow.string,
-    });
-
-    ow(locals, `${relative(process.cwd(), filePath)}`, ow.array.ofType(objectValidate));
-
-    locals.forEach((local) => {
-      this.locals.set(local.storeId.toString(), local);
-    });
+        return acumulator;
+      },
+      { [ALL]: new Map() } as LocalAddress['formats'],
+    );
+    this.locals = this.formats[ALL];
   }
 
   getStore(storeId: LocalObject['storeId']) {
@@ -62,9 +56,9 @@ class LocalAddress {
 
 export default new LocalAddress({
   loads: [
-    `${__dirname}/resources/sucursalesALVI.csv`,
-    `${__dirname}/resources/sucursalesM10.csv`,
-    `${__dirname}/resources/sucursalesOKM.csv`,
-    `${__dirname}/resources/sucursalesUNIMARC.csv`,
+    require('./resources/sucursalesALVI.json'),
+    require('./resources/sucursalesM10.json'),
+    require('./resources/sucursalesOKM.json'),
+    require('./resources/sucursalesUNIMARC.json'),
   ],
 });

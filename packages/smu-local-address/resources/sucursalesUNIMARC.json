@@ -1,0 +1,2338 @@
+[
+  {
+    "storeId": "3",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC OLMUÉ",
+    "address": "PORTALES 2090",
+    "comuna": "OLMUE",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "5",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LAS COMPAÑIAS",
+    "address": "NICARAGUA 1571",
+    "comuna": "LA SERENA",
+    "region": "IV - Coquimbo"
+  },
+  {
+    "storeId": "6",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC SINDEMPART",
+    "address": "AVDA. EL SAUCE 981",
+    "comuna": "COQUIMBO",
+    "region": "IV - Coquimbo"
+  },
+  {
+    "storeId": "7",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC VALLENAR I",
+    "address": "BRAZIL 663",
+    "comuna": "VALLENAR",
+    "region": "III - Atacama"
+  },
+  {
+    "storeId": "8",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC RECOVA",
+    "address": "BRASIL #715",
+    "comuna": "LA SERENA",
+    "region": "IV - Coquimbo"
+  },
+  {
+    "storeId": "9",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC COQUIMBO",
+    "address": "VARELA 1480",
+    "comuna": "COQUIMBO",
+    "region": "IV - Coquimbo"
+  },
+  {
+    "storeId": "10",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC TIL TIL",
+    "address": "ARTURO PRAT 295",
+    "comuna": "TIL TIL",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "11",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ALTO PEÑUELAS",
+    "address": "ALESSANDRI 531",
+    "comuna": "COQUIMBO",
+    "region": "IV - Coquimbo"
+  },
+  {
+    "storeId": "12",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CISTERNAS",
+    "address": "REINALDO BOLTZ 1950",
+    "comuna": "LA SERENA",
+    "region": "IV - Coquimbo"
+  },
+  {
+    "storeId": "13",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LA TORRE",
+    "address": "CARLOS PEZOA VÉLIZ 10-22",
+    "comuna": "ANTOFAGASTA",
+    "region": "II - Antofagasta"
+  },
+  {
+    "storeId": "14",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC COPIAPÓ",
+    "address": "HENRIQUEZ 523",
+    "comuna": "COPIAPO",
+    "region": "III - Atacama"
+  },
+  {
+    "storeId": "16",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC VALLENAR II",
+    "address": "PRAT 2350",
+    "comuna": "VALLENAR",
+    "region": "III - Atacama"
+  },
+  {
+    "storeId": "17",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LOS ALAMOS",
+    "address": "LOS ALAMOS 580",
+    "comuna": "COQUIMBO",
+    "region": "IV - Coquimbo"
+  },
+  {
+    "storeId": "18",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC EL SALVADOR",
+    "address": "AV  BERNARDO OHIGGINS 115",
+    "comuna": "EL SALVADOR",
+    "region": "III - Atacama"
+  },
+  {
+    "storeId": "19",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC BONILLA",
+    "address": "HUAMACHUCO 8481",
+    "comuna": "ANTOFAGASTA",
+    "region": "II - Antofagasta"
+  },
+  {
+    "storeId": "20",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC BARQUITO",
+    "address": "GABRIELA MISTRAL S/N",
+    "comuna": "CHAÑARAL",
+    "region": "III - Atacama"
+  },
+  {
+    "storeId": "21",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC TANGUE",
+    "address": "TANGUE 36",
+    "comuna": "OVALLE",
+    "region": "IV - Coquimbo"
+  },
+  {
+    "storeId": "22",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ATACAMA",
+    "address": "LOS CARRERAS 2242",
+    "comuna": "COPIAPO",
+    "region": "III - Atacama"
+  },
+  {
+    "storeId": "23",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LOS CARRERA",
+    "address": "LOS CARRERAS 479",
+    "comuna": "COPIAPO",
+    "region": "III - Atacama"
+  },
+  {
+    "storeId": "24",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CHACABUCO",
+    "address": "LOS CARRERAS 586",
+    "comuna": "COPIAPO",
+    "region": "III - Atacama"
+  },
+  {
+    "storeId": "25",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC EL PALOMAR",
+    "address": "PALOMAR 1525",
+    "comuna": "COPIAPO",
+    "region": "III - Atacama"
+  },
+  {
+    "storeId": "26",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC SANTOS OSSA",
+    "address": "JOSÉ SANTOS OSSA 2421",
+    "comuna": "ANTOFAGASTA",
+    "region": "II - Antofagasta"
+  },
+  {
+    "storeId": "27",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC PAMPINO",
+    "address": "JOSÉ SANTOS OSSA 2350",
+    "comuna": "Antofagasta",
+    "region": "II - Antofagasta"
+  },
+  {
+    "storeId": "28",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC PARQUE",
+    "address": "JOSÉ MIGUEL CARRERA 1527",
+    "comuna": "ANTOFAGASTA",
+    "region": "II - Antofagasta"
+  },
+  {
+    "storeId": "29",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC GRAN VIA",
+    "address": "AVENIDA ANGAMOS 0159",
+    "comuna": "ANTOFAGASTA",
+    "region": "II - Antofagasta"
+  },
+  {
+    "storeId": "30",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC BALMACEDA",
+    "address": "BALMACEDA 1350",
+    "comuna": "LA SERENA",
+    "region": "IV - Coquimbo"
+  },
+  {
+    "storeId": "32",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CHAÑARCILLO",
+    "address": "CHACABUCO 231",
+    "comuna": "COPIAPO",
+    "region": "III - Atacama"
+  },
+  {
+    "storeId": "33",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC COVIEFI",
+    "address": "AVENIDA ARGENTINA 01910",
+    "comuna": "ANTOFAGASTA",
+    "region": "II - Antofagasta"
+  },
+  {
+    "storeId": "34",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LA CHIMBA",
+    "address": "PEDRO AGUIRRE CERDA. 8700",
+    "comuna": "ANTOFAGASTA",
+    "region": "II - Antofagasta"
+  },
+  {
+    "storeId": "35",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CURACAVÍ I",
+    "address": "AMB. O'HIGGINS 1910",
+    "comuna": "CURACAVÍ",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "36",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LAMPA",
+    "address": "ARTURO PRAT 681",
+    "comuna": "LAMPA",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "41",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC IGNACIO CARRERA PINTO",
+    "address": "CAPITAN IGNACIO CARRERA PINTO 3857",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "43",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC BATUCO",
+    "address": "AVDA. FRANCIA 640",
+    "comuna": "LAMPA",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "44",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LAS REJAS",
+    "address": "LAS REJAS SUR 1279",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "45",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC 2° TRANVERSAL",
+    "address": "SEGUNDA TRANSVERSAL. 4090",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "46",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CALAMA I",
+    "address": "AVENIDA GRANADEROS 3180",
+    "comuna": "CALAMA",
+    "region": "II - Antofagasta"
+  },
+  {
+    "storeId": "47",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC PLAZA",
+    "address": "IGNACIO CARRERA PINTO 909",
+    "comuna": "ANTOFAGASTA",
+    "region": "II - Antofagasta"
+  },
+  {
+    "storeId": "48",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC OVIEDO CAVADA",
+    "address": "CARLOS OVIEDO CAVADA 5319",
+    "comuna": "ANTOFAGASTA",
+    "region": "II - Antofagasta"
+  },
+  {
+    "storeId": "49",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC VICUÑA P.19",
+    "address": "AV. VICUÑA MACKENNA 9090",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "50",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ILLAPEL I",
+    "address": "CONSTITUCION 515",
+    "comuna": "ILLAPEL",
+    "region": "IV - Coquimbo"
+  },
+  {
+    "storeId": "51",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC QUILLOTA I",
+    "address": "O'HIGGINS 34",
+    "comuna": "QUILLOTA",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "53",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC SAN FELIPE",
+    "address": "PORTUS 1248",
+    "comuna": "SAN FELIPE",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "54",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LOS ANDES",
+    "address": "YERBAS BUENAS 460",
+    "comuna": "LOS ANDES",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "56",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LARAPINTA",
+    "address": "LOS HALCONES 2180",
+    "comuna": "LAMPA",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "58",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CONCHA Y TORO",
+    "address": "AV. CONCHA Y TORO 3198",
+    "comuna": "PUENTE ALTO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "59",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ILLAPEL II",
+    "address": "INDEPENDENCIA 104",
+    "comuna": "ILLAPEL",
+    "region": "IV - Coquimbo"
+  },
+  {
+    "storeId": "60",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LOS VILOS",
+    "address": "CAUPOLICAN 584",
+    "comuna": "LOS VILOS",
+    "region": "IV - Coquimbo"
+  },
+  {
+    "storeId": "61",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC SAN BERNARDO I",
+    "address": "P. HURTADO 13694",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "62",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CARRASCAL",
+    "address": "GONZALO BULNES 2407",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "63",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC RINCONADA",
+    "address": "RINCONADA. 1900",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "67",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CASABLANCA",
+    "address": "CONSTITUCIÓN 102",
+    "comuna": "CASA BLANCA",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "68",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC BUIN",
+    "address": "BALMACEDA 280",
+    "comuna": "BUIN",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "71",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC PENCO",
+    "address": "FREIRE 699",
+    "comuna": "PENCO",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "74",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC HIGUERAS",
+    "address": "ARAUCARIAS 295",
+    "comuna": "TALCAHUANO",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "75",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CONCEPCION II",
+    "address": "TUCAPEL 1313",
+    "comuna": "CONCEPCION",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "76",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CORONEL",
+    "address": "MANUEL MONTT 501",
+    "comuna": "CORONEL",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "77",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LOTA II",
+    "address": "PEDRO A.CERDA 684",
+    "comuna": "LOTA",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "79",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CHIGUAYANTE",
+    "address": "M.RODRIGUEZ 785",
+    "comuna": "CHIGUAYANTE",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "80",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ANGOL I",
+    "address": "AV. OHIGGINIS 1257",
+    "comuna": "ANGOL",
+    "region": "IX - De la Araucanía"
+  },
+  {
+    "storeId": "81",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LOMAS COLORADAS",
+    "address": "LOS MAÑIOS # 7045",
+    "comuna": "SAN PEDRO DE LA PAZ",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "82",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ALTO JAHUEL",
+    "address": "MIRAFLORES 242",
+    "comuna": "BUIN",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "85",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC AMUNATEGUI",
+    "address": "AMUNATEGUI 902",
+    "comuna": "IQUIQUE",
+    "region": "I - Tarapaca"
+  },
+  {
+    "storeId": "86",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC BILBAO",
+    "address": "FRANCISCO  BILBAO 3545",
+    "comuna": "IQUIQUE",
+    "region": "I - Tarapaca"
+  },
+  {
+    "storeId": "87",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC JUAN MARTINEZ",
+    "address": "M. RODRIGUEZ 964.",
+    "comuna": "IQUIQUE",
+    "region": "I - Tarapaca"
+  },
+  {
+    "storeId": "88",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LINARES I",
+    "address": "MAIPU 556",
+    "comuna": "LINARES",
+    "region": "VII - Del Maule"
+  },
+  {
+    "storeId": "91",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC COMBARBALÁ",
+    "address": "COMERCIO 310",
+    "comuna": "COMBARBALA",
+    "region": "IV - Coquimbo"
+  },
+  {
+    "storeId": "92",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LIMACHE",
+    "address": "REPUBLICA 342",
+    "comuna": "LIMACHE",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "93",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC SAN FERNANDO II",
+    "address": "MANUEL RODRIGUEZ 954",
+    "comuna": "SAN FERNANDO",
+    "region": "VI - Del Libertador"
+  },
+  {
+    "storeId": "96",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC SAN FERNANDO I",
+    "address": "ESPAÑA 865",
+    "comuna": "SAN FERNANDO",
+    "region": "VI - Del Libertador"
+  },
+  {
+    "storeId": "97",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC SALAMANCA",
+    "address": "BULNE 677",
+    "comuna": "SALAMANCA",
+    "region": "IV - Coquimbo"
+  },
+  {
+    "storeId": "103",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC VIVAR",
+    "address": "VIVAR 786",
+    "comuna": "IQUIQUE",
+    "region": "I - Tarapaca"
+  },
+  {
+    "storeId": "105",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC IQUIQUE CENTRO",
+    "address": "TARAPACÁ. 579",
+    "comuna": "IQUIQUE",
+    "region": "I - Tarapaca"
+  },
+  {
+    "storeId": "106",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LOS MOLLES",
+    "address": "LOS MOLLES 2251",
+    "comuna": "IQUIQUE",
+    "region": "I - Tarapaca"
+  },
+  {
+    "storeId": "107",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC BENAVENTE",
+    "address": "BENAVENTE 221",
+    "comuna": "OVALLE",
+    "region": "IV - Coquimbo"
+  },
+  {
+    "storeId": "110",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC TOCOPILLA II",
+    "address": "COLÓN POLICARPO TORO",
+    "comuna": "TOCOPILLA",
+    "region": "II - Antofagasta"
+  },
+  {
+    "storeId": "111",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CALAMA II",
+    "address": "ACONCAGUA 2588",
+    "comuna": "CALAMA",
+    "region": "II - Antofagasta"
+  },
+  {
+    "storeId": "324",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC MACHALI",
+    "address": "MIGUEL RAMIREZ #1420",
+    "comuna": "RANCAGUA",
+    "region": "VI - Del Libertador"
+  },
+  {
+    "storeId": "325",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC IRARRAZAVAL",
+    "address": "AV. IRARRAZAVAL 4354",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "326",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ESCUELA MILITAR",
+    "address": "APOQUINDO 4335",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "327",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC MANQUEHUE",
+    "address": "MANQUEHUE 1700",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "328",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC GRAN AVENIDA I",
+    "address": "GRAN AVENIDA 5485",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "331",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC DIEGO PORTALES",
+    "address": "PORTUGAL 56",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "332",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC 1 NORTE",
+    "address": "1 NORTE 869",
+    "comuna": "VIÑA DEL MAR",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "333",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LOS LEONES",
+    "address": "GRAL. JOSE ARTIGAS 3250",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "335",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC SANTA MARIA",
+    "address": "STA. MARIA 6940",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "336",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CONCEPCION I",
+    "address": "CHACABUCO 70",
+    "comuna": "CONCEPCION",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "340",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC PRINCIPE DE GALES",
+    "address": "PRICIPE DE GALES 7271",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "343",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC 4 PONIENTE",
+    "address": "4 PONIENTE 630",
+    "comuna": "VIÑA DEL MAR",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "344",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CURICO ALAMEDA",
+    "address": "ESTADO 43",
+    "comuna": "CURICO",
+    "region": "VII - Del Maule"
+  },
+  {
+    "storeId": "345",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CHILLAN",
+    "address": "AV. COLLIN 866",
+    "comuna": "CHILLAN",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "347",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC SILVA CARVALLO",
+    "address": "SILVA CARVALLO 1414",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "352",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC VILLA OLIMPICA",
+    "address": "OBISPO ORREGO 1250",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "353",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC JUAN ANTONIO RIOS",
+    "address": "SALOMOM SACK 351",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "355",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC MANUEL MONTT",
+    "address": "MANUEL MONTT 1079",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "357",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC GRECIA",
+    "address": "AVDA. GRECIA 320",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "360",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC RAMON FREIRE",
+    "address": "PAJARITOS 1529",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "366",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC VILLARRICA",
+    "address": "GERONIMO DE ALDERETE 697",
+    "comuna": "VILLARRICA",
+    "region": "IX - De la Araucanía"
+  },
+  {
+    "storeId": "374",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC NACIMIENTO",
+    "address": "SAN MARTIN 560",
+    "comuna": "NACIMIENTO",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "375",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ARAUCO",
+    "address": "ARAUCO 697",
+    "comuna": "VALDIVIA",
+    "region": "XIV - De los Rios"
+  },
+  {
+    "storeId": "376",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LAS ANIMAS",
+    "address": "BOMBERO CLASSING 204",
+    "comuna": "VALDIVIA",
+    "region": "XIV - De los Rios"
+  },
+  {
+    "storeId": "394",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ZAPADORES",
+    "address": "ZAPADORES 1320",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "395",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LAS PARCELAS",
+    "address": "LAS PARCELAS 9001",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "396",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC QUINTERO",
+    "address": "ESTRELLA DE CHILE 169",
+    "comuna": "QUINTERO",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "398",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CONSTITUCION I",
+    "address": "VIAL 224",
+    "comuna": "CONSTITUCION",
+    "region": "VII - Del Maule"
+  },
+  {
+    "storeId": "441",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC AYSEN",
+    "address": "CARRERA 1500",
+    "comuna": "PUERTO AYSEN",
+    "region": "XI - De Aysen"
+  },
+  {
+    "storeId": "442",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC COYHAIQUE",
+    "address": "LAUTARO 331-339",
+    "comuna": "COYHAIQUE",
+    "region": "XI - De Aysen"
+  },
+  {
+    "storeId": "445",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC VILLA ALEMANA",
+    "address": "AV VALPARAISO 1982",
+    "comuna": "VILLA ALEMANA",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "457",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LAUTARO NAVARRO AUSTRAL",
+    "address": "LAUTARO NAVARRO 1293",
+    "comuna": "PUNTA ARENAS",
+    "region": "XII - Magallanes"
+  },
+  {
+    "storeId": "458",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ESPANA AUSTRAL",
+    "address": "AV. ESPANA 1375",
+    "comuna": "PUNTA ARENAS",
+    "region": "XII - Magallanes"
+  },
+  {
+    "storeId": "459",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ALLENDE AUSTRAL",
+    "address": "AV. SALVADOR ALLENDE 349",
+    "comuna": "PUNTA ARENAS",
+    "region": "XII - Magallanes"
+  },
+  {
+    "storeId": "461",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ZENTENO AUSTRAL",
+    "address": "CAPITAN GUILLERMOS 5",
+    "comuna": "PUNTA ARENAS",
+    "region": "XII - Magallanes"
+  },
+  {
+    "storeId": "463",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC BORIES AUSTRAL",
+    "address": "BORIES 647",
+    "comuna": "PUNTA ARENAS",
+    "region": "XII - Magallanes"
+  },
+  {
+    "storeId": "464",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC AGUIRRE CERDA AUSTRAL",
+    "address": "AV. PEDRO AGUIRRE CERDA 413",
+    "comuna": "PUNTA ARENAS",
+    "region": "XII - Magallanes"
+  },
+  {
+    "storeId": "465",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC PUERTO NATALES",
+    "address": "BULNES 742",
+    "comuna": "NATALES",
+    "region": "XII - Magallanes"
+  },
+  {
+    "storeId": "466",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC QUILLOTA III",
+    "address": "SAN MARTIN 147",
+    "comuna": "QUILLOTA",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "468",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC VALPARAISO",
+    "address": "AVDA. BRASIL 1479",
+    "comuna": "VALPARAISO",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "469",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LOS MILITARES",
+    "address": "AVDA MANQUEHUE NORTE 457",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "472",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CALDERA I",
+    "address": "BATALLON ATACAMA 319",
+    "comuna": "CALDERA",
+    "region": "III - Atacama"
+  },
+  {
+    "storeId": "474",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CHILLAN II",
+    "address": "AVENIDA 5 DE ABRIL 754",
+    "comuna": "CHILLAN",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "475",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ESTADO",
+    "address": "ESTADO 85",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "476",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC FRANCISCO BILBAO",
+    "address": "AVENIDA FRANCISCO BILBAO 2050",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "477",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CURAUMA",
+    "address": "AVDA. OBISPO VALDES SUBERCASEA 1170",
+    "comuna": "VALPARAISO",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "481",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC DORSAL",
+    "address": "GUANACO 3100",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "482",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ABRAZO DE MAIPU",
+    "address": "JORGE GUERRA 16190",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "483",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC SANTO DOMINGO",
+    "address": "AVENIDA EL GOLF 6",
+    "comuna": "ROCAS DE SANTO DOMINGO",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "485",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC EL QUISCO",
+    "address": "JOSE NARCISO AGUIRRE 017",
+    "comuna": "EL QUISCO",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "486",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CIUDAD DE LOS VALLES",
+    "address": "AVENIDA EL CANAL 19591",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "510",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CAMILO HENRIQUEZ I",
+    "address": "C. HENRIQUEZ 445",
+    "comuna": "CURICO",
+    "region": "VII - Del Maule"
+  },
+  {
+    "storeId": "511",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CAMILO HENRIQUEZ II",
+    "address": "C.HENRIQUEZ 655",
+    "comuna": "CURICO",
+    "region": "VII - Del Maule"
+  },
+  {
+    "storeId": "512",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC MOLINA I",
+    "address": "LUIS CRUZ MARTINEZ 1314",
+    "comuna": "MOLINA",
+    "region": "VII - Del Maule"
+  },
+  {
+    "storeId": "513",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC TENO",
+    "address": "AV. COMALLE 50",
+    "comuna": "TENO",
+    "region": "VII - Del Maule"
+  },
+  {
+    "storeId": "515",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CAUQUENES",
+    "address": "CATEDRAL 215",
+    "comuna": "CAUQUENES",
+    "region": "VII - Del Maule"
+  },
+  {
+    "storeId": "517",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CURICO TERMINAL",
+    "address": "PRAT 733",
+    "comuna": "CURICO",
+    "region": "VII - Del Maule"
+  },
+  {
+    "storeId": "518",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LONCOCHE",
+    "address": "BALMACEDA 389",
+    "comuna": "LONCOCHE",
+    "region": "IX - De la Araucanía"
+  },
+  {
+    "storeId": "519",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC TRAIGUEN",
+    "address": "SANTA CRUZ 1170",
+    "comuna": "TRAIGUEN",
+    "region": "IX - De la Araucanía"
+  },
+  {
+    "storeId": "520",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC AV. ESPANA",
+    "address": "AV.ESPANA 414",
+    "comuna": "CURICO",
+    "region": "VII - Del Maule"
+  },
+  {
+    "storeId": "521",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC COLLIPULLI",
+    "address": "CRUZ 233",
+    "comuna": "COLLIPULLI",
+    "region": "IX - De la Araucanía"
+  },
+  {
+    "storeId": "523",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC SAN JOSE",
+    "address": "JOSE PUCH 2001",
+    "comuna": "SAN JOSE DE MARIQUINA",
+    "region": "XIV - De los Rios"
+  },
+  {
+    "storeId": "525",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LAUTARO",
+    "address": "O HIGGINS 630",
+    "comuna": "LAUTARO",
+    "region": "IX - De la Araucanía"
+  },
+  {
+    "storeId": "526",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC PITRUFQUEN",
+    "address": "FCO. BILBAO 476",
+    "comuna": "PITRUFQUEN",
+    "region": "IX - De la Araucanía"
+  },
+  {
+    "storeId": "529",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC NUEVA IMPERIAL",
+    "address": "ARTURO PRAT 246",
+    "comuna": "NUEVA IMPERIAL",
+    "region": "IX - De la Araucanía"
+  },
+  {
+    "storeId": "531",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC MULCHEN",
+    "address": "ANIBAL PINTO 777",
+    "comuna": "MULCHEN",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "532",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CURACAUTIN",
+    "address": "BDO.OHIGGINS 515",
+    "comuna": "CURACAUTIN",
+    "region": "IX - De la Araucanía"
+  },
+  {
+    "storeId": "535",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC RANCAGUA",
+    "address": "DR SALINAS 115",
+    "comuna": "RANCAGUA",
+    "region": "VI - Del Libertador"
+  },
+  {
+    "storeId": "536",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC MOLINA II",
+    "address": "AV. LUIS C. MARTINEZ 2016",
+    "comuna": "MOLINA",
+    "region": "VII - Del Maule"
+  },
+  {
+    "storeId": "537",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC VICTORIA I",
+    "address": "PISAGUA 1354",
+    "comuna": "VICTORIA",
+    "region": "IX - De la Araucanía"
+  },
+  {
+    "storeId": "538",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LAS CABRAS",
+    "address": "JOSE MIGUEL CARRERA 325",
+    "comuna": "LAS CABRAS",
+    "region": "VI - Del Libertador"
+  },
+  {
+    "storeId": "541",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LOS LAGOS I",
+    "address": "BALMACEDA 79",
+    "comuna": "LOS LAGOS",
+    "region": "XIV - De los Rios"
+  },
+  {
+    "storeId": "542",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LOS LAGOS II",
+    "address": "QUINCHILCA 334",
+    "comuna": "LOS LAGOS",
+    "region": "XIV - De los Rios"
+  },
+  {
+    "storeId": "543",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC PEUMO",
+    "address": "SARMIENTO 393",
+    "comuna": "PEUMO",
+    "region": "VI - Del Libertador"
+  },
+  {
+    "storeId": "544",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC PURRANQUE",
+    "address": "ELEUTERIO RARMIREZ 549",
+    "comuna": "PURRANQUE",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "545",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC SAGRADA FAMILIA",
+    "address": "ESPERANZA 138",
+    "comuna": "SAGRADA FAMILIA",
+    "region": "VII - Del Maule"
+  },
+  {
+    "storeId": "550",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LLAY LLAY II",
+    "address": "BALMACEDA 307",
+    "comuna": "SAN FELIPE",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "552",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC SAN CLEMENTE",
+    "address": "HUAMACHUCO 613",
+    "comuna": "SAN CLEMENTE",
+    "region": "VII - Del Maule"
+  },
+  {
+    "storeId": "553",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CHIMBARONGO",
+    "address": "C. LARRAIN 44",
+    "comuna": "RANCAGUA",
+    "region": "VI - Del Libertador"
+  },
+  {
+    "storeId": "554",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC NANCAGUA",
+    "address": "ARMANDO JARAMILLO 152",
+    "comuna": "NANCAGUA",
+    "region": "VI - Del Libertador"
+  },
+  {
+    "storeId": "555",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC GRANEROS",
+    "address": "OBISPO RAFAEL LIRA INFANTE 42",
+    "comuna": "RANCAGUA",
+    "region": "VI - Del Libertador"
+  },
+  {
+    "storeId": "556",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LONTUE",
+    "address": "AVDA 7 DE ABRIL 2069",
+    "comuna": "MOLINA",
+    "region": "VII - Del Maule"
+  },
+  {
+    "storeId": "557",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ROMERAL",
+    "address": "AVDA.LIBERTAD 1124-B 1124-B",
+    "comuna": "ROMERAL",
+    "region": "VII - Del Maule"
+  },
+  {
+    "storeId": "573",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC OVALLE I",
+    "address": "LIBERTAD 249",
+    "comuna": "OVALLE",
+    "region": "IV - Coquimbo"
+  },
+  {
+    "storeId": "576",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CASTRO I",
+    "address": "O`HIGGINS 711",
+    "comuna": "CASTRO",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "578",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ACHAO",
+    "address": "DELICIAS 06",
+    "comuna": "ACHAO",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "580",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC PUDAHUEL",
+    "address": "SAN PABLO 8315",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "581",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC MIRADOR",
+    "address": "VICUNA MACKENNA ORIENTE 6331",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "583",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC SAN JAVIER",
+    "address": "BALMACEDA 1900",
+    "comuna": "SAN JAVIER",
+    "region": "VII - Del Maule"
+  },
+  {
+    "storeId": "585",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LOS VOLCANES",
+    "address": "VOLCAN HORNOPIREN 1728",
+    "comuna": "PUERTO MONTT",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "586",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC BUIN MAIPO",
+    "address": "CAM. BUIN-MAIPO 3147",
+    "comuna": "BUIN",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "600",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ALTO HOSPICIO II",
+    "address": "RUTA A16, PASAJE EL SALITRE",
+    "comuna": "IQUIQUE",
+    "region": "I - Tarapaca"
+  },
+  {
+    "storeId": "601",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CHIGUAYANTE II",
+    "address": "CAMINO PARCELA",
+    "comuna": "CONCEPCION",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "602",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LOMAS DE SAN ANDRES",
+    "address": "COSME CHURRUCA #75",
+    "comuna": "CONCEPCION",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "621",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC EL TABO",
+    "address": "SAN MARCOS 1027",
+    "comuna": "EL TABO",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "622",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ZONA FRANCA",
+    "address": "MANZANA ZONA FRANCA 18",
+    "comuna": "PUNTA ARENAS",
+    "region": "XII - Magallanes"
+  },
+  {
+    "storeId": "624",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC PUCHUNCAVI",
+    "address": "CALLE PRESIDENTE RIOS 672",
+    "comuna": "PUCHUNCAVI",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "625",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC QUINTERO II",
+    "address": "CALLE NORMANDIE 2680",
+    "comuna": "QUINTERO",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "626",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC EL MILAGRO",
+    "address": "AV 4 ESQUINAS PARCELA F",
+    "comuna": "LA SERENA",
+    "region": "IV - Coquimbo"
+  },
+  {
+    "storeId": "628",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CARTAGENA",
+    "address": "AVENIDA CASANOVA 306",
+    "comuna": "CARTAGENA",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "633",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CHIMBARONGO II",
+    "address": "GARCIA Y REYES S/N",
+    "comuna": "CHIMBARONGO",
+    "region": "VI - Del Libertador"
+  },
+  {
+    "storeId": "641",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC VICUÑA",
+    "address": "CHACABUCO 302",
+    "comuna": "VICUÑA",
+    "region": "IV - Coquimbo"
+  },
+  {
+    "storeId": "642",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LOS NOTROS",
+    "address": "LARA ESQ LOS NOTROS S/N",
+    "comuna": "PUERTO MONTT",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "643",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LINDEROS",
+    "address": "PANAMERICANA SUR KM38",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "644",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC REPUBLICA DE CHILE",
+    "address": "REPUBLICA DE CHILE 391",
+    "comuna": "RANCAGUA",
+    "region": "VI - Del Libertador"
+  },
+  {
+    "storeId": "645",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC MEMBRILLAR",
+    "address": "MEMBRILLAR 10",
+    "comuna": "RANCAGUA",
+    "region": "VI - Del Libertador"
+  },
+  {
+    "storeId": "671",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LAS CONDES",
+    "address": "AV. LAS CONDES 14791",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "673",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LA TORRE II",
+    "address": "LA TORRE #2149",
+    "comuna": "CALAMA",
+    "region": "II - Antofagasta"
+  },
+  {
+    "storeId": "674",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC BRASILIA",
+    "address": "BRASILIA #2386",
+    "comuna": "CALAMA",
+    "region": "II - Antofagasta"
+  },
+  {
+    "storeId": "681",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ROTONDA ARICA",
+    "address": "AV 18 DE SEPTIEMBRE # 2500",
+    "comuna": "ARICA",
+    "region": "XV - De Arica y Parinacota"
+  },
+  {
+    "storeId": "683",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LO OVALLE",
+    "address": "GRAN AVENIDA N°6555",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "685",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LOS ANGELES",
+    "address": "ALEMANIA #610",
+    "comuna": "LOS ANGELES",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "686",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC RANCAGUA KENNEDY",
+    "address": "AV. KENNEDY 2235 - 2145",
+    "comuna": "RANCAGUA",
+    "region": "VI - Del Libertador"
+  },
+  {
+    "storeId": "703",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CORONEL II",
+    "address": "MANUEL MONTT #398",
+    "comuna": "CORONEL",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "709",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC MANQUIMAVIDA",
+    "address": "MANUEL RODRIGUEZ #1500",
+    "comuna": "CONCEPCION",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "710",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LOS HUERTOS",
+    "address": "LAS VIOLETAS #39",
+    "comuna": "CONCEPCION",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "712",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC BIG KEY (SUPER)",
+    "address": "SERRANO #500",
+    "comuna": "SAN CARLOS",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "713",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC GOMEZ CARREÑO",
+    "address": "GOMEZ CARREÑO #3875",
+    "comuna": "CONCEPCION",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "714",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ETCHEVERS",
+    "address": "ETCHEVERS ALTO #594",
+    "comuna": "VIÑA DEL MAR",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "715",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ARAUCO II",
+    "address": "COVADONGA #391",
+    "comuna": "ARAUCO",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "716",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LA VIOLETA",
+    "address": "PEDRO AGUIRRE CERDA #602",
+    "comuna": "LOTA",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "717",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC JARDIN DEL MAR",
+    "address": "MAR DE LOS SARGAZOS #1855",
+    "comuna": "VIÑA DEL MAR",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "720",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CURANILAHUE",
+    "address": "O'HIGGINS #101",
+    "comuna": "CURANILAHUE",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "721",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC BULNES",
+    "address": "CARLOS PALACIOS #151",
+    "comuna": "BULNES",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "722",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LEBU",
+    "address": "BULNES #130",
+    "comuna": "LEBU",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "723",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LAJA",
+    "address": "BALMACEDA #62",
+    "comuna": "LAJA",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "724",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CARACOL",
+    "address": "IGNACIO SERRANO #980",
+    "comuna": "CONCEPCION",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "725",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC QUILLON",
+    "address": "CAYUMANQUI #495",
+    "comuna": "QUILLON",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "726",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC COICHUECO",
+    "address": "BALMACEDA #546",
+    "comuna": "COHIUECO",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "732",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC YUNGAY",
+    "address": "ESMERALDA #211",
+    "comuna": "YUNGAY",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "733",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CHILLAN VIEJO",
+    "address": "BERNARDO O'HIGGINS #2305",
+    "comuna": "CHILLAN",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "734",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC YUMBEL",
+    "address": "O'HIGGINS #620",
+    "comuna": "YUMBEL",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "735",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ANDALUE",
+    "address": "GENERAL CRUZ #380",
+    "comuna": "CABRERO",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "736",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC EL VOLCAN",
+    "address": "JUAN ANTONIO RIOS #3039",
+    "comuna": "LAGUNILLAS",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "737",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC HUALQUI",
+    "address": "ARAUCANA #490",
+    "comuna": "HUALQUI",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "738",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC COELEMU",
+    "address": "CASTELLON #597",
+    "comuna": "COELEMU",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "740",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC HUALPENCILLO",
+    "address": "BULGARIA #2818",
+    "comuna": "CONCEPCION",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "743",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CONCEPCION III",
+    "address": "CAUPOLICAN 772",
+    "comuna": "CONCEPCIÓN",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "744",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LOS CARRERA",
+    "address": "LOS CARRERA 1380",
+    "comuna": "LOS ANGELES",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "745",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LOS LLEUQUES",
+    "address": "EDUARDO FREI #162",
+    "comuna": "CAÑETE",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "746",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC HUEPIL",
+    "address": "ARTURO PRAT #500",
+    "comuna": "HUEPIL",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "747",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC SAN PEDRO DEL MAR",
+    "address": "TUCAPEL #285",
+    "comuna": "LOMAS COLORADA",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "748",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC PEÑUELAS",
+    "address": "AV. DOS #35",
+    "comuna": "PEÑUELAS",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "749",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC EL CARMEN",
+    "address": "ESMERALDA #550",
+    "comuna": "EL CARMEN",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "750",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CAÑETE",
+    "address": "SAAVEDRA #525",
+    "comuna": "CAÑETE",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "752",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC TEMUCO II",
+    "address": "ANIBAL PINTO #72",
+    "comuna": "TEMUCO",
+    "region": "IX - De la Araucanía"
+  },
+  {
+    "storeId": "754",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC TEMUCO IV",
+    "address": "JAVIERA CARRERA #1610",
+    "comuna": "TEMUCO",
+    "region": "IX - De la Araucanía"
+  },
+  {
+    "storeId": "755",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC TALCA II",
+    "address": "AV. CALOR SCHORR #265",
+    "comuna": "TALCA",
+    "region": "VII - Del Maule"
+  },
+  {
+    "storeId": "756",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC TALCA III",
+    "address": "2 SUR #1953",
+    "comuna": "TALCA",
+    "region": "VII - Del Maule"
+  },
+  {
+    "storeId": "758",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC TALCA IV",
+    "address": "14 SUR #1310",
+    "comuna": "TALCA",
+    "region": "VII - Del Maule"
+  },
+  {
+    "storeId": "759",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC PORTAL",
+    "address": "AV. ALEMANIA #100",
+    "comuna": "LOS ANGELES",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "760",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC COLON",
+    "address": "AV. COLON #600",
+    "comuna": "LOS ANGELES",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "761",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC MARCONI",
+    "address": "AV. MARCONI #1177",
+    "comuna": "LOS ANGELES",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "763",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC HIPERMERCADO",
+    "address": "JUAN SOLER MANFREDINI #51",
+    "comuna": "PUERTO MONTT",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "764",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC URMENETA",
+    "address": "CALLE URMENETA #574",
+    "comuna": "PUERTO MONTT",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "766",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ALERCE",
+    "address": "GABRIELA MISTRAL S/N",
+    "comuna": "ALERCE",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "767",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ANCUD",
+    "address": "CALLE COLO-COLO #318",
+    "comuna": "CASTRO",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "769",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CALBUCO",
+    "address": "FEDERICO ERRAZURIZ #21",
+    "comuna": "CALBUCO",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "770",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC QUELLON",
+    "address": "AV. JUAN LADRILLEROS #460",
+    "comuna": "CASTRO",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "771",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC MIRASOL",
+    "address": "LA CRUZ #2006",
+    "comuna": "PUERTO MONTT",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "773",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LLANQUIHUE",
+    "address": "CALLE BAQUEDANO #612",
+    "comuna": "LLANQUIHUE",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "775",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC PUERTO MONTT",
+    "address": "CHILLAN #65",
+    "comuna": "PUERTO MONTT",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "777",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CENTRAL",
+    "address": "PATRICIO LYNCH #1278",
+    "comuna": "OSORNO",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "778",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ORIENTE",
+    "address": "JULIO BUSCHMAN #2223",
+    "comuna": "OSORNO",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "779",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC BULNES",
+    "address": "RAMIREZ #669",
+    "comuna": "OSORNO",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "780",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC VICTORIA",
+    "address": "VICTORIA #367",
+    "comuna": "OSORNO",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "782",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC YUNGAY",
+    "address": "YUNGAY #420",
+    "comuna": "VALDIVIA",
+    "region": "XIV - De los Rios"
+  },
+  {
+    "storeId": "784",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LA UNION",
+    "address": "SERRANO #617",
+    "comuna": "LA UNION",
+    "region": "XIV - De los Rios"
+  },
+  {
+    "storeId": "786",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC PAILLACO",
+    "address": "ARTURO PRAT #688",
+    "comuna": "PAILLACO",
+    "region": "XIV - De los Rios"
+  },
+  {
+    "storeId": "787",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC RIO BUENO II",
+    "address": "PEDRO LAGOS #593",
+    "comuna": "RIO BUENO",
+    "region": "XIV - De los Rios"
+  },
+  {
+    "storeId": "788",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC PANGUIPULLI",
+    "address": "PEDRO DE VALDIVIA #115",
+    "comuna": "PANGUIPULLI",
+    "region": "XIV - De los Rios"
+  },
+  {
+    "storeId": "789",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC FRUTILLAR III",
+    "address": "ARTURO ALESSANDRI #381",
+    "comuna": "FRUTILLAR",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "791",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC VALDIVIA IV",
+    "address": "AV. FRANCIA #2651",
+    "comuna": "VALDIVIA",
+    "region": "XIV - De los Rios"
+  },
+  {
+    "storeId": "797",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC RENCA",
+    "address": "AV. BRASIL 7073 - 7085",
+    "comuna": "RENCA",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "901",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CALBUCO II",
+    "address": "FEDERICO ERRAZURIZ #572",
+    "comuna": "CALBUCO",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "902",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC VILLA ALEMANA III",
+    "address": "VALPARAISO 889",
+    "comuna": "VILLA ALEMANA",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "903",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC HUECHURABA",
+    "address": "AV. PEDRO FONTOVA #7626",
+    "comuna": "HUECHURABA",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "905",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC VICENTE VALDES",
+    "address": "VICENTE VALDES 085",
+    "comuna": "LA FLORIDA",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "906",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CAUPOLICAN",
+    "address": "CAUPOLICAN 0191",
+    "comuna": "TEMUCO",
+    "region": "IX - De la Araucanía"
+  },
+  {
+    "storeId": "907",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC TALCAHUANO",
+    "address": "BILBAO #446",
+    "comuna": "TALCAHUANO",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "909",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC SAN MARTIN",
+    "address": "SAN MARTIN #0675",
+    "comuna": "TEMUCO",
+    "region": "IX - De la Araucanía"
+  },
+  {
+    "storeId": "910",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC EL ABRAZO",
+    "address": "CAMINO A MELIPILLA #16860",
+    "comuna": "MAIPU",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "911",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC IV PONIENTE",
+    "address": "4 PONIENTE #1197",
+    "comuna": "MAIPU",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "912",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ROJAS MAGALLANES",
+    "address": "ROJAS MAGALLANES #3538",
+    "comuna": "LA FLORIDA",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "913",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CHILLAN III",
+    "address": "5 DE ABRIL #864",
+    "comuna": "CHILLAN",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "914",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ANDALUE",
+    "address": "CAMINO EL VENADO #1380",
+    "comuna": "CONCEPCION",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "915",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ROTONDA",
+    "address": "AV.PARQUE INDUSTRIAL #300",
+    "comuna": "PUERTO MONTT",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "916",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LA PALOMA",
+    "address": "VOLCÁN PUNTIAGUDO #100",
+    "comuna": "PUERTO MONTT",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "917",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LOS TRAPENSES",
+    "address": "AVDA. JOSE ALCALDE DELANO N° 10497",
+    "comuna": "LO BARNECHEA",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "920",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC BARRIO INGLES",
+    "address": "LAS ENCINAS # 2690",
+    "comuna": "TEMUCO",
+    "region": "IX - De la Araucanía"
+  },
+  {
+    "storeId": "923",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC SANTA MARIA DE ARICA",
+    "address": "SANTA MARIA # 2465",
+    "comuna": "ARICA",
+    "region": "XV - De Arica y Parinacota"
+  },
+  {
+    "storeId": "925",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ALERCE II",
+    "address": "GABRIELA MISTRAL #900",
+    "comuna": "PUERTO MONTT",
+    "region": "X - De los Lagos"
+  },
+  {
+    "storeId": "926",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC VITACURA",
+    "address": "AV. VITACURA # 4607, L-25",
+    "comuna": "VITACURA",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "928",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC PADRE LAS CASAS",
+    "address": "MAQUEHUE #1244",
+    "comuna": "TEMUCO",
+    "region": "IX - De la Araucanía"
+  },
+  {
+    "storeId": "939",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC MARGA MARGA",
+    "address": "CALLE DEL ALHELI # 2011, LOCAL 1",
+    "comuna": "QUILPUE",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "953",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CONSISTORIAL",
+    "address": "CONSISTORIAL 2707",
+    "comuna": "PEÑALOLEN",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "954",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC REGIMIENTO DE ARICA",
+    "address": "REGIMIENTO ARICA N° 6001",
+    "comuna": "LA SERENA",
+    "region": "IV - Coquimbo"
+  },
+  {
+    "storeId": "955",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC SALAMANCA II",
+    "address": "MANUEL BULNES #220",
+    "comuna": "SALAMANCA",
+    "region": "IV - Coquimbo"
+  },
+  {
+    "storeId": "956",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LOS DOMINICOS",
+    "address": "PATAGONIA 99, LOCAL 3",
+    "comuna": "LAS CONDES",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "957",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC PUERTO",
+    "address": "AV.ERRAZURIZ N° 629",
+    "comuna": "VALPARAISO",
+    "region": "V - Valparaiso"
+  },
+  {
+    "storeId": "958",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC PORTUGAL",
+    "address": "PORTUGAL #579",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "959",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC PUCON",
+    "address": "AV. O'HIGGINS N#753",
+    "comuna": "PUCON",
+    "region": "IX - De la Araucanía"
+  },
+  {
+    "storeId": "960",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC TRONCAL SAN FCO.",
+    "address": "AV. LAS NIEVES N° 02251",
+    "comuna": "PUENTE ALTO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "961",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LA CHIMBA II",
+    "address": "PEDRO AGUIRRE CERDA 11385",
+    "comuna": "ANTOFAGASTA",
+    "region": "II - Antofagasta"
+  },
+  {
+    "storeId": "962",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC ESPACIO MORANDE",
+    "address": "COMPAÑÍA #1214",
+    "comuna": "SANTIAGO",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "963",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC LA FLORIDA",
+    "address": "CALLE 18 SEPTIEMBRE  N° 5040",
+    "comuna": "LA SERENA",
+    "region": "IV - Coquimbo"
+  },
+  {
+    "storeId": "965",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC TALCA",
+    "address": "CALLE 1 NORTE  1570",
+    "comuna": "TALCA",
+    "region": "VII - Del Maule"
+  },
+  {
+    "storeId": "966",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC CORONEL III",
+    "address": "LAUTARO 477",
+    "comuna": "CORONEL",
+    "region": "VIII - Del  Bio-bio"
+  },
+  {
+    "storeId": "976",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC MANUEL MONTT",
+    "address": "AV. IRARRÁZAVAL N° 1730",
+    "comuna": "ÑUÑOA",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "978",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC SAN JOAQUIN",
+    "address": "SANTA ROSA #5320",
+    "comuna": "SAN JOAQUIN",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "979",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC TALAGANTE OHIGGINS",
+    "address": "OHIGGINS 2259",
+    "comuna": "TALAGANTE",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "980",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC EL ROSAL",
+    "address": "AV. EL ROSAL N# 6361",
+    "comuna": "MAIPU",
+    "region": "RM - Santiago"
+  },
+  {
+    "storeId": "982",
+    "Formato": "UNIMARC",
+    "Nombre": "UNIMARC TEMUCO ALEMANIA",
+    "address": "AV. ALEMANIA #849",
+    "comuna": "TEMUCO",
+    "region": "IX - De la Araucanía"
+  },
+  {
+    "storeId": "78",
+    "Formato": "UNIMARC",
+    "Nombre": "BELLAVISTA",
+    "address": "LOS LLEUQUES 1540",
+    "comuna": "CONCEPCIÓN",
+    "region": "VIII REGIÓN DEL BÍO-BÍO"
+  },
+  {
+    "storeId": "935",
+    "Formato": "UNIMARC",
+    "Nombre": "SAN FELIPE ENCON",
+    "address": "CALLE ENCON 500",
+    "comuna": "SAN FELIPE",
+    "region": "V REGIÓN DE VALPARAÍSO"
+  },
+  {
+    "storeId": "931",
+    "Formato": "UNIMARC",
+    "Nombre": "CAMINO NOS",
+    "address": "CAMINO NOS A LOS MORROS 565 F",
+    "comuna": "SAN BERNARDO",
+    "region": "XIII REGIÓN METROPOLITANA"
+  }
+]

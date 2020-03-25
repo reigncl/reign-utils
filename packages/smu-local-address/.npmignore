@@ -2,3 +2,6 @@
 !*.d.ts
 !*.js
 tsconfig.json
+transform-resources.js
+transform-resources.d.ts
+resources/*.csv
