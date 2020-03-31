@@ -1,11 +1,6 @@
-import { randomBytes } from "crypto";
 import url from 'url';
 import jsonwebtoken from 'jsonwebtoken';
-
-interface Token {
-  access_token?: string;
-  refresh_token?: string;
-}
+import bent from 'bent';
 
 interface OptsClientOauth2 {
   authorizationUri: string;
@@ -18,72 +13,76 @@ interface OptsClientOauth2 {
   scope?: string;
   state?: string;
   redirectUri?: string;
-  storage?: Token;
+  storage?: StorageDrive;
 }
 
-const storage = globalThis.localStorage ?? {};
-
-export const helperStateValue = (prefix: string = '') => {
-  const keyState = `${prefix}_clientoauth2_state`;
-  const state = storage[keyState];
-
-  if (state) return state;
-
-  const newState = randomBytes(16).toString('hex');
-  storage[keyState] = newState;
-
-  return newState;
-}
-
-export const helperStorage = (prefix: string = ''): Token => {
-  const resultMemory = {};
-
-  const setProp = (prop: string) => Object.defineProperty(resultMemory, prop, {
-    enumerable: true,
-    get() { return storage[`${prefix}_clientoauth2_${prop}`]; },
-    set(v) { storage[`${prefix}_clientoauth2_${prop}`] = v; },
-  });
-
-  setProp('access_token');
-  setProp('refresh_token');
-
-  return resultMemory;
-}
-
-export class ClientOAuth2 {
-  clientId?: string;
-  clientSecret?: string;
-  tokenUri: string;
-  authorizationUri: string;
-  refreshUri: string;
-  scope?: string;
-  redirectUri?: string;
+type ExchangeOption = {
+  code: string;
+  response_type: 'code';
   state?: string;
-  storage: Token | Storage;
-  currentUser: any;
-  prefixMemory: string;
+  [k: string]: any;
+};
 
+export class StorageDrive {
+  constructor(
+    private prefix: string = '',
+    private storeInstance: any = globalThis?.localStorage ?? {},
+  ) { }
+
+  getItem(keyValue: string): string | undefined {
+    return this.storeInstance[`${this.prefix}${keyValue}`] ?? undefined;
+  }
+
+  setItem(keyValue: string, value: any) {
+    this.storeInstance[`${this.prefix}${keyValue}`] = value.toString();
+  }
+}
+
+interface Token {
+  exp?: number;
+  [k: string]: any;
+}
+
+export class ClientOAuth2<T extends Token = {}> {
   private exchangeRefreshTokenMemory?: ReturnType<ClientOAuth2['runExchangeRefreshToken']>;
   private exchangeCodeMemory?: ReturnType<ClientOAuth2['runExchangeCode']>;
 
-  constructor(opts: OptsClientOauth2) {
-    this.prefixMemory = opts.prefixMemory ?? '';
-    this.clientId = opts.clientId;
-    this.clientSecret = opts.clientSecret;
-    this.tokenUri = opts.tokenUri;
-    this.authorizationUri = opts.authorizationUri;
-    this.refreshUri = opts.refreshUri ?? this.tokenUri;
-    this.scope = opts.scope;
-    this.redirectUri = opts.redirectUri ?? globalThis?.location?.href;
-    this.state = opts.state ?? helperStateValue(this.prefixMemory);
-    this.storage = opts.storage ?? helperStorage(this.prefixMemory);
-    if (this.storage.access_token) {
-      this.currentUser = jsonwebtoken.decode(this.storage.access_token);
+  constructor(
+    private opts: OptsClientOauth2,
+  ) { }
+
+  readonly prefixMemory = this.opts.prefixMemory ?? undefined;
+  readonly storage = new StorageDrive(this.prefixMemory);
+  readonly clientId = this.opts.clientId;
+  readonly clientSecret = this.opts.clientSecret;
+  readonly tokenUri = this.opts.tokenUri;
+  readonly authorizationUri = this.opts.authorizationUri;
+  readonly refreshUri = this.opts.refreshUri ?? this.tokenUri;
+  public scope = this.opts.scope;
+  readonly redirectUri = this.opts.redirectUri;
+  readonly state = this.opts.state ?? (() => {
+    const prevState = this.storage.getItem('state');
+
+    if (prevState) return prevState;
+
+    const nextState = Math.floor(Math.random() * 10 ** 17).toString();
+
+    this.storage.setItem('state', nextState);
+
+    return nextState;
+  })();
+
+  private _currentUser = (() => {
+    const accessToken = this.storage.getItem('access_token');
+    if (accessToken) {
+      return jsonwebtoken.decode(accessToken) as T;
     }
-  }
+  })();
+
+  get currentUser() { return this._currentUser; }
 
   getAutorizationUri() {
-    const { query, auth, host, path, href, ...urlParsed } = url.parse(this.authorizationUri, true);
+    const { query, auth, host, path, href, ...urlParsed } = url.parse(this.authorizationUri, true, true);
 
     const paramsQuery = {
       response_type: 'code',
@@ -105,16 +104,20 @@ export class ClientOAuth2 {
   }
 
   async getToken() {
-    if (this.storage.access_token) {
-      const dataToken = jsonwebtoken.decode(this.storage.access_token) as { [k: string]: any };
+    const accessToken = this.storage.getItem('access_token');
 
-      const timeNextRefresh = (dataToken?.exp * 1000) - 30000;
+    if (accessToken) {
+      const dataToken = jsonwebtoken.decode(accessToken) as T;
 
-      if (timeNextRefresh < Date.now()) {
-        await this.exchangeRefreshToken();
+      if (typeof dataToken?.exp === 'number') {
+        const timeNextRefresh = ((dataToken.exp ?? 1) * 1000) - 30000;
+
+        if (timeNextRefresh < Date.now()) {
+          await this.exchangeRefreshToken();
+        }
       }
 
-      return this.storage.access_token;
+      return this.storage.getItem('access_token');
     }
   }
 
@@ -123,47 +126,39 @@ export class ClientOAuth2 {
       return this.exchangeRefreshTokenMemory;
     }
 
-    const p = this.runExchangeRefreshToken();
-    p
+    const promise = this.runExchangeRefreshToken();
+
+    promise
       .then(res => {
-        this.currentUser = jsonwebtoken.decode(res.access_token);
-        this.storage.access_token = res.access_token;
-        this.storage.refresh_token = res.refresh_token;
+        this._currentUser = jsonwebtoken.decode(res.access_token) as T;
+        this.storage.setItem('access_token', res.access_token);
+        this.storage.setItem('refresh_token', res.refresh_token);
       })
       .finally(() => {
         this.exchangeRefreshTokenMemory = undefined;
       });
-    this.exchangeRefreshTokenMemory = p;
+
+    this.exchangeRefreshTokenMemory = promise;
     return this.exchangeRefreshTokenMemory;
   }
 
   private async runExchangeRefreshToken() {
-    const res = await fetch(this.refreshUri, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
+    const body: any = await bent(this.refreshUri, 'json', 'POST', 201)(
+      '',
+      {
         grant_type: 'refresh_token',
-        refresh_token: this.storage.refresh_token,
+        refresh_token: this.storage.getItem('refresh_token'),
         // scope: this.storage.scope,
         client_id: this.clientId,
         client_secret: this.clientSecret,
-      }),
-    });
-
-    const body = await res.json();
+      },
+    );
 
     const token_type: string = body.token_type;
     const expires_in: number = body.expires_in;
     const access_token: string = body.access_token;
     const scope: string = body.scope;
     const refresh_token: string = body.refresh_token;
-
-    if (!res.status.toString().startsWith('2')) {
-      const body = await res.json();
-      throw new Error(body?.error?.message);
-    }
 
     return {
       token_type,
@@ -179,42 +174,34 @@ export class ClientOAuth2 {
       return this.exchangeCodeMemory;
     }
 
-    const p = this.runExchangeCode(code);
-    p
+    const promise = this.runExchangeCode(code);
+
+    promise
       .then((res) => {
-        this.currentUser = jsonwebtoken.decode(res.access_token);
-        this.storage.access_token = res.access_token;
-        this.storage.refresh_token = res.refresh_token;
+        this._currentUser = jsonwebtoken.decode(res.access_token) as T;
+        this.storage.setItem('access_token', res.access_token);
+        this.storage.setItem('refresh_token', res.refresh_token);
       })
       .finally(() => {
         this.exchangeCodeMemory = undefined;
       });
-    this.exchangeCodeMemory = p;
+
+    this.exchangeCodeMemory = promise;
 
     return this.exchangeCodeMemory;
   }
 
   private async runExchangeCode(code: string) {
-    const res = await fetch(this.tokenUri, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
+    const body: any = await bent(this.tokenUri, 'json', 'POST', 201)(
+      '',
+      {
         grant_type: 'authorization_code',
         code: code,
         client_id: this.clientId,
         client_secret: this.clientSecret,
         redirect_uri: this.redirectUri,
-      }),
-    });
-
-    if (!res.status.toString().startsWith('2')) {
-      const body = await res.json();
-      throw new Error(body?.error?.message);
-    }
-
-    const body = await res.json();
+      },
+    );
 
     const token_type: string = body.token_type;
     const expires_in: number = body.expires_in;
@@ -228,6 +215,21 @@ export class ClientOAuth2 {
       access_token,
       scope,
       refresh_token,
+    }
+  }
+
+  exchange(opts: ExchangeOption) {
+    const { response_type, state, code } = opts;
+
+    if (state) {
+      if (this.state !== state) {
+        throw new Error(`State not match`);
+      }
+    }
+
+    switch (response_type) {
+      case 'code': return this.exchangeCode(code);
+      default: throw new Error(`Response type ${opts.response_type} is not valid`);
     }
   }
 }

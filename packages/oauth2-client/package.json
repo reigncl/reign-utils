@@ -6,7 +6,10 @@
         "prepublish": "tsc"
     },
     "dependencies": {
-        "jsonwebtoken": "^8.5.1"
+        "@types/bent": "^7.0.2",
+        "bent": "^7.1.2",
+        "jsonwebtoken": "^8.5.1",
+        "ms": "^2.1.2"
     },
     "devDependencies": {
         "@types/jsonwebtoken": "^8.3.5",
