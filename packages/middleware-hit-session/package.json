@@ -1,0 +1,22 @@
+{
+  "name": "@reignmodule/middleware-hit-session",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@reignmodule/express-utils": "^2.0.0",
+    "geoip-lite": "^1.4.1",
+    "on-finished": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.4",
+    "@types/geoip-lite": "^1.1.31",
+    "@types/on-finished": "^2.3.1",
+    "typescript": "^3.8.3"
+  }
+}
