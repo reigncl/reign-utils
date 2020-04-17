@@ -1,5 +1,5 @@
 import { createServer, IncomingMessage, get, Server } from "http";
-import { middlewareHitSession } from '../index';
+import { middlewareHitSession, setRouterName } from '../index';
 import { spy } from 'sinon';
 import express from 'express';
 
@@ -7,7 +7,10 @@ describe("native nodejs", () => {
   const sp = spy();
   const server = createServer((req, res) => {
     middlewareHitSession(sp)(req, res);
-    res.end();
+    setRouterName('custon name')(req);
+    setTimeout(() => {
+      res.end();
+    }, 300);
   });
 
   before(() => {
@@ -36,6 +39,7 @@ describe('express', () => {
 
   serverExpress
     .use(middlewareHitSession(sp))
+    .use(setRouterName('path:test'))
     .get('/test', (req, res) => setTimeout(() => res.json({}), 300));
 
   before(() => {

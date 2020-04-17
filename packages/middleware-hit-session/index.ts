@@ -12,7 +12,14 @@ export const userAgentToPlatform = (userAgent?: string) => {
   }
 }
 
-export const getRouteName = (req: any): string | undefined => req?.[Symbol.for('route-name')];
+export const routerName = Symbol('route-name');
+
+export const getRouteName = (req: any): string | undefined => req?.[routerName];
+
+export const setRouterName = (routerNameVal: string) => (req: any, res?: any, next?: any) => {
+  req[routerName] = routerNameVal;
+  next?.();
+};
 
 const getHit = (req: IncomingMessage) => {
   const ip = req.headers['x-forwarded-for'] as string;
@@ -54,7 +61,7 @@ const getHit = (req: IncomingMessage) => {
 export const middlewareHitSession = (cb?: (res: ReturnType<typeof getHit>) => void) => {
   return (req: IncomingMessage, res: any, next?: any) => {
     const t = Date.now();
-    
+
     const hit = getHit(req);
 
     if (cb ?? false) {
