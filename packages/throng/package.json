@@ -1,6 +1,6 @@
 {
   "name": "@reignmodule/throng",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Worker Threads",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/reigndesign/reigndesign-utils.git"
+    "url": "git+https://github.com/reigndesign/reigndesign-utils.git",
+    "directory": "packages/throng"
   },
   "bugs": {
     "url": "https://github.com/reigndesign/reigndesign-utils/issues"
