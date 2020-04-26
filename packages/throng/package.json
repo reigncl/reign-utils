@@ -22,7 +22,7 @@
   "author": "Reign (https://www.reigndesign.com/)",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^12.11.1",
-    "typescript": "^3.6.4"
+    "@types/node": "^12.12.37",
+    "typescript": "^3.8.3"
   }
 }
