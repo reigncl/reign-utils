@@ -66,7 +66,8 @@ export const middlewareHitSession = (cb?: (res: ReturnType<typeof getHit>) => vo
 
     if (cb ?? false) {
       onFinished(res, (err) => {
-        console.log(err);
+        if (err) console.error(err);
+
         hit["response-time"] = Date.now() - t;
         hit.routeName = getRouteName(req) ?? hit.path;
         hit.statusCode = res.statusCode;
