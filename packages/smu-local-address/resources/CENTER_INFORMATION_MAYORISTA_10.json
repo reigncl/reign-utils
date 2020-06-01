@@ -1,0 +1,596 @@
+[
+  {
+    "storeId": "3017",
+    "format": "MAYORISTA 10",
+    "name": "M10 OVALLE I",
+    "address": "BENAVENTE 427",
+    "location": "Ovalle",
+    "region": "IV Región de Coquimbo",
+    "_REGION_ID_NUM": "4"
+  },
+  {
+    "storeId": "3008",
+    "format": "MAYORISTA 10",
+    "name": "M10 VALPARAISO",
+    "address": "PEDRO MONTT 2585",
+    "location": "Valparaiso",
+    "region": "V Región de Valparaíso",
+    "_REGION_ID_NUM": "5"
+  },
+  {
+    "storeId": "3020",
+    "format": "MAYORISTA 10",
+    "name": "M10 LOS ANGELES",
+    "address": "AVDA SOR VECENTA 2141",
+    "location": "Los Angeles",
+    "region": "VIII Región del Bío-Bío",
+    "_REGION_ID_NUM": "8"
+  },
+  {
+    "storeId": "3014",
+    "format": "MAYORISTA 10",
+    "name": "M10 SAN FERNANDO",
+    "address": "CHILLAN 745",
+    "location": "San Fernando",
+    "region": "VI Región del Libertador General Bernardo O Higgins",
+    "_REGION_ID_NUM": "6"
+  },
+  {
+    "storeId": "3043",
+    "format": "MAYORISTA 10",
+    "name": "M10 SAN BERNARDO II",
+    "address": "BULNES 550",
+    "location": "San Bernardo",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3059",
+    "format": "MAYORISTA 10",
+    "name": "M10 PORTALES",
+    "address": "PORTALES ORIENTE 1701",
+    "location": "San Bernardo",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3047",
+    "format": "MAYORISTA 10",
+    "name": "M10 VALDIVIA",
+    "address": "PICARTE 2593",
+    "location": "Valdivia",
+    "region": "XIV Región de Los Ríos",
+    "_REGION_ID_NUM": "14"
+  },
+  {
+    "storeId": "3168",
+    "format": "MAYORISTA 10",
+    "name": "M10 TEMUCO V",
+    "address": "MIRAFLORES 1230",
+    "location": "Temuco",
+    "region": "IX Región de la Araucanía",
+    "_REGION_ID_NUM": "9"
+  },
+  {
+    "storeId": "3021",
+    "format": "MAYORISTA 10",
+    "name": "M10 RANCAGUA II",
+    "address": "AVDA BRASIL 1016",
+    "location": "Rancagua",
+    "region": "VI Región del Libertador General Bernardo O Higgins",
+    "_REGION_ID_NUM": "6"
+  },
+  {
+    "storeId": "3169",
+    "format": "MAYORISTA 10",
+    "name": "M10 LINARES",
+    "address": "BRASIL 646-648",
+    "location": "Linares",
+    "region": "VII Región del Maule",
+    "_REGION_ID_NUM": "7"
+  },
+  {
+    "storeId": "3032",
+    "format": "MAYORISTA 10",
+    "name": "M10 SAN PABLO II",
+    "address": "AVDA SAN PABLO 8537",
+    "location": "Pudahuel",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3035",
+    "format": "MAYORISTA 10",
+    "name": "M10 JM CARO",
+    "address": "BUENAVENTURA CA CENTRAL",
+    "location": "Lo Espejo",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3037",
+    "format": "MAYORISTA 10",
+    "name": "M10 LA UNION",
+    "address": "ESMERALDA 751",
+    "location": "La Union",
+    "region": "XIV Región de Los Ríos",
+    "_REGION_ID_NUM": "14"
+  },
+  {
+    "storeId": "3007",
+    "format": "MAYORISTA 10",
+    "name": "M10 EL BELLOTO",
+    "address": "BADEN POWELL 36 EL BELLOTO",
+    "location": "Quilpue",
+    "region": "V Región de Valparaíso",
+    "_REGION_ID_NUM": "5"
+  },
+  {
+    "storeId": "3003",
+    "format": "MAYORISTA 10",
+    "name": "M10 PUERTO MONTT",
+    "address": "PRESIDENTE IBAÑEZ 316",
+    "location": "Puerto Montt",
+    "region": "X Región de Los Lagos",
+    "_REGION_ID_NUM": "10"
+  },
+  {
+    "storeId": "3051",
+    "format": "MAYORISTA 10",
+    "name": "M10 PAJARITOS II",
+    "address": "GLADYS MARIN 6664",
+    "location": "Estacion Central",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3064",
+    "format": "MAYORISTA 10",
+    "name": "M10 SAN DIEGO",
+    "address": "SAN DIEGO 2115",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3001",
+    "format": "MAYORISTA 10",
+    "name": "M10 CURICO",
+    "address": "CAMILO HENRIQUEZ 898",
+    "location": "Curico",
+    "region": "VII Región del Maule",
+    "_REGION_ID_NUM": "7"
+  },
+  {
+    "storeId": "3162",
+    "format": "MAYORISTA 10",
+    "name": "M10 PUENTE ALTO ll",
+    "address": "AVDA CONCHA Y TORO 4115",
+    "location": "Puente Alto",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3030",
+    "format": "MAYORISTA 10",
+    "name": "M10 EYZAGUIRRE",
+    "address": "EYZAGUIRRE 3208",
+    "location": "Puente Alto",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3019",
+    "format": "MAYORISTA 10",
+    "name": "M10 ANGOL",
+    "address": "AVDA. OHHIGGINS 1815",
+    "location": "Angol",
+    "region": "IX Región de la Araucanía",
+    "_REGION_ID_NUM": "9"
+  },
+  {
+    "storeId": "3041",
+    "format": "MAYORISTA 10",
+    "name": "M10 SAN FELIPE",
+    "address": "SANTO DOMINGO 111",
+    "location": "San Felipe",
+    "region": "V Región de Valparaíso",
+    "_REGION_ID_NUM": "5"
+  },
+  {
+    "storeId": "3026",
+    "format": "MAYORISTA 10",
+    "name": "M10 CHILLAN ARTURO PRAT",
+    "address": "ARTURO PRAT 879",
+    "location": "Chillan",
+    "region": "VIII Región del Bío-Bío",
+    "_REGION_ID_NUM": "8"
+  },
+  {
+    "storeId": "3045",
+    "format": "MAYORISTA 10",
+    "name": "M10 OVALLE II",
+    "address": "VICTORIA 435",
+    "location": "Ovalle",
+    "region": "IV Región de Coquimbo",
+    "_REGION_ID_NUM": "4"
+  },
+  {
+    "storeId": "3044",
+    "format": "MAYORISTA 10",
+    "name": "M10 SAN VICENTE",
+    "address": "AV ESPAÑA ESQ GENARO LISBOA",
+    "location": "San Vicente",
+    "region": "VI Región del Libertador General Bernardo O Higgins",
+    "_REGION_ID_NUM": "6"
+  },
+  {
+    "storeId": "3058",
+    "format": "MAYORISTA 10",
+    "name": "M10 SAN LUIS",
+    "address": "SAN LUIS MACUL 5171",
+    "location": "Macul",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3023",
+    "format": "MAYORISTA 10",
+    "name": "M10 LOS ANDES",
+    "address": "AVDA.SANTA TERESA 254",
+    "location": "Los Andes",
+    "region": "V Región de Valparaíso",
+    "_REGION_ID_NUM": "5"
+  },
+  {
+    "storeId": "3170",
+    "format": "MAYORISTA 10",
+    "name": "M10 21 DE MAYO",
+    "address": "CALLE 21 DE MAYO 819",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3009",
+    "format": "MAYORISTA 10",
+    "name": "M10 MAIPU",
+    "address": "5 DE ABRIL 338",
+    "location": "Maipu",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3055",
+    "format": "MAYORISTA 10",
+    "name": "M10 ROJAS MAGALLANES",
+    "address": "ROJAS MAGALLANES 1856",
+    "location": "La Florida",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3068",
+    "format": "MAYORISTA 10",
+    "name": "M10 RANCAGUA III",
+    "address": "AV BRASIL 1064",
+    "location": "Rancagua",
+    "region": "VI Región del Libertador General Bernardo O Higgins",
+    "_REGION_ID_NUM": "6"
+  },
+  {
+    "storeId": "3031",
+    "format": "MAYORISTA 10",
+    "name": "M10 COLINA",
+    "address": "GENERAL SAN MARTIN 381",
+    "location": "Colina",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3052",
+    "format": "MAYORISTA 10",
+    "name": "M10 LA TRAVESIA",
+    "address": "TENIENTE CRUZ 530",
+    "location": "Pudahuel",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3046",
+    "format": "MAYORISTA 10",
+    "name": "M10 VICUÑA MACKENNA",
+    "address": "AVDA SERAFIN ZAMORA 127",
+    "location": "La Florida",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3057",
+    "format": "MAYORISTA 10",
+    "name": "M10 MARATHON",
+    "address": "MARATHON 3073",
+    "location": "Macul",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3160",
+    "format": "MAYORISTA 10",
+    "name": "M10 MAIPU III",
+    "address": "CAMINO A MELIPILLA 18400",
+    "location": "Maipu",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3013",
+    "format": "MAYORISTA 10",
+    "name": "M10 SAN BERNARDO I",
+    "address": "AV PORTALES ESQ GRAL URRUT 244",
+    "location": "San Bernardo",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3062",
+    "format": "MAYORISTA 10",
+    "name": "M10 GABRIELA",
+    "address": "GABRIELA ORIENTE 0651",
+    "location": "Puente Alto",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3015",
+    "format": "MAYORISTA 10",
+    "name": "M10 LA CISTERNA",
+    "address": "GRAN AVENIDA 9150",
+    "location": "La Cisterna",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3029",
+    "format": "MAYORISTA 10",
+    "name": "M10 LA FLORIDA",
+    "address": "SAN JOSE DE LA ESTRELLA 1392",
+    "location": "La Florida",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3049",
+    "format": "MAYORISTA 10",
+    "name": "M10 VILLA ALEMANA",
+    "address": "AVENIDA VALPARAISO 517",
+    "location": "Villa Alemana",
+    "region": "V Región de Valparaíso",
+    "_REGION_ID_NUM": "5"
+  },
+  {
+    "storeId": "3010",
+    "format": "MAYORISTA 10",
+    "name": "M10 PAJARITOS",
+    "address": "AVDA GLADYS MARIN 6480",
+    "location": "Estacion Central",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3164",
+    "format": "MAYORISTA 10",
+    "name": "M10 CONCEPCION",
+    "address": "LOS CARRERA N 637",
+    "location": "Concepcion",
+    "region": "VIII Región del Bío-Bío",
+    "_REGION_ID_NUM": "8"
+  },
+  {
+    "storeId": "3063",
+    "format": "MAYORISTA 10",
+    "name": "M10 SAN MARTIN",
+    "address": "SAN MARTIN 426 - 460",
+    "location": "San Bernardo",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3061",
+    "format": "MAYORISTA 10",
+    "name": "M10 GRAN AVENIDA",
+    "address": "GRAN AVENIDA 6060",
+    "location": "San Miguel",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3053",
+    "format": "MAYORISTA 10",
+    "name": "M10 CERRILLOS",
+    "address": "AMERICO VESPUCIO 1601",
+    "location": "Cerrillos",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3024",
+    "format": "MAYORISTA 10",
+    "name": "M10 PEÑAFLOR",
+    "address": "21 DE MAYO 4287",
+    "location": "Peñaflor",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3166",
+    "format": "MAYORISTA 10",
+    "name": "M10 HUALPEN II",
+    "address": "NUEVA IMPERIAL 133",
+    "location": "Hualpen",
+    "region": "VIII Región del Bío-Bío",
+    "_REGION_ID_NUM": "8"
+  },
+  {
+    "storeId": "3027",
+    "format": "MAYORISTA 10",
+    "name": "M10 CHILLAN I RIQUELME",
+    "address": "ISABEL RIQUELME 959",
+    "location": "Chillan",
+    "region": "VIII Región del Bío-Bío",
+    "_REGION_ID_NUM": "8"
+  },
+  {
+    "storeId": "3042",
+    "format": "MAYORISTA 10",
+    "name": "M10 LA CALERA",
+    "address": "CARRERA 949",
+    "location": "La Calera",
+    "region": "V Región de Valparaíso",
+    "_REGION_ID_NUM": "5"
+  },
+  {
+    "storeId": "3033",
+    "format": "MAYORISTA 10",
+    "name": "M10 SAN JOAQUIN",
+    "address": "LLICO 456",
+    "location": "San Joaquin",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3028",
+    "format": "MAYORISTA 10",
+    "name": "M10 LO PRADO",
+    "address": "SAN PABLO 6702",
+    "location": "Lo Prado",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3048",
+    "format": "MAYORISTA 10",
+    "name": "M10 SAN ANTONIO",
+    "address": "PEDRO MONTT 148  -  166",
+    "location": "San Antonio",
+    "region": "V Región de Valparaíso",
+    "_REGION_ID_NUM": "5"
+  },
+  {
+    "storeId": "3022",
+    "format": "MAYORISTA 10",
+    "name": "M10 TEMUCO II",
+    "address": "PEDRO DE VALDIVIA 02285",
+    "location": "Temuco",
+    "region": "IX Región de la Araucanía",
+    "_REGION_ID_NUM": "9"
+  },
+  {
+    "storeId": "3143",
+    "format": "MAYORISTA 10",
+    "name": "M10 TEMUCO IV",
+    "address": "FRANCISCO SALAZAR  1650",
+    "location": "Temuco",
+    "region": "IX Región de la Araucanía",
+    "_REGION_ID_NUM": "9"
+  },
+  {
+    "storeId": "3036",
+    "format": "MAYORISTA 10",
+    "name": "M10 HUALPEN",
+    "address": "COLON 7948",
+    "location": "Hualpen",
+    "region": "VIII Región del Bío-Bío",
+    "_REGION_ID_NUM": "8"
+  },
+  {
+    "storeId": "3056",
+    "format": "MAYORISTA 10",
+    "name": "M10 STA ROSA",
+    "address": "SANTA ROSA 7576",
+    "location": "La Granja",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3039",
+    "format": "MAYORISTA 10",
+    "name": "M10 RECOLETA",
+    "address": "EL SALTO 2506",
+    "location": "Recoleta",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3040",
+    "format": "MAYORISTA 10",
+    "name": "M10 TEMUCO III",
+    "address": "AVENIDA PINTO 172",
+    "location": "Temuco",
+    "region": "IX Región de la Araucanía",
+    "_REGION_ID_NUM": "9"
+  },
+  {
+    "storeId": "3054",
+    "format": "MAYORISTA 10",
+    "name": "M10 CAMILO HENRIQUEZ",
+    "address": "CAMILO HENRIQUEZ 5239",
+    "location": "Puente Alto",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3167",
+    "format": "MAYORISTA 10",
+    "name": "M10 TOME",
+    "address": "IGNACIO SERRANO 908",
+    "location": "Tome",
+    "region": "VIII Región del Bío-Bío",
+    "_REGION_ID_NUM": "8"
+  },
+  {
+    "storeId": "3038",
+    "format": "MAYORISTA 10",
+    "name": "M10 MAIPU II",
+    "address": "2 NORTE 1373",
+    "location": "Maipu",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3163",
+    "format": "MAYORISTA 10",
+    "name": "M10 CAÑETE",
+    "address": "SAAVEDRA 955",
+    "location": "Cañete",
+    "region": "VIII Región del Bío-Bío",
+    "_REGION_ID_NUM": "8"
+  },
+  {
+    "storeId": "3018",
+    "format": "MAYORISTA 10",
+    "name": "M10 BUIN",
+    "address": "AVDA MANUEL RODRIGUEZ  312",
+    "location": "Buin",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3069",
+    "format": "MAYORISTA 10",
+    "name": "M10 SANTA CRUZ",
+    "address": "SAN FURGO 66",
+    "location": "Santa Cruz",
+    "region": "VI Región del Libertador General Bernardo O Higgins",
+    "_REGION_ID_NUM": "6"
+  },
+  {
+    "storeId": "3034",
+    "format": "MAYORISTA 10",
+    "name": "M10 RENGO",
+    "address": "ARTURO PRAT 607",
+    "location": "Rengo",
+    "region": "VI Región del Libertador General Bernardo O Higgins",
+    "_REGION_ID_NUM": "6"
+  }
+]

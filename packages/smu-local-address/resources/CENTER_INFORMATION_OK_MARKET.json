@@ -1,0 +1,1145 @@
+[
+  {
+    "storeId": "985",
+    "format": "OK MARKET",
+    "name": "OKM APOQUINDO",
+    "address": "AVDA APOQUINDO 3039",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "163",
+    "format": "OK MARKET",
+    "name": "OKM UNAB CASONA",
+    "address": "FERNANDEZ CONCHA 700",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "135",
+    "format": "OK MARKET",
+    "name": "OKM SUCRE",
+    "address": "SALVADOR 1866",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "950",
+    "format": "OK MARKET",
+    "name": "OKM ESCUELA MILITAR",
+    "address": "AV APOQUINDO  4554",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "989",
+    "format": "OK MARKET",
+    "name": "OKM TOESCA",
+    "address": "TOESCA 1844",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "701",
+    "format": "OK MARKET",
+    "name": "OKM IRARRAZAVAL",
+    "address": "AV IRARRAZAVAL 4949 LOCAL 6",
+    "location": "Ñuñoa",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "614",
+    "format": "OK MARKET",
+    "name": "OKM CASTILLO VELASCO",
+    "address": "CASTILLO VELASCO 5500",
+    "location": "Ñuñoa",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "647",
+    "format": "OK MARKET",
+    "name": "OKM ELIECER PARADA",
+    "address": "AV TOBALABA  4507  LOCAL 6",
+    "location": "Ñuñoa",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "676",
+    "format": "OK MARKET",
+    "name": "OKM MIDDLETON",
+    "address": "MIDDLETON 1690",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "596",
+    "format": "OK MARKET",
+    "name": "OKM TOBALABA",
+    "address": "NUEVA PROVIDENCIA 2671  LOCAL",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "793",
+    "format": "OK MARKET",
+    "name": "OKM BARROS",
+    "address": "BARROS ARANA 1557",
+    "location": "Concepcion",
+    "region": "VIII Región del Bío-Bío",
+    "_REGION_ID_NUM": "8"
+  },
+  {
+    "storeId": "127",
+    "format": "OK MARKET",
+    "name": "OKM ROSARIO SUR",
+    "address": "APOQUINDO 5697",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "137",
+    "format": "OK MARKET",
+    "name": "OKM JOSE DOMINGO CAÑAS",
+    "address": "JOSE DOMINGO CAÑAS 2151",
+    "location": "Ñuñoa",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "145",
+    "format": "OK MARKET",
+    "name": "OKM ABDON CIFUENTES",
+    "address": "ALAMEDA 2168",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "136",
+    "format": "OK MARKET",
+    "name": "OKM ELEUTERIO RAMIREZ",
+    "address": "SAN FRANCISCO  355",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "648",
+    "format": "OK MARKET",
+    "name": "OKM SUECIA",
+    "address": "SUECIA 361",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "160",
+    "format": "OK MARKET",
+    "name": "OKM JANUARIO OVALLE",
+    "address": "JANUARIO OVALLE 362",
+    "location": "Zapallar",
+    "region": "V Región de Valparaíso",
+    "_REGION_ID_NUM": "5"
+  },
+  {
+    "storeId": "567",
+    "format": "OK MARKET",
+    "name": "OKM QUINCHAMALI",
+    "address": "AV LAS CONDES 14151",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "609",
+    "format": "OK MARKET",
+    "name": "OKM CARMEN SYLVA",
+    "address": "CARMEN SILVA 606",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "991",
+    "format": "OK MARKET",
+    "name": "OKM MAYOR ABE",
+    "address": "AV MACUL 2841",
+    "location": "Macul",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "144",
+    "format": "OK MARKET",
+    "name": "OKM H. DE MAGALLANES",
+    "address": "CRISTOBAL COLON 6560",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "114",
+    "format": "OK MARKET",
+    "name": "OKM LA CONCEPCION",
+    "address": "LA CONCEPCION 145 LOCAL 3",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "134",
+    "format": "OK MARKET",
+    "name": "OKM MORANDE",
+    "address": "MORANDE   603",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "990",
+    "format": "OK MARKET",
+    "name": "OKM MARCOLETA",
+    "address": "DIAGONAL PARAGUAY 406 LOCAL 1A",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "112",
+    "format": "OK MARKET",
+    "name": "OKM PLAZA EGAÑA",
+    "address": "AVDA IRARRAZAVAL 5612",
+    "location": "Ñuñoa",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "678",
+    "format": "OK MARKET",
+    "name": "OKM MARCHANT PEREIRA",
+    "address": "MARCHANT PEREIRA 150 LOCAL 1 Y",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "692",
+    "format": "OK MARKET",
+    "name": "OKM BENJAMIN RIESCO",
+    "address": "BENJAMIN RIESCO 2965",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "156",
+    "format": "OK MARKET",
+    "name": "OKM MANUEL MONTT",
+    "address": "MANUEL MONTT 434",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "499",
+    "format": "OK MARKET",
+    "name": "OKM MANQUEHUE",
+    "address": "AV MANQUEHUE SUR 1581",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "148",
+    "format": "OK MARKET",
+    "name": "OKM SOTERO DEL RIO",
+    "address": "SOTERIO DEL RIO 322",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "570",
+    "format": "OK MARKET",
+    "name": "OKM ISIDORA",
+    "address": "ISIDORA GOYENECHEA 3601",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "140",
+    "format": "OK MARKET",
+    "name": "OKM METRO PLAZA MAIPU",
+    "address": "AVDA PAJARITOS 1921",
+    "location": "Maipu",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "986",
+    "format": "OK MARKET",
+    "name": "OKM METRO COLON",
+    "address": "TOBALABA 1375",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "143",
+    "format": "OK MARKET",
+    "name": "OKM SERRANO",
+    "address": "SERRANO  294",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "118",
+    "format": "OK MARKET",
+    "name": "OKM BORGOÑO",
+    "address": "AVDA BORGOÑO 14768",
+    "location": "Viña del Mar",
+    "region": "V Región de Valparaíso",
+    "_REGION_ID_NUM": "5"
+  },
+  {
+    "storeId": "618",
+    "format": "OK MARKET",
+    "name": "OKM JORGE MATTE",
+    "address": "JORGE MATTE 2645-2649-2655",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "141",
+    "format": "OK MARKET",
+    "name": "OKM CHAMISERO",
+    "address": "AVDA CHAMISERO 10290",
+    "location": "Colina",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "999",
+    "format": "OK MARKET",
+    "name": "OKM MALL ARAUCO MAIPU",
+    "address": "AVDA AMERICO VESPUCIO 399 LOCA",
+    "location": "Maipu",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "152",
+    "format": "OK MARKET",
+    "name": "OKM PEDRO DE VALDIVIA",
+    "address": "PEDRO DE VALDIVIA  3774",
+    "location": "Ñuñoa",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "680",
+    "format": "OK MARKET",
+    "name": "OKM NUEVA LAS CONDES",
+    "address": "AV PRESIDENTE RIESCO 5561 LOCA",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "565",
+    "format": "OK MARKET",
+    "name": "OKM MACUL",
+    "address": "AV MACUL 3430 LOCAL 2",
+    "location": "Macul",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "126",
+    "format": "OK MARKET",
+    "name": "OKM PORTUGAL",
+    "address": "PORTUGAL 277",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "120",
+    "format": "OK MARKET",
+    "name": "OKM REPUBLICA",
+    "address": "REPUBLICA 48",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "497",
+    "format": "OK MARKET",
+    "name": "OKM EL BOSQUE",
+    "address": "AV EL BOSQUE NORTE 421 I GOYEN",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "157",
+    "format": "OK MARKET",
+    "name": "OKM HAMBURGO",
+    "address": "AV TOBALABA 5151, LOCAL 107",
+    "location": "Ñuñoa",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "138",
+    "format": "OK MARKET",
+    "name": "OKM ALONSO DE CAMARGO",
+    "address": "HERNANDO DE MAGALLANES  1275",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "594",
+    "format": "OK MARKET",
+    "name": "OKM NORUEGA",
+    "address": "AV APOQUINDO 6314",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "667",
+    "format": "OK MARKET",
+    "name": "OKM LUIS CARRERA",
+    "address": "LUIS CARRERA 2247",
+    "location": "Vitacura",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "630",
+    "format": "OK MARKET",
+    "name": "OKM BROWN NORTE",
+    "address": "AV IRARRAZAVAL 3674",
+    "location": "Ñuñoa",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "479",
+    "format": "OK MARKET",
+    "name": "OKM CACHAGUA",
+    "address": "CACHAGUA 100",
+    "location": "Zapallar",
+    "region": "V Región de Valparaíso",
+    "_REGION_ID_NUM": "5"
+  },
+  {
+    "storeId": "165",
+    "format": "OK MARKET",
+    "name": "OKM UNAB VIÑA",
+    "address": "QUILLOTA 910",
+    "location": "Viña del Mar",
+    "region": "V Región de Valparaíso",
+    "_REGION_ID_NUM": "5"
+  },
+  {
+    "storeId": "568",
+    "format": "OK MARKET",
+    "name": "OKM EL RODEO",
+    "address": "AV LA DEHESA 2035 LOCAL 3 Y 4",
+    "location": "Lo Barnechea",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "695",
+    "format": "OK MARKET",
+    "name": "OKM NUEVA PROVIDENCIA",
+    "address": "AVDA PEDRO DE VALDIVIA 18",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "690",
+    "format": "OK MARKET",
+    "name": "OKM LOS INGLESES",
+    "address": "CAMINO CHICUREO KM 2 S/N",
+    "location": "Colina",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "617",
+    "format": "OK MARKET",
+    "name": "OKM MANUEL DE LA LASTRA",
+    "address": "ALCALDE MANUEL DE LA LASTRA 25",
+    "location": "La Reina",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "563",
+    "format": "OK MARKET",
+    "name": "OKM CHICUREO",
+    "address": "AV CHICUREO LOTEO 2-C3 LOCAL D",
+    "location": "Colina",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "606",
+    "format": "OK MARKET",
+    "name": "OKM SUBCENTRO",
+    "address": "AV APOQUINDO  4411",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "635",
+    "format": "OK MARKET",
+    "name": "OKM CIUDAD EMPRESARIAL",
+    "address": "AV SANTA CLARA  354  LOCAL 102",
+    "location": "Huechuraba",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "495",
+    "format": "OK MARKET",
+    "name": "OKM ISABEL LA CATOLICA",
+    "address": "AV AMERICO VESPUCIO SUR 1463",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "951",
+    "format": "OK MARKET",
+    "name": "OKM PROVIDENCIA",
+    "address": "AV PROVIDENCIA 381",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "490",
+    "format": "OK MARKET",
+    "name": "OKM SANTA BLANCA",
+    "address": "AV JOSE ALCALDE DELANO 11293",
+    "location": "Lo Barnechea",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "696",
+    "format": "OK MARKET",
+    "name": "OKM COQUIMBO",
+    "address": "VICUÑA MACKENNA 869 LOCAL 4",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "128",
+    "format": "OK MARKET",
+    "name": "OKM SIMON BOLIVAR",
+    "address": "SIMON BOLIVAR 4800 L 101 Y 102",
+    "location": "Ñuñoa",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "604",
+    "format": "OK MARKET",
+    "name": "OKM ALAMEDA",
+    "address": "ALAMEDA 1881",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "637",
+    "format": "OK MARKET",
+    "name": "OKM SAN DAMIAN",
+    "address": "AVDA LAS CONDES 11700 LOC 103B",
+    "location": "Vitacura",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "116",
+    "format": "OK MARKET",
+    "name": "OKM VECINAL",
+    "address": "VECINAL 90  A1",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "595",
+    "format": "OK MARKET",
+    "name": "OKM GENERAL DEL CANTO",
+    "address": "AV 11 DE SEPTIEMBRE 1363",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "998",
+    "format": "OK MARKET",
+    "name": "OKM STRIP LARRAIN",
+    "address": "LOS MAITENES 26  LOCAL B",
+    "location": "La Reina",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "491",
+    "format": "OK MARKET",
+    "name": "OKM REÑACA",
+    "address": "AV BORGOÑO 14410",
+    "location": "Viña del Mar",
+    "region": "V Región de Valparaíso",
+    "_REGION_ID_NUM": "5"
+  },
+  {
+    "storeId": "952",
+    "format": "OK MARKET",
+    "name": "OKM DIEGO PORTALES",
+    "address": "DIEGO PORTALES 1001",
+    "location": "Viña del Mar",
+    "region": "V Región de Valparaíso",
+    "_REGION_ID_NUM": "5"
+  },
+  {
+    "storeId": "697",
+    "format": "OK MARKET",
+    "name": "OKM LAS LILAS",
+    "address": "ELIODORO YAÑEZ  2881- 2885",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "689",
+    "format": "OK MARKET",
+    "name": "OKM MERCED",
+    "address": "SAN ANTONIO 412",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "155",
+    "format": "OK MARKET",
+    "name": "OKM TEATINOS",
+    "address": "TEATINOS 257",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "149",
+    "format": "OK MARKET",
+    "name": "OKM LA CAPITANIA",
+    "address": "LA CAPITANIA 45 ESQ APOQUINDO",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "131",
+    "format": "OK MARKET",
+    "name": "OKM EDIFICIO LAS ARTES",
+    "address": "CERRO EL PLOMO 5680 PISO 11",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "139",
+    "format": "OK MARKET",
+    "name": "OKM CHACABUCO",
+    "address": "CHACABUCO  1238 LOCAL 1",
+    "location": "Concepcion",
+    "region": "VIII Región del Bío-Bío",
+    "_REGION_ID_NUM": "8"
+  },
+  {
+    "storeId": "679",
+    "format": "OK MARKET",
+    "name": "OKM SANTA BEATRIZ",
+    "address": "SANTA BEATRIZ 44",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "147",
+    "format": "OK MARKET",
+    "name": "OKM ALMIRANTE PASTENE",
+    "address": "ALMIRANTE PASTENE 185",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "153",
+    "format": "OK MARKET",
+    "name": "OKM MALL PLAZA OESTE",
+    "address": "AV AMERICO VESPUCIO 1501 LOCAL",
+    "location": "Cerrillos",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "487",
+    "format": "OK MARKET",
+    "name": "OKM LAS CATALPAS",
+    "address": "AV  VITACURA 3303 LOCAL 2",
+    "location": "Vitacura",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "129",
+    "format": "OK MARKET",
+    "name": "OKM EXEQUIEL FERNANDEZ",
+    "address": "EXEQUIEL FERNANDEZ 115",
+    "location": "Ñuñoa",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "996",
+    "format": "OK MARKET",
+    "name": "OKM MAITENCILLO",
+    "address": "CALLE CENTRAL 928",
+    "location": "Puchuncavi",
+    "region": "V Región de Valparaíso",
+    "_REGION_ID_NUM": "5"
+  },
+  {
+    "storeId": "619",
+    "format": "OK MARKET",
+    "name": "OKM AVENIDA PERU",
+    "address": "AV PERU  805-831",
+    "location": "Recoleta",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "142",
+    "format": "OK MARKET",
+    "name": "OKM METRO CHILE ESPAÑA",
+    "address": "AVDA JOSE PEDRO ALESSANDRI 30",
+    "location": "Ñuñoa",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "987",
+    "format": "OK MARKET",
+    "name": "OKM CATEDRAL TEATINOS",
+    "address": "CATEDRAL 1288",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "796",
+    "format": "OK MARKET",
+    "name": "OKM ACACIOS",
+    "address": "LOS ACACIOS 96",
+    "location": "San Pedro de la Paz",
+    "region": "VIII Región del Bío-Bío",
+    "_REGION_ID_NUM": "8"
+  },
+  {
+    "storeId": "494",
+    "format": "OK MARKET",
+    "name": "OKM JUAN MOYA",
+    "address": "AV IRARRAZAVAL 4123 LOCAL 2",
+    "location": "Ñuñoa",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "125",
+    "format": "OK MARKET",
+    "name": "OKM SAN DIEGO",
+    "address": "SAN DIEGO  369 L1",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "150",
+    "format": "OK MARKET",
+    "name": "OKM LINCOYAN",
+    "address": "OHIGGINS 437",
+    "location": "Concepcion",
+    "region": "VIII Región del Bío-Bío",
+    "_REGION_ID_NUM": "8"
+  },
+  {
+    "storeId": "496",
+    "format": "OK MARKET",
+    "name": "OKM SAN PASCUAL",
+    "address": "AV APOQUINDO 4671",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "133",
+    "format": "OK MARKET",
+    "name": "OKM WARREN SMITH",
+    "address": "WARREN SMITH  28",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "121",
+    "format": "OK MARKET",
+    "name": "OKM LUIS THAYER OJEDA",
+    "address": "LUIS THAYER OJEDA 20",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "166",
+    "format": "OK MARKET",
+    "name": "OKM AIEP SAN JOAQUIN",
+    "address": "VICUÑA MACKENNA 4865",
+    "location": "San Joaquin",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "146",
+    "format": "OK MARKET",
+    "name": "OKM MARTIN DE ZAMORA",
+    "address": "MARTIN DE ZAMORA 5278",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "122",
+    "format": "OK MARKET",
+    "name": "OKM LAS HUALTATAS",
+    "address": "LUIS CARRERA 1330 LOCAL 4-5 Y",
+    "location": "Vitacura",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "119",
+    "format": "OK MARKET",
+    "name": "OKM MIRAFLORES",
+    "address": "MERCED 602",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "159",
+    "format": "OK MARKET",
+    "name": "OKM METRO MATTA",
+    "address": "SANTA ROSA 1080 LOC 2",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "698",
+    "format": "OK MARKET",
+    "name": "OKM SANTA ISABEL",
+    "address": "SANTA ISABEL 1131",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "173",
+    "format": "OK MARKET",
+    "name": "OKM UDLA A VARAS",
+    "address": "ANTONIO VARAS 929",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "154",
+    "format": "OK MARKET",
+    "name": "OKM TOLEDO",
+    "address": "PEDRO DE VALDIVIA 1221 - 1227",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "623",
+    "format": "OK MARKET",
+    "name": "OKM CHESTERTON",
+    "address": "CHESTERTON 8125",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "997",
+    "format": "OK MARKET",
+    "name": "OKM CARMEN - STA ISABEL",
+    "address": "CARMEN 464",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "612",
+    "format": "OK MARKET",
+    "name": "OKM ELIODORO YAÑEZ",
+    "address": "AV PROVIDENCIA  753-759-763",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "113",
+    "format": "OK MARKET",
+    "name": "OKM STRIP SAN FRANCISCO",
+    "address": "SAN FRANCISCO 521",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "615",
+    "format": "OK MARKET",
+    "name": "OKM STRIP OSSA",
+    "address": "AV OSSA 345  LOCAL 5",
+    "location": "La Reina",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "171",
+    "format": "OK MARKET",
+    "name": "OKM AIEP GRAJALES",
+    "address": "GRAJALES 2550",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "616",
+    "format": "OK MARKET",
+    "name": "OKM EYZAGUIRRE",
+    "address": "SAN DIEGO 560",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "620",
+    "format": "OK MARKET",
+    "name": "OKM ANTONIO VARAS",
+    "address": "AV ANTONIO VARAS 2284",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "492",
+    "format": "OK MARKET",
+    "name": "OKM VIÑA DEL MAR",
+    "address": "AV LIBERTAD 800",
+    "location": "Viña del Mar",
+    "region": "V Región de Valparaíso",
+    "_REGION_ID_NUM": "5"
+  },
+  {
+    "storeId": "162",
+    "format": "OK MARKET",
+    "name": "OKM UNAB REPUBLICA",
+    "address": "REPUBLICA 252",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "631",
+    "format": "OK MARKET",
+    "name": "OKM ENCOMENDEROS",
+    "address": "SAN SEBASTIAN 2701 ENCOMENDERO",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "694",
+    "format": "OK MARKET",
+    "name": "OKM NATANIEL COX",
+    "address": "TARAPACA 1324 ESQ NATANIEL COX",
+    "location": "Santiago",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "562",
+    "format": "OK MARKET",
+    "name": "OKM COLON",
+    "address": "AV CRISTOBAL COLON 4317",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "608",
+    "format": "OK MARKET",
+    "name": "OKM RECREO I",
+    "address": "MANUEL RODRIGUEZ 1701 RECREO",
+    "location": "Viña del Mar",
+    "region": "V Región de Valparaíso",
+    "_REGION_ID_NUM": "5"
+  },
+  {
+    "storeId": "668",
+    "format": "OK MARKET",
+    "name": "OKM HUINGANAL II",
+    "address": "HUINGANAL 2042",
+    "location": "Lo Barnechea",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "639",
+    "format": "OK MARKET",
+    "name": "OKM ESMERALDA",
+    "address": "ESMERALDA 1077",
+    "location": "Valparaiso",
+    "region": "V Región de Valparaíso",
+    "_REGION_ID_NUM": "5"
+  },
+  {
+    "storeId": "699",
+    "format": "OK MARKET",
+    "name": "OKM EL PARQUE",
+    "address": "AV DEL PARQUE 4023 CIUDAD EMPR",
+    "location": "Huechuraba",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "636",
+    "format": "OK MARKET",
+    "name": "OKM PLAZA ITALIA",
+    "address": "AV PROVIDENCIA  085",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "158",
+    "format": "OK MARKET",
+    "name": "OKM GRAN AVENIDA",
+    "address": "GRAN AVENIDA 5001",
+    "location": "San Miguel",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "792",
+    "format": "OK MARKET",
+    "name": "OKM VILLUCO",
+    "address": "CAMINO A CHIGUAYANTE 3857",
+    "location": "Chiguayante",
+    "region": "VIII Región del Bío-Bío",
+    "_REGION_ID_NUM": "8"
+  },
+  {
+    "storeId": "992",
+    "format": "OK MARKET",
+    "name": "OKM VICUÑA MACKENNA ORIENTE",
+    "address": "VICUÑA MACKENNA ORIENTE 7491",
+    "location": "La Florida",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "693",
+    "format": "OK MARKET",
+    "name": "OKM DIEGO DE ALMAGRO",
+    "address": "EL BOSQUE 2108 ESQ DIEGO DE AL",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "488",
+    "format": "OK MARKET",
+    "name": "OKM LA REINA",
+    "address": "AV CARLOS OSSANDON 1300",
+    "location": "La Reina",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "123",
+    "format": "OK MARKET",
+    "name": "OKM FCO NOGUERA",
+    "address": "FRANCISCO NOGUERA 36",
+    "location": "Providencia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "988",
+    "format": "OK MARKET",
+    "name": "OKM ARMANDO JARAMILLO",
+    "address": "VITACURA 3595",
+    "location": "Vitacura",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "611",
+    "format": "OK MARKET",
+    "name": "OKM QUINTA",
+    "address": "AV QUINTA 149",
+    "location": "Viña del Mar",
+    "region": "V Región de Valparaíso",
+    "_REGION_ID_NUM": "5"
+  },
+  {
+    "storeId": "560",
+    "format": "OK MARKET",
+    "name": "OKM ROSARIO NORTE",
+    "address": "ROSARIO NORTE 530 LOCALES 104-",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  }
+]

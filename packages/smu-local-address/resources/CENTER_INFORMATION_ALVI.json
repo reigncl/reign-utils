@@ -1,0 +1,308 @@
+[
+  {
+    "storeId": "3090",
+    "format": "ALVI",
+    "name": "ALVI QUILICURA",
+    "address": "AV SAN MARTIN 030",
+    "location": "Quilicura",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3187",
+    "format": "ALVI",
+    "name": "ALVI TALCA ALAMEDA",
+    "address": "3 Å“  NORTE 1749",
+    "location": "Talca",
+    "region": "VII Región del Maule",
+    "_REGION_ID_NUM": "7"
+  },
+  {
+    "storeId": "3181",
+    "format": "ALVI",
+    "name": "ALVI TTE. CRUZ",
+    "address": "TENIENTE CRUZ 570",
+    "location": "Pudahuel",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3080",
+    "format": "ALVI",
+    "name": "ALVI INDEPENDENCIA",
+    "address": "INDEPENDENCIA 4154",
+    "location": "Conchali",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3094",
+    "format": "ALVI",
+    "name": "ALVI RANCAGUA",
+    "address": "BOMBERO RUIDIAZ 040",
+    "location": "Rancagua",
+    "region": "VI Región del Libertador General Bernardo O Higgins",
+    "_REGION_ID_NUM": "6"
+  },
+  {
+    "storeId": "3071",
+    "format": "ALVI",
+    "name": "ALVI PUENTE ALTO",
+    "address": "EYZAGUIRRE 2909",
+    "location": "Puente Alto",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3077",
+    "format": "ALVI",
+    "name": "ALVI LA PINTANA",
+    "address": "AV SANTA ROSA 13218",
+    "location": "La Pintana",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3078",
+    "format": "ALVI",
+    "name": "ALVI VESPUCIO",
+    "address": "AV SANTA ROSA 9267",
+    "location": "San Ramon",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3076",
+    "format": "ALVI",
+    "name": "ALVI DEPARTAMENTAL",
+    "address": "SANTA ROSA 5780",
+    "location": "San Joaquin",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3085",
+    "format": "ALVI",
+    "name": "ALVI BELLOTO",
+    "address": "AV FREIRE 1515",
+    "location": "Quilpue",
+    "region": "V Región de Valparaíso",
+    "_REGION_ID_NUM": "5"
+  },
+  {
+    "storeId": "3075",
+    "format": "ALVI",
+    "name": "ALVI LINARES",
+    "address": "JANUARIO ESPINOZA 903",
+    "location": "Linares",
+    "region": "VII Región del Maule",
+    "_REGION_ID_NUM": "7"
+  },
+  {
+    "storeId": "3084",
+    "format": "ALVI",
+    "name": "ALVI PEÑALOLEN",
+    "address": "AV GRECIA 7310",
+    "location": "Peñalolen",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3074",
+    "format": "ALVI",
+    "name": "ALVI RECOLETA",
+    "address": "RECOLETA 1750",
+    "location": "Recoleta",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3183",
+    "format": "ALVI",
+    "name": "ALVI SAN BERNARDO",
+    "address": "PADRE HURTADO 14529",
+    "location": "San Bernardo",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3088",
+    "format": "ALVI",
+    "name": "ALVI PUERTO MONTT",
+    "address": "AV PRESIDENTE IBAÑEZ 507",
+    "location": "Puerto Montt",
+    "region": "X Región de Los Lagos",
+    "_REGION_ID_NUM": "10"
+  },
+  {
+    "storeId": "3086",
+    "format": "ALVI",
+    "name": "ALVI TEMUCO",
+    "address": "BALMACEDA 1583",
+    "location": "Temuco",
+    "region": "IX Región de la Araucanía",
+    "_REGION_ID_NUM": "9"
+  },
+  {
+    "storeId": "3093",
+    "format": "ALVI",
+    "name": "ALVI COQUIMBO",
+    "address": "JUAN ANTONIO RIOS 1165",
+    "location": "Coquimbo",
+    "region": "IV Región de Coquimbo",
+    "_REGION_ID_NUM": "4"
+  },
+  {
+    "storeId": "3073",
+    "format": "ALVI",
+    "name": "ALVI RENCA",
+    "address": "AV CAUPOLICAN 1340",
+    "location": "Renca",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3199",
+    "format": "ALVI",
+    "name": "ALVI CANASTA INSTITUCIONAL",
+    "address": "PEDRO AGUIRRE CERDA 8455",
+    "location": "Cerrillos",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3072",
+    "format": "ALVI",
+    "name": "ALVI SAN PABLO",
+    "address": "AV SAN PABLO 8685",
+    "location": "Pudahuel",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3099",
+    "format": "ALVI",
+    "name": "ALVI VALPARAISO",
+    "address": "YUNGAY 2602",
+    "location": "Valparaiso",
+    "region": "V Región de Valparaíso",
+    "_REGION_ID_NUM": "5"
+  },
+  {
+    "storeId": "3097",
+    "format": "ALVI",
+    "name": "ALVI LO PRADO",
+    "address": "AV SAN PABLO 5660",
+    "location": "Lo Prado",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3083",
+    "format": "ALVI",
+    "name": "ALVI MAIPU",
+    "address": "AV PAJARITOS 1637 1613",
+    "location": "Maipu",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3092",
+    "format": "ALVI",
+    "name": "ALVI PAJARITOS",
+    "address": "AV PAJARITOS 5100",
+    "location": "Maipu",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3180",
+    "format": "ALVI",
+    "name": "ALVI TALAGANTE 21 DE MAYO",
+    "address": "21 DE MAYO 1081",
+    "location": "Talagante",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3091",
+    "format": "ALVI",
+    "name": "ALVI CHILLAN",
+    "address": "ISABEL RIQUELME 1001",
+    "location": "Chillan",
+    "region": "VIII Región del Bío-Bío",
+    "_REGION_ID_NUM": "8"
+  },
+  {
+    "storeId": "3082",
+    "format": "ALVI",
+    "name": "ALVI CONCHA Y TORO",
+    "address": "AV CONCHA Y TORO 3088",
+    "location": "Puente Alto",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3096",
+    "format": "ALVI",
+    "name": "ALVI LOS ANGELES",
+    "address": "VILLAGRAN 471",
+    "location": "Los Angeles",
+    "region": "VIII Región del Bío-Bío",
+    "_REGION_ID_NUM": "8"
+  },
+  {
+    "storeId": "3098",
+    "format": "ALVI",
+    "name": "ALVI LAS CONDES",
+    "address": "AV LAS CONDES 11097",
+    "location": "Las Condes",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3089",
+    "format": "ALVI",
+    "name": "ALVI CONCEPCION",
+    "address": "LOS CARRERA 555",
+    "location": "Concepcion",
+    "region": "VIII Región del Bío-Bío",
+    "_REGION_ID_NUM": "8"
+  },
+  {
+    "storeId": "3079",
+    "format": "ALVI",
+    "name": "ALVI JJ PEREZ",
+    "address": "JOSE JOAQUIN PEREZ 6658",
+    "location": "Cerro Navia",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3081",
+    "format": "ALVI",
+    "name": "ALVI EL BOSQUE",
+    "address": "GRAN AVENIDA 13059",
+    "location": "El Bosque",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3172",
+    "format": "ALVI",
+    "name": "ALVI OSORNO",
+    "address": "CHILLAN 637",
+    "location": "Osorno",
+    "region": "X Región de Los Lagos",
+    "_REGION_ID_NUM": "10"
+  },
+  {
+    "storeId": "3087",
+    "format": "ALVI",
+    "name": "ALVI TALCA TERMINAL",
+    "address": "1 SUR 1990",
+    "location": "Talca",
+    "region": "VII Región del Maule",
+    "_REGION_ID_NUM": "7"
+  }
+]
