@@ -10,16 +10,6 @@ readdirSync(`${__dirname}/resources`)
       columns: true,
     });
 
-    const objectPredicate = ow.object.partialShape({
-      storeId: ow.string.nonEmpty,
-      address: ow.string.nonEmpty,
-      comuna: ow.string,
-      region: ow.string,
-      Formato: ow.string,
-    });
-
-    ow(locals, `${filePath}`, ow.array.ofType(objectPredicate));
-
     const filePathOut = path.format({
       dir: path.dirname(filePath),
       name: path.basename(filePath, path.extname(filePath)),
