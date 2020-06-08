@@ -12,6 +12,7 @@
   "dependencies": {
     "@reignmodule/express-utils": "^2.0.0",
     "geoip-lite": "^1.4.1",
+    "object.fromentries": "^2.0.2",
     "on-finished": "^2.3.0"
   },
   "devDependencies": {
@@ -20,6 +21,7 @@
     "@types/geoip-lite": "^1.1.31",
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.11.0",
+    "@types/object.fromentries": "^2.0.0",
     "@types/on-finished": "^2.3.1",
     "@types/sinon": "^9.0.0",
     "express": "^4.17.1",

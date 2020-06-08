@@ -3,6 +3,7 @@ import onFinished from 'on-finished';
 import { Request } from 'express';
 import { IncomingMessage } from 'http';
 import url from 'url';
+import fromEntries from 'object.fromentries';
 
 export const userAgentToPlatform = (userAgent?: string) => {
   if (userAgent) {
@@ -20,6 +21,33 @@ export const setRouterName = (routerNameVal: string) => (req: any, res?: any, ne
   req[routerName] = routerNameVal;
   next?.();
 };
+
+const FILTRED = '[FILTRED]';
+
+const markAsFiltred = (header: string, value: string | string[] | undefined) => {
+  const isDynamicFiltred = /authorization$/i.test(header);
+
+  if (isDynamicFiltred) return FILTRED;
+
+  switch (header) {
+    case 'authorization':
+    case 'cookie':
+      return FILTRED;
+    default: return value;
+  }
+}
+
+const filterReqHeaders = (headers: Request['headers']) => {
+  return fromEntries(
+    Object.entries(headers).map((header) => {
+      let [h, v] = header;
+
+      const nextValue = markAsFiltred(h, v);
+
+      return [h, nextValue];
+    })
+  );
+}
 
 const getHit = (req: IncomingMessage) => {
   const ip = req.headers['x-forwarded-for'] as string;
@@ -47,11 +75,7 @@ const getHit = (req: IncomingMessage) => {
       host: uri?.hostname ?? undefined,
       method: req.method,
       url: req.url,
-      headers: {
-        ...req.headers,
-        authorization: undefined,
-        cookie: undefined,
-      },
+      headers: filterReqHeaders(req.headers),
     },
   };
 
