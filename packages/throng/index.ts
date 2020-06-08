@@ -5,11 +5,13 @@ const defaultWorkers = cpus().length;
 
 export default (
   workerRun: () => void,
-  {
-    workers = defaultWorkers,
-    env = undefined as undefined | any,
-  } = {},
+  opts?: {
+    workers?: number;
+    env?: any;
+  },
 ) => {
+  const workers = opts?.workers ?? defaultWorkers;
+  const env = opts?.env;
   if (isMaster) return Array(workers).fill(0).map(() => fork(env));
   if (isWorker) workerRun();
 };
