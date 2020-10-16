@@ -1,0 +1,8 @@
+/src
+/tests
+tsconfig.json
+tslint.json
+tsconfig.json
+*.ts
+!*.d.ts
+*.tgz
