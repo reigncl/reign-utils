@@ -1,0 +1,26 @@
+{
+  "name": "@reignmodule/util-pkg",
+  "version": "1.0.0",
+  "description": "Read the package.json file",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "tsc",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "Reign (https://www.reign.cl/)",
+  "bugs": {
+    "url": "https://github.com/reigncl/reign-utils/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reigncl/reign-utils.git",
+    "directory": "packages/util-pkg"
+  },
+  "homepage": "https://github.com/reigncl/reign-utils/tree/master/packages/util-pkg#readme",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.14.10",
+    "typescript": "^4.1.2"
+  }
+}
