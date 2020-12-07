@@ -16,7 +16,7 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
+          cd packages/util-pkg && echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
       - name: npm ci
         run: cd packages/util-pkg && npm ci
       - name: npm publish
