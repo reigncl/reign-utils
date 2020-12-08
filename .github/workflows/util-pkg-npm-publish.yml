@@ -1,5 +1,5 @@
 
-name: NPM Publish util-pkg
+name: NPM Publish package util-pkg
 
 on:
   push:
@@ -13,11 +13,13 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: autorize on npm
+        working-directory: packages/util-pkg
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          cd packages/util-pkg && echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
-      - name: npm ci
-        run: cd packages/util-pkg && npm ci
-      - name: npm publish
-        run: cd packages/util-pkg && npm publish
+        run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
+      - name: install
+        working-directory: packages/util-pkg
+        run: npm ci
+      - name: publish on npm
+        working-directory: packages/util-pkg
+        run: npm publish
