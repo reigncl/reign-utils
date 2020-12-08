@@ -1,4 +1,4 @@
-import winston, { createLogger, Logger } from "winston";
+import winston, { createLogger } from "winston";
 import winstonCloudwatch from "winston-cloudwatch";
 import dayjs from "dayjs";
 import { v4 as uuidv4 } from "uuid";
@@ -46,19 +46,9 @@ export class AwsCloudWatch {
       awsAccessKeyId: string;
       awsSecretKey: string;
       awsRegion: string;
-    }) => {
-      return new AwsCloudWatch(props);
-    },
+    }) => new AwsCloudWatch(props),
+    (props) => `${props.awsRegion}/${props.logGroupName}`
   );
-
-  public static getInstance2(props: {
-    logGroupName: string;
-    awsAccessKeyId: string;
-    awsSecretKey: string;
-    awsRegion: string;
-  }): AwsCloudWatch {
-    return new AwsCloudWatch(props);
-  }
 
   public getLogger() {
     return this.logger;
