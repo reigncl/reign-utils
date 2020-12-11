@@ -1,4 +1,12 @@
 tsconfig.json
 *.ts
 !*.d.ts
+*.spec.ts
+*.spec.js
+*.spec.d.ts
 *.tgz
+.editorconfig
+.prettierignore
+
+demo.js
+demo.d.ts
