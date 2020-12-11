@@ -34,6 +34,15 @@
     "winston": "^3.3.3",
     "winston-cloudwatch": "^2.4.0"
   },
+  "homepage": "https://github.com/reigncl/reign-utils/tree/master/packages/logger-activity#readme",
+  "bugs": {
+    "url": "https://github.com/reigncl/reign-utils/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reigncl/reign-utils.git",
+    "directory": "packages/logger-activity"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
