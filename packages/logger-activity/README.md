@@ -15,7 +15,8 @@ $ npm i @reignmodule/logger-activity
 Import `@reignmodule/logger-activity` in your code.
 
 ```ts
-import { LoggerActivity } from "@reignmodule/logger-activity";
+import { LoggerActivity, Action } from "@reignmodule/logger-activity";
+import { AwsCloudWatch } from "@reignmodule/logger-activity/AwsCloudWatch";
 
 const log = LoggerActivity.createLogger({
   loggerMessage: AwsCloudWatch.getInstance({
@@ -24,5 +25,17 @@ const log = LoggerActivity.createLogger({
     awsSecretKey: process.env.AWS_SECRET_ACCESS_KEY,
     logGroupName: "mi_logs_groups",
   }),
+});
+
+log.sendMessage({
+  action: Action.Login,
+  clientId: "abc",
+  formatId: "123",
+  location: {
+    city: "W",
+    countryCode: "12",
+    regionCode: "CW",
+    position: [1, 2],
+  },
 });
 ```
