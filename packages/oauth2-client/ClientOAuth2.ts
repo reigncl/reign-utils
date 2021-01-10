@@ -1,6 +1,7 @@
 import { randomBytes } from "crypto";
 import url from 'url';
 import jsonwebtoken from 'jsonwebtoken';
+import fetch from 'node-fetch';
 
 interface Token {
   access_token?: string;
@@ -50,6 +51,23 @@ export const helperStorage = (prefix: string = ''): Token => {
   return resultMemory;
 }
 
+export interface ExchangeResult {
+  token_type?: string;
+  expires_in: number;
+  access_token: string;
+  scope?: string;
+  refresh_token?: string;
+}
+
+declare global {
+  interface ClientOAuth2Exchanges {
+    code: (code: string) => Promise<ExchangeResult>;
+    refreshToken: () => Promise<ExchangeResult>;
+  }
+}
+
+type A<T> = T extends (...args: infer R) => any ? R : [];
+
 export class ClientOAuth2 {
   clientId?: string;
   clientSecret?: string;
@@ -58,13 +76,13 @@ export class ClientOAuth2 {
   refreshUri: string;
   scope?: string;
   redirectUri?: string;
-  state?: string;
+  state: string;
   storage: Token | Storage;
   currentUser: any;
   prefixMemory: string;
 
-  private exchangeRefreshTokenMemory?: ReturnType<ClientOAuth2['runExchangeRefreshToken']>;
-  private exchangeCodeMemory?: ReturnType<ClientOAuth2['runExchangeCode']>;
+  private workingExchangeMemory?: Promise<ExchangeResult>;
+  private exchanges = new Map<string, (...args: any) => Promise<ExchangeResult>>();
 
   constructor(opts: OptsClientOauth2) {
     this.prefixMemory = opts.prefixMemory ?? '';
@@ -80,6 +98,13 @@ export class ClientOAuth2 {
     if (this.storage.access_token) {
       this.currentUser = jsonwebtoken.decode(this.storage.access_token);
     }
+
+    this.use('code', () => (code: string) => this.runExchangeCode(code));
+    this.use('refreshToken', () => () => this.runExchangeRefreshToken());
+  }
+
+  use<T extends keyof ClientOAuth2Exchanges>(exchangeName: T, exchange: (client: ClientOAuth2) => ClientOAuth2Exchanges[T]) {
+    this.exchanges.set(exchangeName, exchange(this));
   }
 
   getAutorizationUri() {
@@ -118,12 +143,16 @@ export class ClientOAuth2 {
     }
   }
 
-  exchangeRefreshToken() {
-    if (this.exchangeRefreshTokenMemory) {
-      return this.exchangeRefreshTokenMemory;
+  async exchange<T extends keyof ClientOAuth2Exchanges>(exchangeName: T, ...args: A<ClientOAuth2Exchanges[T]>) {
+    if (this.workingExchangeMemory) {
+      return this.workingExchangeMemory;
     }
 
-    const p = this.runExchangeRefreshToken();
+    const exchange = this.exchanges.get(exchangeName)
+
+    if (!exchange) throw new Error(`Cannot found exchange ${exchangeName}`)
+
+    const p = exchange(...args);
     p
       .then(res => {
         this.currentUser = jsonwebtoken.decode(res.access_token);
@@ -131,10 +160,19 @@ export class ClientOAuth2 {
         this.storage.refresh_token = res.refresh_token;
       })
       .finally(() => {
-        this.exchangeRefreshTokenMemory = undefined;
+        this.workingExchangeMemory = undefined;
       });
-    this.exchangeRefreshTokenMemory = p;
-    return this.exchangeRefreshTokenMemory;
+    this.workingExchangeMemory = p;
+
+    return this.workingExchangeMemory;
+  }
+
+  exchangeCode(code: string) {
+    return this.exchange('code', code);
+  }
+
+  exchangeRefreshToken() {
+    return this.exchange('refreshToken');
   }
 
   private async runExchangeRefreshToken() {
@@ -152,6 +190,11 @@ export class ClientOAuth2 {
       }),
     });
 
+    if (!res.status.toString().startsWith('2')) {
+      const body = await res.json();
+      throw new Error(`Error exchange: ${body?.error?.message ?? JSON.stringify(body)}`);
+    }
+
     const body = await res.json();
 
     const token_type: string = body.token_type;
@@ -160,11 +203,6 @@ export class ClientOAuth2 {
     const scope: string = body.scope;
     const refresh_token: string = body.refresh_token;
 
-    if (!res.status.toString().startsWith('2')) {
-      const body = await res.json();
-      throw new Error(body?.error?.message);
-    }
-
     return {
       token_type,
       expires_in,
@@ -172,26 +210,6 @@ export class ClientOAuth2 {
       scope,
       refresh_token,
     }
-  }
-
-  exchangeCode(code: string) {
-    if (this.exchangeCodeMemory) {
-      return this.exchangeCodeMemory;
-    }
-
-    const p = this.runExchangeCode(code);
-    p
-      .then((res) => {
-        this.currentUser = jsonwebtoken.decode(res.access_token);
-        this.storage.access_token = res.access_token;
-        this.storage.refresh_token = res.refresh_token;
-      })
-      .finally(() => {
-        this.exchangeCodeMemory = undefined;
-      });
-    this.exchangeCodeMemory = p;
-
-    return this.exchangeCodeMemory;
   }
 
   private async runExchangeCode(code: string) {
@@ -211,7 +229,7 @@ export class ClientOAuth2 {
 
     if (!res.status.toString().startsWith('2')) {
       const body = await res.json();
-      throw new Error(body?.error?.message);
+      throw new Error(`Error exchange: ${body?.error?.message ?? JSON.stringify(body)}`);
     }
 
     const body = await res.json();

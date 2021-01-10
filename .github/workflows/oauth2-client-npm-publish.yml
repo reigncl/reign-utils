@@ -1,0 +1,25 @@
+
+name: NPM Publish package oauth2-client
+
+on:
+  push:
+    tags:
+      - "@reignmodule/oauth2-client@*"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: autorize on npm
+        working-directory: packages/oauth2-client
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
+      - name: install
+        working-directory: packages/oauth2-client
+        run: npm ci
+      - name: publish on npm
+        working-directory: packages/oauth2-client
+        run: npm publish
