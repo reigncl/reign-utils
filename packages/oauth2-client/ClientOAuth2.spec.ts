@@ -7,6 +7,11 @@ const localStorageDisabled = new Proxy({}, {
 // @ts-ignore
 globalThis.localStorage = localStorageDisabled;
 
+import fetch from 'node-fetch';
+
+// @ts-ignore
+globalThis.fetch = fetch;
+
 import { createServer } from "http";
 import { promisify } from "util";
 import { ClientOAuth2, ExchangeResult } from "./ClientOAuth2";

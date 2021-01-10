@@ -1,7 +1,6 @@
 import { randomBytes } from "crypto";
 import url from 'url';
 import jsonwebtoken from 'jsonwebtoken';
-import fetch from 'node-fetch';
 import { EventEmitter } from "events";
 
 interface Token {
