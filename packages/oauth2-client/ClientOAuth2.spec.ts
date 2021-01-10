@@ -150,4 +150,18 @@ describe('ClientOAuth2', () => {
 
     expect(await clientOAuth2.getToken()).toEqual('custonaccesstoken');
   })
+
+  it('event', () => {
+    const clientOAuth2 = new ClientOAuth2({
+      authorizationUri: `${authServer.baseurl()}/authorize`,
+      tokenUri: `${authServer.baseurl()}/token`,
+      state: 'aaaa',
+      clientId: 'asd',
+      storage: {},
+    });
+
+    clientOAuth2.once('changeCurrentUser', (asd) => {
+
+    })
+  })
 });

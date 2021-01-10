@@ -2,6 +2,7 @@ import { randomBytes } from "crypto";
 import url from 'url';
 import jsonwebtoken from 'jsonwebtoken';
 import fetch from 'node-fetch';
+import { EventEmitter } from "events";
 
 interface Token {
   access_token?: string;
@@ -68,7 +69,13 @@ declare global {
 
 type A<T> = T extends (...args: infer R) => any ? R : [];
 
+interface ClientOAuth2Events {
+  changeCurrentUser: [];
+  refreshToken: [];
+}
+
 export class ClientOAuth2 {
+  private eventEmitter = new EventEmitter()
   clientId?: string;
   clientSecret?: string;
   tokenUri: string;
@@ -101,6 +108,23 @@ export class ClientOAuth2 {
 
     this.use('code', () => (code: string) => this.runExchangeCode(code));
     this.use('refreshToken', () => () => this.runExchangeRefreshToken());
+  }
+
+  on<T extends keyof ClientOAuth2Events>(event: T, listener: (...args: ClientOAuth2Events[T]) => void) {
+    this.eventEmitter.once(event, listener as any);
+  }
+  once<T extends keyof ClientOAuth2Events>(event: T, listener: (...args: ClientOAuth2Events[T]) => void) {
+    this.eventEmitter.once(event, listener as any);
+  }
+  removeAllListeners<T extends keyof ClientOAuth2Events>(event: T) {
+    this.eventEmitter.removeAllListeners(event);
+  }
+  removeListener<T extends keyof ClientOAuth2Events>(event: T, listener: (...args: ClientOAuth2Events[T]) => void) {
+    this.eventEmitter.removeListener(event, listener as any);
+  }
+
+  private emit<T extends keyof ClientOAuth2Events>(event: T, ...args: ClientOAuth2Events[T]) {
+    this.eventEmitter.emit(event, ...args);
   }
 
   use<T extends keyof ClientOAuth2Exchanges>(exchangeName: T, exchange: (client: ClientOAuth2) => ClientOAuth2Exchanges[T]) {
@@ -137,6 +161,7 @@ export class ClientOAuth2 {
 
       if (timeNextRefresh < Date.now()) {
         await this.exchangeRefreshToken();
+        this.emit('refreshToken');
       }
 
       return this.storage.access_token;
@@ -158,6 +183,7 @@ export class ClientOAuth2 {
         this.currentUser = jsonwebtoken.decode(res.access_token);
         this.storage.access_token = res.access_token;
         this.storage.refresh_token = res.refresh_token;
+        this.emit('changeCurrentUser');
       })
       .finally(() => {
         this.workingExchangeMemory = undefined;

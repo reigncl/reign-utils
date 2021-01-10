@@ -1,6 +1,6 @@
 {
     "name": "@reignmodule/oauth2-client",
-    "version": "0.2.0-beta.2",
+    "version": "0.2.0-beta.3",
     "main": "ClientOAuth2.js",
     "publishConfig": {
         "access": "public",
