@@ -40,7 +40,12 @@ export class AwsCloudWatch implements LoggerMessage {
       awsAccessKeyId: props.awsAccessKeyId,
       awsSecretKey: props.awsSecretKey,
       awsRegion: props.awsRegion,
-      messageFormatter: ({ message }) => JSON.stringify({ message }),
+      messageFormatter: ({ message }) =>
+        JSON.stringify({
+          message,
+          appName: logStreamNamePkgName,
+          appVersion: logStreamNamePkgVersion,
+        }),
     });
 
     winstonLogger.add(winstonCloudwatch);
