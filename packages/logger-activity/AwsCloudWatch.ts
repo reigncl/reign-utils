@@ -1,5 +1,5 @@
 import winston, { createLogger } from "winston";
-import winstonCloudwatch from "winston-cloudwatch";
+import WinstonCloudwatch from "winston-cloudwatch";
 import dayjs from "dayjs";
 import { v4 as uuidv4 } from "uuid";
 import { pkgName, pkgVersion } from "@reignmodule/util-pkg";
@@ -10,6 +10,8 @@ import { LoggerMessage } from "./LoggerMessage";
 export interface AwsCloudWatchOptions {
   logGroupName: string;
   logStreamName?: string;
+  logStreamNamePkgName?: string;
+  logStreamNamePkgVersion?: string;
   awsAccessKeyId?: string;
   awsSecretKey?: string;
   awsRegion?: string;
@@ -24,20 +26,24 @@ export class AwsCloudWatch implements LoggerMessage {
       transports: [],
     })
   ) {
-    winstonLogger.add(
-      new winstonCloudwatch({
-        logGroupName: props.logGroupName,
-        logStreamName:
-          props.logStreamName ??
+    const logStreamNamePkgName = props.logStreamNamePkgName ?? pkgName;
+    const logStreamNamePkgVersion = props.logStreamNamePkgVersion ?? pkgVersion;
+    const insid = uuidv4();
+    const winstonCloudwatch = new WinstonCloudwatch({
+      logGroupName: props.logGroupName,
+      logStreamName:
+        props.logStreamName ??
+        (() =>
           `${dayjs().format(
             "YYYY/MM/DD"
-          )}/[${pkgName}@${pkgVersion}]/${uuidv4()}`,
-        awsAccessKeyId: props.awsAccessKeyId,
-        awsSecretKey: props.awsSecretKey,
-        awsRegion: props.awsRegion,
-        messageFormatter: ({ message }) => JSON.stringify({ message }),
-      })
-    );
+          )}/[${logStreamNamePkgName}@${logStreamNamePkgVersion}]/${insid}`),
+      awsAccessKeyId: props.awsAccessKeyId,
+      awsSecretKey: props.awsSecretKey,
+      awsRegion: props.awsRegion,
+      messageFormatter: ({ message }) => JSON.stringify({ message }),
+    });
+
+    winstonLogger.add(winstonCloudwatch);
   }
 
   public static getInstance = once(
