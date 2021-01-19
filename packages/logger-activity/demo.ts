@@ -61,3 +61,15 @@ log.sendMessage({
     position: [1, 2],
   },
 });
+
+log.sendMessage({
+  action: "custon action",
+  clientId: "",
+  formatId: "",
+  location: {
+    city: "",
+    countryCode: "",
+    regionCode: "",
+    position: [1, 2],
+  },
+});

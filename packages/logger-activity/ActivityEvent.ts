@@ -56,4 +56,7 @@ export type ActivityEvent = ActivityEventBase &
         action: Action.UserUpdated;
         typeUserUpdated: TypeUserUpdated;
       }
+    | {
+        action: string;
+      }
   );
