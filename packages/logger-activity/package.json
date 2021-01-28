@@ -1,6 +1,6 @@
 {
   "name": "@reignmodule/logger-activity",
-  "version": "1.3.2",
+  "version": "2.0.0-beta.0",
   "description": "",
   "main": "index.js",
   "publishConfig": {
