@@ -1,6 +1,7 @@
 export enum Action {
   Register = "Register",
   Login = "Login",
+  RecoverPassword = "RecoverPassword",
   CouponAction = "CouponAction",
   UserUpdated = "UserUpdated",
 }
@@ -52,7 +53,13 @@ export type ActivityEvent = ActivityEventBase &
         geoIdOffer: string;
       }
     | {
-        action: Action.Login | Action.Register;
+        action: Action.Login;
+      }
+    | {
+        action: Action.Register;
+      }
+    | {
+        action: Action.RecoverPassword;
       }
     | {
         action: Action.UserUpdated;
