@@ -3,6 +3,7 @@ import { ActivityEvent } from "./ActivityEvent";
 import geoipLite from "geoip-lite";
 import "./middlewareLoggerGlobal";
 import { requestHandlerAsync } from "@reignmodule/express-utils/handle-async";
+import type { Request, Response } from "express";
 
 export interface createMiddlewareLoggerOptions {
   logger: LoggerActivity;
