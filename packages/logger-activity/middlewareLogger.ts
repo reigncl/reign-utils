@@ -5,7 +5,7 @@ import geoipLite from "geoip-lite";
 import e from "express";
 import "./middlewareLoggerGlobal";
 
-interface createMiddlewareLoggerOptions {
+export interface createMiddlewareLoggerOptions {
   logger: LoggerActivity;
   middleware?: (
     activityEvent: ActivityEvent,
