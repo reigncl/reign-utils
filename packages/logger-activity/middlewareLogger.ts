@@ -1,16 +1,15 @@
-import { requestHandlerAsync } from "@reignmodule/express-utils/handle-async";
 import { LoggerActivity } from "./LoggerActivity";
 import { ActivityEvent } from "./ActivityEvent";
 import geoipLite from "geoip-lite";
-import e from "express";
 import "./middlewareLoggerGlobal";
+import { requestHandlerAsync } from "@reignmodule/express-utils/handle-async";
 
 export interface createMiddlewareLoggerOptions {
   logger: LoggerActivity;
   middleware?: (
     activityEvent: ActivityEvent,
-    request: e.Request,
-    response: e.Response
+    request: Request,
+    response: Response
   ) => ActivityEvent;
   ignorePropertiesHeaders?: string[];
   ignoreDefaultIgnorePropertiesHeaders?: boolean;
