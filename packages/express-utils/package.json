@@ -1,6 +1,6 @@
 {
   "name": "@reignmodule/express-utils",
-  "version": "2.0.0",
+  "version": "2.0.1-beta.0",
   "description": "Common services express utilities",
   "main": "index.js",
   "engines": {
@@ -22,7 +22,8 @@
     "url": "git+https://github.com/reigndesign/reigndesign-utils.git"
   },
   "keywords": [
-    "express"
+    "express",
+    "asyn handler"
   ],
   "author": "Reign (https://www.reigndesign.com/)",
   "license": "ISC",

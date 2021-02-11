@@ -1,5 +1,5 @@
 // tslint:disable:max-line-length
-import { RequestHandler, RequestParamHandler, ErrorRequestHandler, NextFunction, Response, Request } from 'express';
+import type { RequestHandler, RequestParamHandler, ErrorRequestHandler, NextFunction, Response, Request } from 'express';
 
 export const requestHandlerAsync = (requestHandler: (req: Request, res: Response, next: NextFunction) => Promise<any>, thisArg?: any): RequestHandler => {
   return (req, res, next) =>
