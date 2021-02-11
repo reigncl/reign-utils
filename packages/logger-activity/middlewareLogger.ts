@@ -92,7 +92,9 @@ export function createMiddlewareLogger(options: createMiddlewareLoggerOptions) {
             : message,
       };
 
+      const durationReqMsStart = Date.now();
       res.on("finish", () => {
+        message.durationReqMs = Date.now() - durationReqMsStart;
         logger.sendMessage(message);
       });
 
