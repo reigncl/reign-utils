@@ -188,3 +188,5 @@ $RECYCLE.BIN/
 
 *.js
 *.d.ts
+!.editorconfig
+!.prettierignore
