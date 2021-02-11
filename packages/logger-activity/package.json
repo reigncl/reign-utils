@@ -1,6 +1,6 @@
 {
   "name": "@reignmodule/logger-activity",
-  "version": "2.0.2-beta.3",
+  "version": "2.0.3-beta.0",
   "description": "",
   "main": "index.js",
   "publishConfig": {
@@ -17,6 +17,7 @@
   "author": "Reign (https://www.reign.cl/)",
   "license": "ISC",
   "devDependencies": {
+    "@types/express": "^4.17.11",
     "@types/geoip-lite": "^1.4.1",
     "@types/mocha": "^8.2.0",
     "@types/node": "^14.14.10",
