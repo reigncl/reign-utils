@@ -26,6 +26,7 @@ type Lng = number;
 type LLPosition = [Lat, Lng];
 
 export type ActivityEventBase = {
+  disabled?: boolean;
   clientId?: string;
   formatId?: string;
   userId?: string;

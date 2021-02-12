@@ -95,7 +95,9 @@ export function createMiddlewareLogger(options: createMiddlewareLoggerOptions) {
       const durationReqMsStart = Date.now();
       res.on("finish", () => {
         message.durationReqMs = Date.now() - durationReqMsStart;
-        logger.sendMessage(message);
+        if (!message.disabled) {
+          logger.sendMessage(message);
+        }
       });
 
       return next();
