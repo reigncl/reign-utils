@@ -1,4 +1,5 @@
-import { LoggerActivity, Action, TypeUserUpdated } from ".";
+import { Action, TypeUserUpdated } from ".";
+import { LoggerActivity } from "./LoggerActivity";
 import { TypeCouponAction } from "./ActivityEvent";
 import { AwsCloudWatch } from "./AwsCloudWatch";
 

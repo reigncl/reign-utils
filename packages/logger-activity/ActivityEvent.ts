@@ -1,6 +1,7 @@
 export enum Action {
   Register = "Register",
   Login = "Login",
+  RecoverPassword = "RecoverPassword",
   CouponAction = "CouponAction",
   UserUpdated = "UserUpdated",
 }
@@ -25,10 +26,12 @@ type Lng = number;
 type LLPosition = [Lat, Lng];
 
 export type ActivityEventBase = {
-  clientId: string;
-  formatId: string;
+  disabled?: boolean;
+  clientId?: string;
+  formatId?: string;
+  userId?: string;
   storeId?: string;
-  location: {
+  location?: {
     city: string;
     countryCode: string;
     regionCode: string;
@@ -40,6 +43,7 @@ export type ActivityEventBase = {
     };
     [k: string]: any;
   };
+  [prop: string]: any;
 };
 
 export type ActivityEvent = ActivityEventBase &
@@ -50,7 +54,13 @@ export type ActivityEvent = ActivityEventBase &
         geoIdOffer: string;
       }
     | {
-        action: Action.Login | Action.Register;
+        action: Action.Login;
+      }
+    | {
+        action: Action.Register;
+      }
+    | {
+        action: Action.RecoverPassword;
       }
     | {
         action: Action.UserUpdated;
