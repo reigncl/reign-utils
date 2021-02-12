@@ -1,11 +1,11 @@
 {
   "name": "@reignmodule/express-utils",
-  "version": "2.0.1-beta.1",
+  "version": "2.0.1",
   "description": "Common services express utilities",
   "main": "index.js",
   "publishConfig": {
     "access": "public",
-    "tag": "beta"
+    "tag": "latest"
   },
   "engines": {
     "node": "^11.12.0",
