@@ -65,6 +65,7 @@ export function createMiddlewareLogger(options: createMiddlewareLoggerOptions) {
       const message: ActivityEvent = {
         ...activityEvent,
         formatId: getHeader("x-format-id"),
+        platform: getHeader("x-platform"),
         storeId: getHeader("x-origin-soapid") ?? getHeader("x-storeid"),
         location: geo
           ? {
