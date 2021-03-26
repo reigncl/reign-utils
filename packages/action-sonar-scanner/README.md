@@ -1,4 +1,4 @@
-# Hello world docker action
+# Sonar Scanner docker action
 
 This action sonar scanner to projects with NodeJS.
 
