@@ -1,0 +1,8 @@
+name: "Sonar Scanner"
+
+description: ""
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
