@@ -1,13 +1,12 @@
 # Hello world docker action
 
-This action sonar scanner.
-
-## Inputs
-
-## Outputs
+This action sonar scanner to projects with NodeJS.
 
 ## Example usage
 
-<!-- uses: actions/hello-world-docker-action@v1
-with:
-  who-to-greet: 'Mona the Octocat' -->
+```yaml
+uses: reigncl/reign-utils/packages/action-sonar-scanner@master
+env:
+  SONAR_HOST_URL: ${{ secrets.SONAR_HOSTURL }}
+  SONAR_LOGIN: ${{ secrets.SONAR_LOGIN }}
+```
