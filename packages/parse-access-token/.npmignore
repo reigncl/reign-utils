@@ -1,0 +1,9 @@
+*.spec.ts
+*.spec.js
+tsconfig.json
+.editorconfig
+jest.config.js
+*.tgz
+*.ts
+!*.d.ts
+*.spec.d.ts
