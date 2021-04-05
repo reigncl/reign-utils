@@ -1,6 +1,6 @@
 {
-  "name": "@reigncl/parse-access-token",
-  "version": "1.0.0",
+  "name": "@reignmodule/parse-access-token",
+  "version": "1.0.1",
   "publishConfig": {
     "access": "public",
     "tag": "latest"

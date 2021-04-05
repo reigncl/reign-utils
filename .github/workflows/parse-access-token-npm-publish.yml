@@ -4,7 +4,7 @@ name: NPM Publish package parse-access-token
 on:
   push:
     tags:
-      - "@reigncl/parse-access-token@*"
+      - "@reignmodule/parse-access-token@*"
 
 jobs:
   publish:
