@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/reigncl/reign-utils/compare/@reignmodule/smu-local-address@1.3.0...@reignmodule/smu-local-address@1.4.0) (2021-11-29)
+
+
+### Features
+
+* **smu-local-address:** add localid 3188 ([866656b](https://github.com/reigncl/reign-utils/commit/866656b25020caa7b31028b71d8a03aa48dc570f))
+
 ## 1.3.0 (2021-11-29)
 
 
