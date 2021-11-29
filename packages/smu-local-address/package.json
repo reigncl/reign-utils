@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prerelease": "ts-node transform-resources.ts",
     "release": "standard-version -t @reignmodule/smu-local-address@",
     "prepare": "tsc"
   },
