@@ -1,5 +1,14 @@
 [
   {
+    "storeId": "3188",
+    "format": "ALVI",
+    "name": "LA SERENA",
+    "address": "AVENIDA 18 DE SEPTIEMBRE 4595",
+    "location": "LA SERENA",
+    "region": "COQUIMBO",
+    "_REGION_ID_NUM": "4"
+  },
+  {
     "storeId": "3090",
     "format": "ALVI",
     "name": "ALVI QUILICURA",
