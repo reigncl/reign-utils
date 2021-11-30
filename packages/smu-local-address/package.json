@@ -1,9 +1,11 @@
 {
   "name": "@reignmodule/smu-local-address",
-  "version": "1.1.0",
+  "version": "1.4.1",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prerelease": "ts-node transform-resources.ts",
+    "release": "standard-version -t @reignmodule/smu-local-address@",
     "prepare": "tsc"
   },
   "author": "",
@@ -11,6 +13,8 @@
   "devDependencies": {
     "@types/lodash.flatten": "^4.4.6",
     "@types/node": "^13.9.3",
+    "standard-version": "^9.3.2",
+    "ts-node": "^10.4.0",
     "typescript": "^3.8.3"
   },
   "dependencies": {

@@ -1,5 +1,5 @@
 import { readdirSync, readFileSync, writeFileSync } from 'fs';
-import path from 'path';
+import path, { extname } from 'path';
 import csvParse from 'csv-parse/lib/sync';
 import ow from 'ow';
 
@@ -15,6 +15,8 @@ interface LocalObject {
 readdirSync(`${__dirname}/resources`)
   .map(filePath => `${__dirname}/resources/${filePath}`)
   .map(filePath => {
+    if (extname(filePath) !== '.csv') return null;
+
     const locals: LocalObject[] = csvParse(readFileSync(filePath, 'utf8'), {
       columns: true,
       delimiter: ','
