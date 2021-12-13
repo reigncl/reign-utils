@@ -24,7 +24,7 @@ for await (const entry of c.getEntriesByField('slug', ['/home', '/article/123', 
 ```
 
 
-## Get all entries of contentful
+## Get all entries as async iterable
 
 Transform the get entries method to an async generator.
 
