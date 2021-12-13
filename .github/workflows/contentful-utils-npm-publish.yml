@@ -1,0 +1,25 @@
+
+name: NPM Publish package contentful-utils
+
+on:
+  push:
+    tags:
+      - "@reignmodule/contentful-utils@*"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: autorize on npm
+        working-directory: packages/contentful-utils
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
+      - name: install
+        working-directory: packages/contentful-utils
+        run: npm ci
+      - name: publish on npm
+        working-directory: packages/contentful-utils
+        run: npm publish
