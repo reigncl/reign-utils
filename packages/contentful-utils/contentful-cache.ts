@@ -1,6 +1,6 @@
 import { ContentfulClientApi, createClient, Entry } from 'contentful'
 import Cache from 'node-cache';
-import { createPaginateItems } from './lib/paginate-items';
+import { createPaginateItems } from './paginate-items';
 
 interface ContentfulCacheOptions<F> {
     client: ContentfulClientApi;

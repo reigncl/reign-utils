@@ -1,4 +1,4 @@
-import { createMockClient } from './createMockClient';
+import { createMockClient } from './lib/createMockClient';
 import { createPaginateItems } from './paginate-items';
 
 describe('paginate items', () => {

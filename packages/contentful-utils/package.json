@@ -9,7 +9,8 @@
   },
   "scripts": {
     "release": "standard-version -t @reignmodule/contentful-utils@v ----prerelease beta",
-    "prepare": "tsc"
+    "prepare": "tsc",
+    "clean": "tsc --build --clean"
   },
   "keywords": [],
   "author": "",

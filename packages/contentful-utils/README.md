@@ -12,8 +12,31 @@ const client = contentful.createClient()
 
 const contentfulCache = new ContentfulCache({ client, fieldIndexable: ['slug'] });
 
+// Get entries by field value
 for await (const entry of c.getEntriesByField('slug', ['/home', '/article/123', '/article/456'])) {
-    // ... do something with entry
+    // ... do something with entry. Time 500ms
+}
+
+// Second time, we can get the entries from cache
+for await (const entry of c.getEntriesByField('slug', ['/home', '/article/123', '/article/456'])) {
+    // ... do something with entry. Time 10ms
 }
 ```
 
+
+## Get all entries of contentful
+
+Transform the get entries method to an async generator.
+
+**Example:**
+
+```ts
+import { createPaginateItems } from '@reignmodule/contentful-utils/paginate-items'
+
+const paginateItems = createPaginateItems(client.getEntries);
+
+// Get all entries
+for await (const entries of paginateItems()) {
+    // ... do something with entry
+}
+```
