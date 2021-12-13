@@ -8,7 +8,7 @@
     "tag": "beta"
   },
   "scripts": {
-    "release": "standard-version -t @reignmodule/contentful-utils@v"
+    "release": "standard-version -t @reignmodule/contentful-utils@v ----prerelease beta"
   },
   "keywords": [],
   "author": "",
