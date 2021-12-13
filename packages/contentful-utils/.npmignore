@@ -1,0 +1,7 @@
+*.ts
+!*.d.ts
+*.spec.*
+*.tgz
+tsconfig.json
+jest.config.js
+CHANGELOG.md
