@@ -33,6 +33,8 @@ Transform the get entries method to an async generator.
 ```ts
 import { createPaginateItems } from '@reignmodule/contentful-utils/paginate-items'
 
+const client = contentful.createClient()
+
 const paginateItems = createPaginateItems(client.getEntries);
 
 // Get all entries
