@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-beta.2](https://github.com/reigncl/reign-utils/compare/@reignmodule/contentful-utils@v1.1.0-beta.1...@reignmodule/contentful-utils@v1.1.0-beta.2) (2021-12-13)
+
+
+### Features
+
+* **contentful-utils:** add paginate-utils lib ([6d26af3](https://github.com/reigncl/reign-utils/commit/6d26af3d5ac058076900d66f0787e370607b2060))
+* remove files compiled ([3397080](https://github.com/reigncl/reign-utils/commit/3397080ed9632025e4c5466f56d9a0184c87c6b7))
+
 ## [1.1.0-beta.1](https://github.com/reigncl/reign-utils/compare/@reignmodule/contentful-utils@v1.1.0-beta.0-1...@reignmodule/contentful-utils@v1.1.0-beta.1) (2021-12-13)
 
 
