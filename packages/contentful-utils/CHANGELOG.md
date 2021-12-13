@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-beta.1](https://github.com/reigncl/reign-utils/compare/@reignmodule/contentful-utils@v1.1.0-beta.0-1...@reignmodule/contentful-utils@v1.1.0-beta.1) (2021-12-13)
+
+
+### Features
+
+* **contentful-util:** remove files compiled ([05e771b](https://github.com/reigncl/reign-utils/commit/05e771bffae5d707ed37d7616837c30dab345cb5))
+* **contentful-utils:** configure npm package ([235543e](https://github.com/reigncl/reign-utils/commit/235543ea98274f45b28cc18cc04a93704572b86d))
+
+
+### Bug Fixes
+
+* **contentful-utils:** remove credential contentful preview ([acb2de3](https://github.com/reigncl/reign-utils/commit/acb2de34a19f2bc5a6e7f899a99e787716983b57))
+
 ## 1.1.0-beta.0 (2021-12-13)
 
 
