@@ -6,11 +6,9 @@ describe('contentful-cache', () => {
 
     it('should get entries by fields', async () => {
 
-        // const client = createMockClient();
-        const client = createClient({
-            space: 'un6yvtd6uq5z',
-            accessToken: '0HuB4Wc2Fx83ltrGULzmIkDaPV5Z64FyO5BwGk1jPAU',
-        })
+        const client = createMockClient();
+        // const client = createClient({
+        // })
 
 
         const c = new ContentfulCache({ client, fieldIndexable: ['refid', 'name'] })
