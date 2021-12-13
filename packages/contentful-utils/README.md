@@ -6,6 +6,8 @@
 **Sample:**
 
 ```ts
+import { ContentfulCache } from '@reignmodule/contentful-utils/contentful-cache'
+
 const client = contentful.createClient()
 
 const contentfulCache = new ContentfulCache({ client, fieldIndexable: ['slug'] });

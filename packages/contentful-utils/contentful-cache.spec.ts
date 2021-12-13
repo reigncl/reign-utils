@@ -6,18 +6,18 @@ describe('contentful-cache', () => {
 
     it('should get entries by fields', async () => {
 
-        const client = createMockClient();
+        const client = createMockClient() as any;
         // const client = createClient({
         // })
 
 
-        const c = new ContentfulCache({ client, fieldIndexable: ['refid', 'name'] })
+        const c = new ContentfulCache({ client, fieldIndexable: ['slug', 'name'] })
 
-        for await (const entry of c.getEntriesByField('refid', ['5_9_451', '5_9_612'], { content_type: 'cupon' })) {
+        for await (const entry of c.getEntriesByField('slug', ['article/23', 'article/12'], { content_type: 'cupon' })) {
             // console.log(entry)
         }
 
-        for await (const entry of c.getEntriesByField('refid', ['5_9_451', '5_9_812'], { content_type: 'cupon' })) {
+        for await (const entry of c.getEntriesByField('slug', ['article/43', 'article/8'], { content_type: 'cupon' })) {
             // console.log(entry)
         }
     })
