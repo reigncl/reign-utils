@@ -2,6 +2,15 @@ import type { ContentfulClientApi, Entry } from 'contentful'
 import { CacheSystem } from './types/cache-system';
 import { createPaginateItems } from './paginate-items';
 import { Cache } from './lib/cache';
+import ms from 'ms';
+
+const contentfulCacheDefaultTTL = process.env.CONTENTFUL_CACHE_DEFAULT_TTL ?? '20 minutes';
+
+const msTosSecond = (ms: number) => Math.round(ms / 1000);
+
+function hashQuery(query: any) {
+    return JSON.stringify(query);
+}
 
 interface ContentfulCacheOptions<F> {
     client: ContentfulClientApi;
@@ -29,10 +38,12 @@ export class ContentfulCache<F extends string> {
     entriesCache: CacheSystem;
     assetsCache: CacheSystem;
     fieldsCache = new Map<F, CacheSystem>();
+    queryCache: CacheSystem;
 
     constructor(readonly options: ContentfulCacheOptions<F>) {
         const createSystemCache = options.createSystemCache ?? ContentfulCache.defaultCreateCacheSystem;
 
+        this.queryCache = createSystemCache();
         this.entriesCache = createSystemCache();
         this.assetsCache = createSystemCache();
 
@@ -40,6 +51,22 @@ export class ContentfulCache<F extends string> {
             this.fieldsCache.set(field, createSystemCache());
         });
     };
+
+    async *getEntriesByQuery(query: any) {
+        const hash = hashQuery(query);
+        const cached = await this.queryCache.get<Entry<any>[]>(hash);
+        if (cached) yield* cached;
+
+        const newCached: Entry<any>[] = [];
+
+        for await (const entry of createPaginateItems((q) => this.options.client.getEntries(q))(query)) {
+            this.putEntryCache(entry);
+            newCached.push(entry);
+            yield entry;
+        }
+
+        this.queryCache.set(hash, newCached);
+    }
 
     async *getEntriesByField<T extends { [k in F]: any }>(field: F, valuesIn: any[], getEntriesQuery?: any) {
         const fieldCache = this.fieldsCache.get(field);
@@ -59,20 +86,20 @@ export class ContentfulCache<F extends string> {
             const p = createPaginateItems(q => this.options.client.getEntries<T>(q))
 
             for await (const entry of p({ ...getEntriesQuery, [`fields.${field}[in]`]: valuesIn.join(',') })) {
-                this.entriesCache.set(entry.sys.id, entry);
-                const isRecord = (v: any): v is Record<any, any> => typeof entry.fields === 'object' && entry.fields !== null
-                const fields = entry.fields
-                if (isRecord(fields)) {
-                    Array.from(this.fieldsCache.entries()).forEach(([field, cache]) => {
-                        if (fields[field]) {
-                            cache.set(fields[field], entry);
-                        }
-                    });
-                }
+                this.putEntryCache(entry);
                 yield entry;
             }
         }
     }
 
-    static defaultCreateCacheSystem = (): CacheSystem => new Cache();
+    putEntryCache(entry: Entry<any>) {
+        this.entriesCache.set(entry.sys.id, entry);
+        Array.from(this.fieldsCache.entries()).forEach(([field, cache]) => {
+            if (entry.fields && entry.fields[field]) {
+                cache.set(entry.fields[field], entry);
+            }
+        });
+    }
+
+    static defaultCreateCacheSystem = (): CacheSystem => new Cache({ stdTTL: msTosSecond(ms(contentfulCacheDefaultTTL)) });
 }
