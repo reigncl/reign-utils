@@ -3,6 +3,9 @@ import { CacheSystem } from './types/cache-system';
 import { createPaginateItems } from './paginate-items';
 import { Cache } from './lib/cache';
 import ms from 'ms';
+import debug from 'debug';
+
+const log = debug('contentful-utils:cache');
 
 const contentfulCacheDefaultTTL = process.env.CONTENTFUL_CACHE_DEFAULT_TTL ?? '20 minutes';
 
@@ -57,6 +60,8 @@ export class ContentfulCache<F extends string> {
         const cached = await this.queryCache.get<Entry<any>[]>(hash);
         if (cached) yield* cached;
 
+        log(`Fetching query: %o`, query);
+
         const newCached: Entry<any>[] = [];
 
         for await (const entry of createPaginateItems((q) => this.options.client.getEntries(q))(query)) {
@@ -82,14 +87,17 @@ export class ContentfulCache<F extends string> {
             }
         }
 
-        const itemsNoCached = valuesIn.filter(value => itemsCached[value] === undefined);
+        const valuesNoCached = valuesIn.filter(value => itemsCached[value] === undefined);
 
-        if (itemsNoCached.length) {
-            console.log(`${itemsNoCached.length} items not found in cache`);
-
+        if (valuesNoCached.length) {
+            log(`${valuesNoCached.length} items not found in cache`);
             const p = createPaginateItems(q => this.options.client.getEntries<T>(q))
 
-            for await (const entry of p({ ...getEntriesQuery, [`fields.${field}[in]`]: itemsNoCached.join(',') })) {
+            const query = { ...getEntriesQuery, [`fields.${field}[in]`]: valuesNoCached.join(',') }
+
+            log(`Fetching query: %o`, query);
+
+            for await (const entry of p(query)) {
                 this.putEntryCache(entry);
                 yield entry;
             }
