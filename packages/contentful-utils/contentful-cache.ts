@@ -76,7 +76,11 @@ export class ContentfulCache<F extends string> {
 
         const itemsCached = await fieldCache.mget<Entry<T>>(valuesIn)
 
-        yield* Object.values(itemsCached);
+        for (const value of Object.values(itemsCached)) {
+            if (value) {
+                yield value;
+            }
+        }
 
         const itemsNoCached = valuesIn.filter(value => itemsCached[value] === undefined);
 
