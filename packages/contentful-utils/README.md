@@ -23,6 +23,24 @@ for await (const entry of contentfulCache.getEntriesByField('slug', ['/home', '/
 }
 ```
 
+### Get entries by query
+
+
+**Sample:**
+
+```ts
+import { ContentfulCache } from '@reignmodule/contentful-utils/contentful-cache'
+
+const client = contentful.createClient()
+
+const contentfulCache = new ContentfulCache({ client, fieldIndexable: ['slug'] });
+
+// Get entries by field value
+for await (const entry of contentfulCache.getEntries({ content_type: 'articles', 'fields.type[in]': 'vip' })) {
+    // ... do something with entry. Time 500ms
+}
+```
+
 
 ## Get all entries as async iterable
 

@@ -52,7 +52,7 @@ export class ContentfulCache<F extends string> {
         });
     };
 
-    async *getEntriesByQuery(query: any) {
+    async *getEntries(query: any) {
         const hash = hashQuery(query);
         const cached = await this.queryCache.get<Entry<any>[]>(hash);
         if (cached) yield* cached;
