@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/reigncl/reign-utils/compare/@reignmodule/contentful-utils@v1.1.0-beta.3...@reignmodule/contentful-utils@v1.1.0) (2021-12-14)
+
+
+### Features
+
+* **contentful-util:** configure release latest ([384ca5d](https://github.com/reigncl/reign-utils/commit/384ca5da40f444166ce56612a6a4a092856e2904))
+
 ## [1.1.0-beta.3](https://github.com/reigncl/reign-utils/compare/@reignmodule/contentful-utils@v1.1.0-beta.2...@reignmodule/contentful-utils@v1.1.0-beta.3) (2021-12-14)
 
 
