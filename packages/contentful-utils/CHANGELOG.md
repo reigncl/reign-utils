@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-beta.3](https://github.com/reigncl/reign-utils/compare/@reignmodule/contentful-utils@v1.1.0-beta.2...@reignmodule/contentful-utils@v1.1.0-beta.3) (2021-12-14)
+
+
+### Features
+
+* **contentful-util:** update cache system control ([d0e715e](https://github.com/reigncl/reign-utils/commit/d0e715ec75f9ed17aa0ad891c7f91ae8142b6a50))
+
 ## [1.1.0-beta.2](https://github.com/reigncl/reign-utils/compare/@reignmodule/contentful-utils@v1.1.0-beta.1...@reignmodule/contentful-utils@v1.1.0-beta.2) (2021-12-13)
 
 
