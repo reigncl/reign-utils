@@ -5,10 +5,10 @@
   "main": "index.js",
   "publishConfig": {
     "access": "public",
-    "tag": "beta"
+    "tag": "latest"
   },
   "scripts": {
-    "release": "standard-version -t @reignmodule/contentful-utils@v ----prerelease beta",
+    "release": "standard-version -t @reignmodule/contentful-utils@v",
     "prepare": "tsc",
     "clean": "tsc --build --clean"
   },
