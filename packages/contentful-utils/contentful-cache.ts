@@ -55,16 +55,16 @@ export class ContentfulCache<F extends string> {
         });
     };
 
-    async *getEntries(query: any) {
+    async *getEntries<T extends { [k in F]: any }>(query: any) {
         const hash = hashQuery(query);
-        const cached = await this.queryCache.get<Entry<any>[]>(hash);
+        const cached = await this.queryCache.get<Entry<T>[]>(hash);
         if (cached) yield* cached;
 
         log(`Fetching query: %o`, query);
 
         const newCached: Entry<any>[] = [];
 
-        for await (const entry of createPaginateItems((q) => this.options.client.getEntries(q))(query)) {
+        for await (const entry of createPaginateItems<Entry<T>>((q) => this.options.client.getEntries(q))(query)) {
             this.putEntryCache(entry);
             newCached.push(entry);
             yield entry;
