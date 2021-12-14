@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/reigncl/reign-utils/compare/@reignmodule/contentful-utils@v1.3.3...@reignmodule/contentful-utils@v1.4.0) (2021-12-14)
+
+
+### Features
+
+* **contentful-util:** configure logger ([ab6349d](https://github.com/reigncl/reign-utils/commit/ab6349df327f1585e5a1f47dfb44de18597b95c1))
+* **contentful-util:** limit by values no cached ([32e4a4e](https://github.com/reigncl/reign-utils/commit/32e4a4ead85e9386abe51a6dae4b37d11e07a34c))
+
 ### [1.3.3](https://github.com/reigncl/reign-utils/compare/@reignmodule/contentful-utils@v1.3.2...@reignmodule/contentful-utils@v1.3.3) (2021-12-14)
 
 
