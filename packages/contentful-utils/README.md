@@ -65,4 +65,4 @@ for await (const entries of paginateItems()) {
 
 You can use the `CONTENTFUL_CACHE_DEFAULT_TTL` environment to set the default ttl for the cache. The default is `20 minutes` and the format is `${number} ${Unit}`
 
-> Unit can be `seconds`, `minutes`, `hours`, `days`. Lock the full list of units here: [ms/index.ts#L9-L40](https://github.com/vercel/ms/blob/master/src/index.ts#L9-L40)
+> Unit can be `seconds`, `minutes`, `hours`, `days`. Look the full list of units here: [ms/index.ts#L9-L40](https://github.com/vercel/ms/blob/master/src/index.ts#L9-L40)

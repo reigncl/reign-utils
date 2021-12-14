@@ -74,14 +74,14 @@ export class ContentfulCache<F extends string> {
             throw new Error(`Field ${field} not found in cache`);
         }
 
-        const res = await fieldCache.mget<Entry<T>>(valuesIn)
+        const itemsCached = await fieldCache.mget<Entry<T>>(valuesIn)
 
-        yield* Object.values(res);
+        yield* Object.values(itemsCached);
 
-        const itemsNotFound = valuesIn.filter(value => res[value] === undefined);
+        const itemsNoCached = valuesIn.filter(value => itemsCached[value] === undefined);
 
-        if (itemsNotFound.length) {
-            console.log(`${itemsNotFound.length} items not found in cache`);
+        if (itemsNoCached.length) {
+            console.log(`${itemsNoCached.length} items not found in cache`);
 
             const p = createPaginateItems(q => this.options.client.getEntries<T>(q))
 
