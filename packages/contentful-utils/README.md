@@ -13,12 +13,12 @@ const client = contentful.createClient()
 const contentfulCache = new ContentfulCache({ client, fieldIndexable: ['slug'] });
 
 // Get entries by field value
-for await (const entry of c.getEntriesByField('slug', ['/home', '/article/123', '/article/456'])) {
+for await (const entry of contentfulCache.getEntriesByField('slug', ['/home', '/article/123', '/article/456'])) {
     // ... do something with entry. Time 500ms
 }
 
 // Second time, we can get the entries from cache
-for await (const entry of c.getEntriesByField('slug', ['/home', '/article/123', '/article/456'])) {
+for await (const entry of contentfulCache.getEntriesByField('slug', ['/home', '/article/123', '/article/456'])) {
     // ... do something with entry. Time 10ms
 }
 ```

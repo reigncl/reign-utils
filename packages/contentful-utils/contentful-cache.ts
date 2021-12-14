@@ -1,24 +1,44 @@
-import { ContentfulClientApi, createClient, Entry } from 'contentful'
-import Cache from 'node-cache';
+import type { ContentfulClientApi, Entry } from 'contentful'
+import { CacheSystem } from './types/cache-system';
 import { createPaginateItems } from './paginate-items';
+import { Cache } from './lib/cache';
 
 interface ContentfulCacheOptions<F> {
     client: ContentfulClientApi;
     fieldIndexable?: F[];
-    cacheOptions?: Cache.Options;
+    createSystemCache?: () => CacheSystem;
 }
 
+/**
+ * @example
+ * declare const client: ContentfulClientApi;
+ * 
+ * const contentfulCache = new ContentfulCache({ client, fieldIndexable: ['slug'] });
+ * 
+ * // Get entries by field value
+ * for await (const entry of contentfulCache.getEntriesByField('slug', ['/home', '/article/123', '/article/456'])) {
+ *     // ... do something with entry. Time 500ms
+ * }
+ * 
+ * // Second time, we can get the entries from cache
+ * for await (const entry of contentfulCache.getEntriesByField('slug', ['/home', '/article/123', '/article/456'])) {
+ *     // ... do something with entry. Time 10ms
+ * }
+ */
 export class ContentfulCache<F extends string> {
-    entriesCache: Cache;
-    assetsCache: Cache;
-    fieldsCache: Map<F, Cache>;
+    entriesCache: CacheSystem;
+    assetsCache: CacheSystem;
+    fieldsCache = new Map<F, CacheSystem>();
 
     constructor(readonly options: ContentfulCacheOptions<F>) {
-        this.entriesCache = new Cache(options.cacheOptions);
-        this.assetsCache = new Cache(options.cacheOptions);
-        this.fieldsCache = new Map<F, Cache>(
-            options.fieldIndexable?.map(field => [field, new Cache(options.cacheOptions)])
-        );
+        const createSystemCache = options.createSystemCache ?? ContentfulCache.defaultCreateCacheSystem;
+
+        this.entriesCache = createSystemCache();
+        this.assetsCache = createSystemCache();
+
+        options.fieldIndexable?.forEach(field => {
+            this.fieldsCache.set(field, createSystemCache());
+        });
     };
 
     async *getEntriesByField<T extends { [k in F]: any }>(field: F, valuesIn: any[], getEntriesQuery?: any) {
@@ -53,4 +73,6 @@ export class ContentfulCache<F extends string> {
             }
         }
     }
+
+    static defaultCreateCacheSystem = (): CacheSystem => new Cache();
 }
