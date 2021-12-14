@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/reigncl/reign-utils/compare/@reignmodule/contentful-utils@v1.1.0...@reignmodule/contentful-utils@v1.2.0) (2021-12-14)
+
+
+### Features
+
+* **contentful-util:** add option cache by query ([2478eb2](https://github.com/reigncl/reign-utils/commit/2478eb2380305ac393a8fa2da8ae1a21cb338ea9))
+
 ## [1.1.0](https://github.com/reigncl/reign-utils/compare/@reignmodule/contentful-utils@v1.1.0-beta.3...@reignmodule/contentful-utils@v1.1.0) (2021-12-14)
 
 
