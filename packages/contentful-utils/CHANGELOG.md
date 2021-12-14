@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/reigncl/reign-utils/compare/@reignmodule/contentful-utils@v1.5.0...@reignmodule/contentful-utils@v1.6.0) (2021-12-14)
+
+
+### Features
+
+* update paginator items with initial skip value ([14c58c7](https://github.com/reigncl/reign-utils/commit/14c58c700c09a948c1e06ececbf99c8931989b03))
+
 ## [1.5.0](https://github.com/reigncl/reign-utils/compare/@reignmodule/contentful-utils@v1.4.0...@reignmodule/contentful-utils@v1.5.0) (2021-12-14)
 
 
