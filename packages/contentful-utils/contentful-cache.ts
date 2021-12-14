@@ -89,7 +89,7 @@ export class ContentfulCache<F extends string> {
 
             const p = createPaginateItems(q => this.options.client.getEntries<T>(q))
 
-            for await (const entry of p({ ...getEntriesQuery, [`fields.${field}[in]`]: valuesIn.join(',') })) {
+            for await (const entry of p({ ...getEntriesQuery, [`fields.${field}[in]`]: itemsNoCached.join(',') })) {
                 this.putEntryCache(entry);
                 yield entry;
             }
