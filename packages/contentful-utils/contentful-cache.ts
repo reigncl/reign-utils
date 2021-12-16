@@ -55,11 +55,7 @@ export class ContentfulCache<F extends string> {
         });
     };
 
-    async *getEntries<T extends { [k in F]: any }>(query: any) {
-        const hash = hashQuery(query);
-        const cached = await this.queryCache.get<Entry<T>[]>(hash);
-        if (cached) yield* cached;
-
+    private async * getEntriesWithoutCache<T extends { [k in F]: any }>(hash: string, query: any) {
         log(`Fetching query: %o`, query);
 
         const newCached: Entry<any>[] = [];
@@ -71,6 +67,20 @@ export class ContentfulCache<F extends string> {
         }
 
         this.queryCache.set(hash, newCached);
+
+        return;
+    }
+
+    async *getEntries<T extends { [k in F]: any }>(query: any) {
+        const hash = hashQuery(query);
+        const cached = await this.queryCache.get<Entry<T>[]>(hash);
+        if (cached) {
+            yield* cached;
+            return;
+        }
+
+        yield* this.getEntriesWithoutCache(hash, query);
+        return;
     }
 
     async *getEntriesByField<T extends { [k in F]: any }>(field: F, valuesIn: any[], getEntriesQuery?: any) {
