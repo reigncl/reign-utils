@@ -7,7 +7,7 @@ interface GetItems<T> {
  */
 export function createPaginateItems<T>(getItems: GetItems<T>) {
     return async function* paginateItems(query?: Record<string, any>) {
-        let skip: undefined | number = typeof query?.skip === 'number' ? query.skip : undefined;
+        let skip: number = typeof query?.skip === 'number' ? query.skip : 0;
 
         do {
             const items = await getItems({
