@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.1](https://github.com/reigncl/reign-utils/compare/@reignmodule/contentful-utils@v1.6.0...@reignmodule/contentful-utils@v1.6.1) (2021-12-16)
+
+
+### Bug Fixes
+
+* **contentful-cache:** remove call to contentful always in function ([059a8d5](https://github.com/reigncl/reign-utils/commit/059a8d57a7c2f7d4f5d576fef8f0ab4bc101eaec))
+
 ## [1.6.0](https://github.com/reigncl/reign-utils/compare/@reignmodule/contentful-utils@v1.5.0...@reignmodule/contentful-utils@v1.6.0) (2021-12-14)
 
 
