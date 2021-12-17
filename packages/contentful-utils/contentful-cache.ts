@@ -55,7 +55,7 @@ export class ContentfulCache<F extends string> {
         });
     };
 
-    private async * getEntriesWithoutCache<T extends { [k in F]: any }>(hash: string, query: any) {
+    private async * getEntriesWithoutCache<T>(hash: string, query: any) {
         log(`Fetching query: %o`, query);
 
         const newCached: Entry<any>[] = [];
@@ -71,7 +71,7 @@ export class ContentfulCache<F extends string> {
         return;
     }
 
-    async *getEntries<T extends { [k in F]: any }>(query: any) {
+    async *getEntries<T>(query: any) {
         const hash = hashQuery(query);
         const cached = await this.queryCache.get<Entry<T>[]>(hash);
         if (cached) {
