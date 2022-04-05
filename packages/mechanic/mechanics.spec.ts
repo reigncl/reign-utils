@@ -251,7 +251,7 @@ describe("Mechanics", () => {
     `);
   });
 
-  it("should use custom options", ()=>{
+  it("should use custom options", () => {
     let mechanics = new Mechanics("11", "10*100", {
       currencyFormat: {
         currency: "USD",
