@@ -250,4 +250,30 @@ describe("Mechanics", () => {
       ]
     `);
   });
+
+  it("should use custom options", ()=>{
+    let mechanics = new Mechanics("11", "10*100", {
+      currencyFormat: {
+        currency: "USD",
+      },
+    });
+
+    expect(mechanics.format()).toBe("US$10,00 Por una compra sobre US$100,00");
+    expect(mechanics.formatToParts()).toMatchInlineSnapshot(`
+      Array [
+        Object {
+          "type": "discountAmount",
+          "value": "US$10,00",
+        },
+        Object {
+          "type": "literal",
+          "value": " Por una compra sobre ",
+        },
+        Object {
+          "type": "minimumAmount",
+          "value": "US$100,00",
+        },
+      ]
+    `);
+  })
 });

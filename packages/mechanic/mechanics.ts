@@ -71,9 +71,10 @@ export class Mechanics<A extends MechanicsId>{
   static parseToParts(mechanicsId: any, mechanicsText: any, options?: MechanicsOption): Path[] {
     const style = options?.style ?? "default";
     const locales = options?.locales ?? ["es-CL"];
-    const currencyFormatOptions = options?.currencyFormat ?? {
+    const currencyFormatOptions: Intl.NumberFormatOptions = {
       currency: "CLP",
       style: "currency",
+      ...options?.currencyFormat,
     };
 
     const currencyFormat = new Intl.NumberFormat(locales, currencyFormatOptions);
