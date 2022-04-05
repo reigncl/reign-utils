@@ -8,6 +8,8 @@ This library help to format the "mechanic text".
 - 4: Ex. `$10 Antes: $100`
 - 13: Ex. `Por una compra sobre $100`
 - 11: Ex. `$10 Por una compra sobre $100`
+- 2: Ex. `2x3`
+- 7: Ex. `4 x $890`
 
 
 ## API `Mechanics`

@@ -2,6 +2,11 @@ import { mechanicExpressions } from "./mechanicsExpressions";
 import { MechanicsId, MechanicsIdSupported, MechanicsMapExpression } from "./MechanicsIdSupported";
 
 
+interface Path {
+  type: string
+  value: string
+}
+
 
 export class Mechanics<A extends MechanicsId>{
   parts: { type: string; value: string }[] = [];
@@ -41,10 +46,7 @@ export class Mechanics<A extends MechanicsId>{
     return false
   }
 
-  static parseToParts(
-    mechanicsId: any,
-    mechanics: any,
-  ): { type: string; value: string }[] {
+  static parseToParts(mechanicsId: any, mechanics: any): Path[] {
     if (!Mechanics.isValidMechanicsId(mechanicsId)) {
       throw new Error(`MechanicsId ${mechanicsId} is not supported`);
     }
@@ -73,14 +75,14 @@ export class Mechanics<A extends MechanicsId>{
             }
           }
 
-          throw new Error(`value template is not supported`);
+          throw new Error(`The value field is not type supported`);
         });
 
         return parts;
       }
     }
 
-    throw new Error("Mechanic text is not valid");
+    throw new Error(`Cannot find the expression for the mechanic id ${mechanicsId}`);
   }
 }
 
