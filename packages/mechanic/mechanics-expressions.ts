@@ -1,6 +1,8 @@
 import { MechanicsId } from "./mechanics-id-supported"
 
 
+export enum Styles { default }
+
 export type TypePart =
   | "discount"
   | "discountAmount"
@@ -21,7 +23,10 @@ export interface ExpressionsPart {
 
 export interface Expressions {
   exp: RegExp
-  parts: ExpressionsPart[]
+  parts: ExpressionsPart[] | {
+    /** !use style `default` to omit error.  */
+    [style: string]: ExpressionsPart[];
+  }
 }
 
 
@@ -74,10 +79,12 @@ export const mechanicExpressions: { [id in MechanicsId]: Expressions | Expressio
   },
   "7": {
     exp: /^(?<nProducts>\d+)\*(?<nOffer>\d+)$/,
-    parts: [
-      { type: "nProducts", value: ({ nProducts }) => nProducts },
-      { type: "literal", value: " x " },
-      { type: "m", value: ({ nOffer }, { currencyFormat }) => currencyFormat.format(Number(nOffer)) },
-    ]
+    parts: {
+      default: [
+        { type: "nProducts", value: ({ nProducts }) => nProducts },
+        { type: "literal", value: " x " },
+        { type: "m", value: ({ nOffer }, { currencyFormat }) => currencyFormat.format(Number(nOffer)) },
+      ]
+    }
   },
 };
