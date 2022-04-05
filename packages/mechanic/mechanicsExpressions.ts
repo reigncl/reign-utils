@@ -1,9 +1,19 @@
 import { MechanicsId } from "./MechanicsIdSupported"
 
 
+export type TypePart =
+  | "discount"
+  | "discountAmount"
+  | "literal"
+  | "m"
+  | "minimumAmount"
+  | "nProducts"
+  | "offer"
+  | "ref"
+
 
 export interface ExpressionsPart {
-  type: string
+  type: TypePart
   value:
   | string
   | ((group: Record<string, string>, formats: { currencyFormat: Intl.NumberFormat }) => string)

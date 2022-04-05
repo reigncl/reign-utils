@@ -1,9 +1,9 @@
-import { mechanicExpressions } from "./mechanicsExpressions";
+import { mechanicExpressions, TypePart } from "./mechanicsExpressions";
 import { MechanicsId, MechanicsIdSupported, MechanicsMapExpression } from "./MechanicsIdSupported";
 
 
-interface Path {
-  type: string
+export interface Path {
+  type: TypePart
   value: string
 }
 
@@ -11,8 +11,8 @@ interface Path {
 export class Mechanics<A extends MechanicsId>{
   parts: { type: string; value: string }[] = [];
 
-  constructor(mechanicsId: A, mechanics: MechanicsMapExpression[A]) {
-    this.parts = Mechanics.parseToParts(mechanicsId, mechanics);
+  constructor(mechanicsId: A, mechanicsText: MechanicsMapExpression[A]) {
+    this.parts = Mechanics.parseToParts(mechanicsId, mechanicsText);
   }
 
   formatToParts() {
@@ -33,12 +33,12 @@ export class Mechanics<A extends MechanicsId>{
     return MechanicsIdSupported.includes(mechanicsIdVal);
   }
 
-  static isValidMechanics(mechanicsId: MechanicsId, mechanics: any): mechanics is MechanicsMapExpression[typeof mechanicsId] {
+  static isValidMechanics(mechanicsId: MechanicsId, mechanicsText: any): mechanicsText is MechanicsMapExpression[typeof mechanicsId] {
     const mechanicExpression = mechanicExpressions[mechanicsId];
     const expressions = Array.isArray(mechanicExpression) ? mechanicExpression : [mechanicExpression];
 
     for (const expression of expressions) {
-      if (expression.exp.test(mechanics)) {
+      if (expression.exp.test(mechanicsText)) {
         return true;
       }
     }
@@ -46,13 +46,13 @@ export class Mechanics<A extends MechanicsId>{
     return false
   }
 
-  static parseToParts(mechanicsId: any, mechanics: any): Path[] {
+  static parseToParts(mechanicsId: any, mechanicsText: any): Path[] {
     if (!Mechanics.isValidMechanicsId(mechanicsId)) {
       throw new Error(`MechanicsId ${mechanicsId} is not supported`);
     }
 
-    if (!Mechanics.isValidMechanics(mechanicsId, mechanics)) {
-      throw new Error(`Mechanics ${mechanics} is not supported`);
+    if (!Mechanics.isValidMechanics(mechanicsId, mechanicsText)) {
+      throw new Error(`Mechanics ${mechanicsText} is not supported`);
     }
 
     const mechanicExpression = mechanicExpressions[mechanicsId];
@@ -60,7 +60,7 @@ export class Mechanics<A extends MechanicsId>{
     const expressions = Array.isArray(mechanicExpression) ? mechanicExpression : [mechanicExpression];
 
     for (const exp of expressions) {
-      const resultExp = exp.exp.exec(mechanics);
+      const resultExp = exp.exp.exec(mechanicsText);
       if (resultExp) {
         const group = resultExp.groups ?? {};
         const parts = exp.parts.map(({ type, value }) => {

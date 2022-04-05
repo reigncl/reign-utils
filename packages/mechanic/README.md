@@ -32,8 +32,78 @@ expect(mechanics.format()).toBe("$10 Antes: $100");
 
 **Constructor** 
 
-**``Mechanics(string, string)``**
+**``Mechanics(mechanicsId, mechanicsText)``**
 
 Create a new `Mechanics` object.
 
+**Syntax**
+
+```ts
+new Mechanics("4", "10*100")
+```
+
 **Parameters**
+
+- `mechanicsId`: Type of mechanic to format. Posible values "`1`", "`4`", "`13`", "`11`", "`2`", "`7`".
+- `mechanicsText`: Mechanic text to decompose. The format depends on the mechanic id. Ex. with the mechanic id `4` the mechanic text is `10*100`.
+
+
+## `Mechanics.prototype.format()`
+
+The `Mechanics.prototype.format()` method format the mechanic text.
+
+**Syntax**
+
+```ts
+format()
+```
+
+**Return value**
+
+A `string` of the mechanic formatted.
+
+**Example**
+
+```ts
+const mechanicValue = new Mechanics("4", "10*100").format()
+
+expect(mechanicValue).toBe("$10 Antes: $100")
+```
+
+
+## `Mechanics.prototype.formatToParts()`
+
+The `Mechanics.prototype.formatToParts()` method format the mechanic text and return it in parts.
+
+**Syntax**
+
+```ts
+formatToParts()
+```
+
+**Return value**
+
+An `Array` of objects containing the formatted in parts. 
+
+**Example**
+
+```ts
+[
+    { "type": "offer", "value": "$10" },
+    { "type": "literal", "value": " Antes: " },
+    { "type": "ref", "value": "$100" },
+]
+```
+
+Possible types are the following:
+
+- `literal`: The string used for separating the values.
+- `discount`:
+- `discountAmount`:
+- `m`:
+- `minimumAmount`:
+- `nProducts`:
+- `offer`:
+- `ref`:
+
+
