@@ -106,7 +106,7 @@ export class Mechanics<A extends MechanicsId>{
           if (typeof value === "function") {
             return {
               type: type,
-              value: value(group, { currencyFormat }),
+              value: value(group, { currencyFormat, locales }),
             }
           }
 

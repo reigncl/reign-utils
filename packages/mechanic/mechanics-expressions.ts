@@ -18,7 +18,7 @@ export interface ExpressionsPart {
   type: TypePart
   value:
   | string
-  | ((group: Record<string, string>, formats: { currencyFormat: Intl.NumberFormat }) => string)
+  | ((group: Record<string, string>, formats: { currencyFormat: Intl.NumberFormat, locales: string | string[] }) => string)
 }
 
 export interface Expressions {
