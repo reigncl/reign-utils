@@ -1,4 +1,4 @@
-import { MechanicsId } from "./MechanicsIdSupported"
+import { MechanicsId } from "./mechanics-id-supported"
 
 
 export type TypePart =

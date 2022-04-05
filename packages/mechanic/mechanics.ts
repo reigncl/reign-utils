@@ -1,5 +1,5 @@
-import { mechanicExpressions, TypePart } from "./mechanicsExpressions";
-import { MechanicsId, MechanicsIdSupported, MechanicsMapExpression } from "./MechanicsIdSupported";
+import { mechanicExpressions, TypePart } from "./mechanics-expressions";
+import { MechanicsId, MechanicsIdSupported, MechanicsMapExpression } from "./mechanics-id-supported";
 
 
 export interface Path {
