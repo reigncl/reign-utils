@@ -129,4 +129,15 @@ Mechanics.defineStyle("1", null, "custom", [
 - `parts`: An `Array` with the template part to format the `string` result.
 
 
+**Sample**
+
+```ts
+let mechanics = new Mechanics("11", "10*100", {
+    currencyFormat: {
+        currency: "USD",
+    },
+});
+
+expect(mechanics.format()).toBe("US$10,00 Por una compra sobre US$100,00");
+```
 
