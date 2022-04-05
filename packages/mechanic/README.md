@@ -107,3 +107,26 @@ Possible types are the following:
 - `ref`:
 
 
+## Custom Style `Mechanics.defineStyle(mechanicsId, expressionPos, styleName, parts)`
+
+Use a custom style in the formatter with `Mechanics.defineStyle(mechanicsId, expressionPos, styleName, parts)`.
+
+**Syntax**
+
+```ts
+Mechanics.defineStyle("1", null, "custom", [
+    { type: "literal", value: "Tienes un " },
+    { type: "discount", value: ({ discount }) => `${discount}%` },
+    { type: "literal", value: " de descuento" },
+])
+```
+
+**Parameters**
+
+- `mechanicsId`: Type of mechanic to format. Posible values "`1`", "`4`", "`13`", "`11`", "`2`", "`7`".
+- `expressionPos`: If the mechanic has more expressions needs define the position (You can look at it with `Mechanics.getStyle`). If is `null` or `undefined` the position per default is `0`.
+- `styleName`: Define a name to the style
+- `parts`: An `Array` with the template part to format the `string` result.
+
+
+
