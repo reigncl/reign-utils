@@ -1,11 +1,6 @@
-import { ExpressionsPart, mechanicExpressions, Styles, TypePart } from "./mechanics-expressions";
+import { mechanicExpressions, Path, Template } from "./mechanics-expressions";
 import { MechanicsId, MechanicsIdSupported, MechanicsMapExpression } from "./mechanics-id-supported";
 
-
-export interface Path {
-  type: TypePart
-  value: string
-}
 
 export type MechanicsOption = {
   style?: string
@@ -55,13 +50,13 @@ export class Mechanics<A extends MechanicsId>{
     return expressions;
   }
 
-  static defineStyle(mechanicsId: MechanicsId, expressionPos: number | null | undefined, styleName: string, parts: ExpressionsPart[]) {
+  static defineStyle(mechanicsId: MechanicsId, expressionPos: number | null | undefined, styleName: string, parts: Template) {
     const expressionPosition = expressionPos ?? 0;
     const mechanicExpression = mechanicExpressions[mechanicsId];
     const expressions = Array.isArray(mechanicExpression) ? mechanicExpression : [mechanicExpression];
     const expression = expressions[expressionPosition];
 
-    const nextParts = Array.isArray(expression.parts) ? { default: expression.parts } : expression.parts;
+    const nextParts = expression.parts instanceof Template ? { default: expression.parts } : expression.parts;
 
     nextParts[styleName] = parts;
 
@@ -96,24 +91,13 @@ export class Mechanics<A extends MechanicsId>{
       if (resultExp) {
         const group = resultExp.groups ?? {};
 
-        const partsCompose = Array.isArray(exp.parts) ? exp.parts : exp.parts[style] ?? exp.parts['default'];
+        const partsCompose = exp.parts instanceof Template ? exp.parts : exp.parts[style] ?? exp.parts.default;
 
-        const parts = partsCompose.map(({ type, value }) => {
-          if (typeof value === "string") {
-            return { type, value };
-          }
+        if (!partsCompose) {
+          throw new Error(`Not found parts for ${mechanicsId}`);
+        }
 
-          if (typeof value === "function") {
-            return {
-              type: type,
-              value: value(group, { currencyFormat, locales }),
-            }
-          }
-
-          throw new Error(`The value field is not type supported`);
-        });
-
-        return parts;
+        return partsCompose.renderParts(group, { currencyFormat, locales });
       }
     }
 

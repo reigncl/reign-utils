@@ -1,4 +1,5 @@
 import { Mechanics } from "./mechanics";
+import { discount, template } from "./mechanics-expressions";
 
 describe("Mechanics", () => {
   it("should check the valid mechanic id values", () => {
@@ -30,6 +31,10 @@ describe("Mechanics", () => {
     expect(mechanics.formatToParts()).toMatchInlineSnapshot(`
       Array [
         Object {
+          "type": "literal",
+          "value": "",
+        },
+        Object {
           "type": "discount",
           "value": "40%",
         },
@@ -48,8 +53,16 @@ describe("Mechanics", () => {
     expect(mechanics.formatToParts()).toMatchInlineSnapshot(`
       Array [
         Object {
+          "type": "literal",
+          "value": "",
+        },
+        Object {
           "type": "offer",
           "value": "$10",
+        },
+        Object {
+          "type": "literal",
+          "value": "",
         },
       ]
     `);
@@ -62,6 +75,10 @@ describe("Mechanics", () => {
     expect(mechanics.formatToParts()).toMatchInlineSnapshot(`
       Array [
         Object {
+          "type": "literal",
+          "value": "",
+        },
+        Object {
           "type": "offer",
           "value": "$10",
         },
@@ -72,6 +89,10 @@ describe("Mechanics", () => {
         Object {
           "type": "ref",
           "value": "$100",
+        },
+        Object {
+          "type": "literal",
+          "value": "",
         },
       ]
     `);
@@ -85,7 +106,15 @@ describe("Mechanics", () => {
       Array [
         Object {
           "type": "literal",
+          "value": "",
+        },
+        Object {
+          "type": "input",
           "value": "Por una compra sobre $100",
+        },
+        Object {
+          "type": "literal",
+          "value": "",
         },
       ]
     `);
@@ -98,6 +127,10 @@ describe("Mechanics", () => {
     expect(mechanics.formatToParts()).toMatchInlineSnapshot(`
       Array [
         Object {
+          "type": "literal",
+          "value": "",
+        },
+        Object {
           "type": "discountAmount",
           "value": "$10",
         },
@@ -108,6 +141,10 @@ describe("Mechanics", () => {
         Object {
           "type": "minimumAmount",
           "value": "$100",
+        },
+        Object {
+          "type": "literal",
+          "value": "",
         },
       ]
     `);
@@ -120,6 +157,10 @@ describe("Mechanics", () => {
     expect(mechanics.formatToParts()).toMatchInlineSnapshot(`
       Array [
         Object {
+          "type": "literal",
+          "value": "",
+        },
+        Object {
           "type": "nProducts",
           "value": "3",
         },
@@ -130,6 +171,10 @@ describe("Mechanics", () => {
         Object {
           "type": "m",
           "value": "2",
+        },
+        Object {
+          "type": "literal",
+          "value": "",
         },
       ]
     `);
@@ -142,6 +187,10 @@ describe("Mechanics", () => {
     expect(mechanics.formatToParts()).toMatchInlineSnapshot(`
       Array [
         Object {
+          "type": "literal",
+          "value": "",
+        },
+        Object {
           "type": "nProducts",
           "value": "4",
         },
@@ -150,8 +199,12 @@ describe("Mechanics", () => {
           "value": " x ",
         },
         Object {
-          "type": "m",
+          "type": "offer",
           "value": "$890",
+        },
+        Object {
+          "type": "literal",
+          "value": "",
         },
       ]
     `);
@@ -164,27 +217,25 @@ describe("Mechanics", () => {
       Array [
         Object {
           "exp": /\\^\\(\\?<discount>\\\\d\\+\\)\\$/,
-          "parts": Array [
-            Object {
-              "type": "discount",
-              "value": [Function],
-            },
-            Object {
-              "type": "literal",
-              "value": " Descuento",
-            },
-          ],
+          "parts": Template {
+            "substitutions": Array [
+              Part {
+                "type": "discount",
+                "value": [Function],
+              },
+            ],
+            "template": Array [
+              "",
+              " Descuento",
+            ],
+          },
         },
       ]
     `);
   });
 
   it("should get styles with a custom style", () => {
-    Mechanics.defineStyle("1", null, "custom", [
-      { type: "literal", value: "Tienes un " },
-      { type: "discount", value: ({ discount }) => `${discount}%` },
-      { type: "literal", value: " de descuento" },
-    ]);
+    Mechanics.defineStyle("1", null, "custom", template`Tienes un ${discount} de descuento`);
 
     const style = Mechanics.getStyle("1");
 
@@ -193,30 +244,30 @@ describe("Mechanics", () => {
         Object {
           "exp": /\\^\\(\\?<discount>\\\\d\\+\\)\\$/,
           "parts": Object {
-            "custom": Array [
-              Object {
-                "type": "literal",
-                "value": "Tienes un ",
-              },
-              Object {
-                "type": "discount",
-                "value": [Function],
-              },
-              Object {
-                "type": "literal",
-                "value": " de descuento",
-              },
-            ],
-            "default": Array [
-              Object {
-                "type": "discount",
-                "value": [Function],
-              },
-              Object {
-                "type": "literal",
-                "value": " Descuento",
-              },
-            ],
+            "custom": Template {
+              "substitutions": Array [
+                Part {
+                  "type": "discount",
+                  "value": [Function],
+                },
+              ],
+              "template": Array [
+                "Tienes un ",
+                " de descuento",
+              ],
+            },
+            "default": Template {
+              "substitutions": Array [
+                Part {
+                  "type": "discount",
+                  "value": [Function],
+                },
+              ],
+              "template": Array [
+                "",
+                " Descuento",
+              ],
+            },
           },
         },
       ]
@@ -224,11 +275,7 @@ describe("Mechanics", () => {
   });
 
   it("should render custom style", () => {
-    Mechanics.defineStyle("1", null, "custom", [
-      { type: "literal", value: "Tienes un " },
-      { type: "discount", value: ({ discount }) => `${discount}%` },
-      { type: "literal", value: " de descuento" },
-    ]);
+    Mechanics.defineStyle("1", null, "custom", template`Tienes un ${discount} de descuento`);
 
     let mechanics = new Mechanics("1", "40", { style: "custom" });
 
@@ -262,6 +309,10 @@ describe("Mechanics", () => {
     expect(mechanics.formatToParts()).toMatchInlineSnapshot(`
       Array [
         Object {
+          "type": "literal",
+          "value": "",
+        },
+        Object {
           "type": "discountAmount",
           "value": "US$10,00",
         },
@@ -272,6 +323,10 @@ describe("Mechanics", () => {
         Object {
           "type": "minimumAmount",
           "value": "US$100,00",
+        },
+        Object {
+          "type": "literal",
+          "value": "",
         },
       ]
     `);
