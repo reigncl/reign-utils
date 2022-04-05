@@ -1,9 +1,15 @@
 {
-  "name": "mechanic",
+  "name": "@reignmodule/mechanic-text",
   "version": "1.0.0",
   "description": "This library help to format the \"mechanic text\".",
   "main": "mechanics.js",
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  },
   "scripts": {
+    "prepare": "tsc",
+    "clean": "tsc --build --clean",
     "test": "jest"
   },
   "keywords": [],
