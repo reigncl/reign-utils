@@ -32,15 +32,30 @@ expect(mechanics.format()).toBe("$10 Antes: $100");
 
 **Constructor** 
 
-**``Mechanics(mechanicsId, mechanicsText)``**
+**``Mechanics(locales, options)``**
 
 Create a new `Mechanics` object.
 
 **Syntax**
 
 ```ts
-new Mechanics("4", "10*100")
+new Mechanics(undefined, { currencyFormat: { currency: "CLP" } })
 ```
+
+**Parameters**
+
+- `locales`: A string with a BCP 47 language tag, or an array of such strings.
+- `options`: An object with some or all the following properties:
+  - `style`: The formatting style to use. the default is `default`.
+    - `"default"`: Generic formatting.
+    - `"mobile-alvi"`: for the app mobile formatting.
+  - `currencyFormat`: An object with the NumberFormat options. See more https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat.
+
+
+
+## `Mechanics.prototype.format(mechanicsId, mechanicsText)`
+
+The `Mechanics.prototype.format()` method format the mechanic text.
 
 **Parameters**
 
@@ -48,14 +63,10 @@ new Mechanics("4", "10*100")
 - `mechanicsText`: Mechanic text to decompose. The format depends on the mechanic id. Ex. with the mechanic id `4` the mechanic text is `10*100`.
 
 
-## `Mechanics.prototype.format()`
-
-The `Mechanics.prototype.format()` method format the mechanic text.
-
 **Syntax**
 
 ```ts
-format()
+format("4", "10*100")
 ```
 
 **Return value**
@@ -65,20 +76,28 @@ A `string` of the mechanic formatted.
 **Example**
 
 ```ts
-const mechanicValue = new Mechanics("4", "10*100").format()
+const mechanicValue = new Mechanics().format("4", "10*100")
 
 expect(mechanicValue).toBe("$10 Antes: $100")
 ```
 
 
-## `Mechanics.prototype.formatToParts()`
+## `Mechanics.prototype.formatToParts(mechanicsId, mechanicsText)`
 
 The `Mechanics.prototype.formatToParts()` method format the mechanic text and return it in parts.
+
+
+**Parameters**
+
+- `mechanicsId`: Type of mechanic to format. Posible values "`1`", "`4`", "`13`", "`11`", "`2`", "`7`".
+- `mechanicsText`: Mechanic text to decompose. The format depends on the mechanic id. Ex. with the mechanic id `4` the mechanic text is `10*100`.
+
+
 
 **Syntax**
 
 ```ts
-formatToParts()
+formatToParts("4", "10*100")
 ```
 
 **Return value**
@@ -105,35 +124,4 @@ Possible types are the following:
 - `nProducts`:
 - `offer`:
 - `ref`:
-
-
-## Custom Style `Mechanics.defineStyle(mechanicsId, expressionPos, styleName, parts)`
-
-Use a custom style in the formatter with `Mechanics.defineStyle(mechanicsId, expressionPos, styleName, parts)`.
-
-**Syntax**
-
-```ts
-Mechanics.defineStyle("1", null, "custom", template`Tienes un ${discount} de descuento`)
-```
-
-**Parameters**
-
-- `mechanicsId`: Type of mechanic to format. Posible values "`1`", "`4`", "`13`", "`11`", "`2`", "`7`".
-- `expressionPos`: If the mechanic has more expressions needs define the position (You can look at it with `Mechanics.getStyle`). If is `null` or `undefined` the position per default is `0`.
-- `styleName`: Define a name to the style
-- `parts`: An `Array` with the template part to format the `string` result.
-
-
-**Sample**
-
-```ts
-let mechanics = new Mechanics("11", "10*100", {
-    currencyFormat: {
-        currency: "USD",
-    },
-});
-
-expect(mechanics.format()).toBe("US$10,00 Por una compra sobre US$100,00");
-```
 
