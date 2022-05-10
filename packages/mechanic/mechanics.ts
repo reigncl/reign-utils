@@ -1,61 +1,41 @@
-import { mechanicExpressions, TypePart } from "./mechanics-expressions";
-import { MechanicsId, MechanicsIdSupported, MechanicsMapExpression } from "./mechanics-id-supported";
+import { mechanicExpressions } from "./mechanics-expressions";
+import { Template } from "./Template";
+import { Path } from "./Path";
 
 
-export interface Path {
-  type: TypePart
-  value: string
+export type MechanicsOption = {
+  style?: string
+  currencyFormat?: Intl.NumberFormatOptions
 }
 
 
-export class Mechanics<A extends MechanicsId>{
-  parts: { type: string; value: string }[] = [];
+export class Mechanics {
+  private currencyFormatOptions: Intl.NumberFormatOptions;
+  private currencyFormat: Intl.NumberFormat;
+  private style: string;
 
-  constructor(mechanicsId: A, mechanicsText: MechanicsMapExpression[A]) {
-    this.parts = Mechanics.parseToParts(mechanicsId, mechanicsText);
+  constructor(readonly locales: string | string[] = ['es-CL'], readonly options?: MechanicsOption) {
+    this.style = this.options?.style ?? "default";
+    this.currencyFormatOptions = {
+      currency: "CLP",
+      style: "currency",
+      ...this.options?.currencyFormat,
+    };
+    this.currencyFormat = new Intl.NumberFormat(locales, this.currencyFormatOptions);
   }
 
-  formatToParts() {
-    return this.parts;
-  }
+  formatToParts(mechanicsId: string, mechanicsText: string): Path[] {
+    const styledMechanicExpressions = mechanicExpressions[this.style];
 
-  format() {
-    return this.parts.map((e) => e.value).join("");
-  }
-
-  static currencyFormat = new Intl.NumberFormat("es-CL", {
-    currency: "CLP",
-    style: "currency",
-  });
-
-  static isValidMechanicsId(mechanicsId: any): mechanicsId is MechanicsId {
-    const mechanicsIdVal = ["number", "string"].includes(typeof mechanicsId) ? mechanicsId.toString() : "";
-    return MechanicsIdSupported.includes(mechanicsIdVal);
-  }
-
-  static isValidMechanics(mechanicsId: MechanicsId, mechanicsText: any): mechanicsText is MechanicsMapExpression[typeof mechanicsId] {
-    const mechanicExpression = mechanicExpressions[mechanicsId];
-    const expressions = Array.isArray(mechanicExpression) ? mechanicExpression : [mechanicExpression];
-
-    for (const expression of expressions) {
-      if (expression.exp.test(mechanicsText)) {
-        return true;
-      }
+    if (!styledMechanicExpressions) {
+      throw new Error(`Mechanics style ${this.style} is not supported`);
     }
 
-    return false
-  }
+    const mechanicExpression = styledMechanicExpressions[mechanicsId];
 
-  static parseToParts(mechanicsId: any, mechanicsText: any): Path[] {
-    if (!Mechanics.isValidMechanicsId(mechanicsId)) {
+    if (!mechanicExpression) {
       throw new Error(`MechanicsId ${mechanicsId} is not supported`);
     }
-
-    if (!Mechanics.isValidMechanics(mechanicsId, mechanicsText)) {
-      throw new Error(`Mechanics ${mechanicsText} is not supported`);
-    }
-
-    const mechanicExpression = mechanicExpressions[mechanicsId];
 
     const expressions = Array.isArray(mechanicExpression) ? mechanicExpression : [mechanicExpression];
 
@@ -63,26 +43,15 @@ export class Mechanics<A extends MechanicsId>{
       const resultExp = exp.exp.exec(mechanicsText);
       if (resultExp) {
         const group = resultExp.groups ?? {};
-        const parts = exp.parts.map(({ type, value }) => {
-          if (typeof value === "string") {
-            return { type, value };
-          }
-
-          if (typeof value === "function") {
-            return {
-              type: type,
-              value: value(group, { currencyFormat: Mechanics.currencyFormat })
-            }
-          }
-
-          throw new Error(`The value field is not type supported`);
-        });
-
-        return parts;
+        return exp.template.renderParts(group, { currencyFormat: this.currencyFormat, locales: this.locales });
       }
     }
 
     throw new Error(`Cannot find the expression for the mechanic id ${mechanicsId}`);
+  }
+
+  format(mechanicsId: string, mechanicsText: string): string {
+    return this.formatToParts(mechanicsId, mechanicsText).map(part => part.value).join('');
   }
 }
 
