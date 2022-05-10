@@ -114,11 +114,7 @@ Use a custom style in the formatter with `Mechanics.defineStyle(mechanicsId, exp
 **Syntax**
 
 ```ts
-Mechanics.defineStyle("1", null, "custom", [
-    { type: "literal", value: "Tienes un " },
-    { type: "discount", value: ({ discount }) => `${discount}%` },
-    { type: "literal", value: " de descuento" },
-])
+Mechanics.defineStyle("1", null, "custom", template`Tienes un ${discount} de descuento`)
 ```
 
 **Parameters**
