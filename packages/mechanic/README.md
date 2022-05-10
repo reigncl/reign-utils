@@ -20,14 +20,14 @@ The `Mechanic` object format the "mechanical text".
 
 ```ts
 // Format mechanics 1
-let mechanics = new Mechanics("1", "40");
+let mechanics = new Mechanics();
 
-expect(mechanics.format()).toBe("40% Descuento");
+expect(mechanics.format("1", "40")).toBe("40% Descuento");
 
 // Format mechanics 4
-let mechanics = new Mechanics("4", "10*100");
+let mechanics = new Mechanics();
 
-expect(mechanics.format()).toBe("$10 Antes: $100");
+expect(mechanics.format("4", "10*100")).toBe("$10 Antes: $100");
 ```
 
 **Constructor** 
