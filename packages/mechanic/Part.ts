@@ -1,9 +1,6 @@
 import { FormatOptions } from "./FormatOptions";
 import { Path } from "./Path";
 import { TypePart } from "./TypePart";
-
-
-
 export class Part {
   constructor(
     readonly type: TypePart,
@@ -22,9 +19,7 @@ export class Part {
   }
 }
 
-
 export const part = (
   type: TypePart,
   value: string | ((group: Record<string, string>, options: FormatOptions) => string)
 ) => new Part(type, value);
-

@@ -1,13 +1,10 @@
 import { mechanicExpressions } from "./mechanics-expressions";
-import { Template } from "./Template";
 import { Path } from "./Path";
-
 
 export type MechanicsOption = {
   style?: string
   currencyFormat?: Intl.NumberFormatOptions
 }
-
 
 export class Mechanics {
   private currencyFormatOptions: Intl.NumberFormatOptions;
@@ -22,6 +19,12 @@ export class Mechanics {
       ...this.options?.currencyFormat,
     };
     this.currencyFormat = new Intl.NumberFormat(locales, this.currencyFormatOptions);
+  }
+
+  expEvaluation(mechanicsId: string, mechanicsText: string){
+    const str = mechanicsText.split('*')
+    if(mechanicsId === '8' && parseInt(str[1], 10) < 100) return 1
+    return 0
   }
 
   formatToParts(mechanicsId: string, mechanicsText: string): Path[] {
@@ -43,7 +46,8 @@ export class Mechanics {
       const resultExp = exp.exp.exec(mechanicsText);
       if (resultExp) {
         const group = resultExp.groups ?? {};
-        return exp.template.renderParts(group, { currencyFormat: this.currencyFormat, locales: this.locales });
+        const template = this.expEvaluation(mechanicsId, mechanicsText)
+        return exp.template[template].renderParts(group, { currencyFormat: this.currencyFormat, locales: this.locales });
       }
     }
 

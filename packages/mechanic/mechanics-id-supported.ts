@@ -3,22 +3,18 @@ export const MechanicsIdSupported = [
     "2",
     "4",
     "7",
-    "13",
+    "8",
     "11",
+    "13",
 ] as const;
 
-
 export type MechanicsId = typeof MechanicsIdSupported[number];
-
-
 export interface MechanicsMapExpression {
     "1": `${number}`
-    "4": `${number}` | `${number}*${number}`
-    "13": string
-    "11": `${number}*${number}`
     "2": `${number}*${number}`
+    "4": `${number}` | `${number}*${number}`
     "7": `${number}*${number}`
+    "8": `${number}*${number}`
+    "11": `${number}*${number}`
+    "13": string
 }
-
-// +7
-// +2

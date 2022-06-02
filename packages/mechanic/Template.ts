@@ -2,8 +2,6 @@ import { FormatOptions } from "./FormatOptions";
 import { Part } from "./Part";
 import { Path } from "./Path";
 
-
-
 export class Template {
   constructor(
     private template: { raw: readonly string[] | ArrayLike<string>; },
@@ -31,7 +29,6 @@ export class Template {
   }
 
 }
-
 
 export const template = (
   template: { raw: readonly string[] | ArrayLike<string> },
