@@ -27,7 +27,7 @@ const amountWithSuffix = new Part(
     "amountWithSuffix", 
     ({amountWithSuffix}) => [
       { type: "amountWithSuffix", value: amountWithSuffix }, 
-      { type: "suffix", value: `${formatOrdinals(parseInt(amountWithSuffix))}` }
+      { type: "suffix", value: `${formatOrdinals(amountWithSuffix)}` }
     ])
 
 type MechanicId = string
