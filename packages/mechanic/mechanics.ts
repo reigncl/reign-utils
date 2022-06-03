@@ -1,15 +1,18 @@
 import { mechanicExpressions } from "./mechanics-expressions";
+import { OrdinalNumbers, OrdinalOptions } from "./OrdinalNumbers";
 import { Path } from "./Path";
 
 export type MechanicsOption = {
   style?: string
   currencyFormat?: Intl.NumberFormatOptions
+  ordinalOptions?: OrdinalOptions
 }
 
 export class Mechanics {
   private currencyFormatOptions: Intl.NumberFormatOptions;
   private currencyFormat: Intl.NumberFormat;
   private style: string;
+  private ordinalNumbers: OrdinalNumbers;
 
   constructor(readonly locales: string | string[] = ['es-CL'], readonly options?: MechanicsOption) {
     this.style = this.options?.style ?? "default";
@@ -19,12 +22,7 @@ export class Mechanics {
       ...this.options?.currencyFormat,
     };
     this.currencyFormat = new Intl.NumberFormat(locales, this.currencyFormatOptions);
-  }
-
-  expEvaluation(mechanicsId: string, mechanicsText: string){
-    const str = mechanicsText.split('*')
-    if(mechanicsId === '8' && parseInt(str[1], 10) < 100) return 1
-    return 0
+    this.ordinalNumbers = new OrdinalNumbers({style: 'short', noun: 'f', ...options?.ordinalOptions})
   }
 
   formatToParts(mechanicsId: string, mechanicsText: string): Path[] {
@@ -46,8 +44,7 @@ export class Mechanics {
       const resultExp = exp.exp.exec(mechanicsText);
       if (resultExp) {
         const group = resultExp.groups ?? {};
-        const template = this.expEvaluation(mechanicsId, mechanicsText)
-        return exp.template[template].renderParts(group, { currencyFormat: this.currencyFormat, locales: this.locales });
+        return exp.template.renderParts(group, { currencyFormat: this.currencyFormat, locales: this.locales, ordinalNumbers: this.ordinalNumbers });
       }
     }
 

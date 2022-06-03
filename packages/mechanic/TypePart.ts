@@ -9,5 +9,5 @@ export type TypePart = "discount" |
   "input" |
   "nOffer" |
   "new_line" |
-  "variableOffer" |
-  "amountWithSuffix";
+  "price" |
+  "amountSuffix";

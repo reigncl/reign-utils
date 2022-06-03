@@ -388,13 +388,13 @@ describe("Mechanics", () => {
     })
 
     it("should format mechanics 8a", () => {
-      const mechanic = new Mechanics("es-CL", { style: "mobile-unimarc" });
+      const mechanic = new Mechanics("es-CL", { style: "mobile-unimarc"});
 
       expect(mechanic.format("8", "2*330")).toBe("2da UN x $330");
       expect(mechanic.formatToParts("8", "2*330")).toMatchInlineSnapshot(`
         Array [
           Object {
-            "type": "amountWithSuffix",
+            "type": "amount",
             "value": "2",
           },
           Object {
@@ -418,13 +418,13 @@ describe("Mechanics", () => {
     })
 
     it("should format mechanics 8b", () => {
-      const mechanic = new Mechanics("es-CL", { style: "mobile-unimarc" });
+      const mechanic = new Mechanics("es-CL", { style: "mobile-unimarc"});
 
       expect(mechanic.format("8", "2*30")).toBe("30% en 2da UN");
       expect(mechanic.formatToParts("8", "2*30")).toMatchInlineSnapshot(`
         Array [
           Object {
-            "type": "variableOffer",
+            "type": "discount",
             "value": "30",
           },
           Object {
@@ -436,7 +436,7 @@ describe("Mechanics", () => {
             "value": " en ",
           },
           Object {
-            "type": "amountWithSuffix",
+            "type": "amount",
             "value": "2",
           },
           Object {

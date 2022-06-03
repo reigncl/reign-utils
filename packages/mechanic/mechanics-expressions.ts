@@ -1,9 +1,8 @@
 import { Part } from "./Part";
 import { template, Template } from "./Template";
-import { formatOrdinals } from './Suffixes'
 export interface Expressions {
   exp: RegExp
-  template: Template[]
+  template: Template
 }
 
 export const discount = new Part("discount", ({ discount }) => [{ type: "discount", value: discount }, { type: "percentSign", value: `%` }]);
@@ -16,57 +15,44 @@ export const newLine = new Part("new_line", () => `\n`)
 export const nOffer = new Part("nOffer", ({ nOffer }, { currencyFormat }) => currencyFormat.formatToParts(Number(nOffer)))
 export const discountAmount = new Part("discountAmount", ({ discountAmount }, { currencyFormat }) => currencyFormat.formatToParts(Number(discountAmount)))
 export const minimumAmount = new Part("minimumAmount", ({ minimumAmount }, { currencyFormat }) => currencyFormat.formatToParts(Number(minimumAmount)))
-const variableOffer = new Part(
-  "variableOffer", 
-  ({ variableOffer }, { currencyFormat }) => 
-  parseInt(variableOffer, 10) > 100 ? 
-  currencyFormat.formatToParts(Number(variableOffer)) :
-  [{ type: "variableOffer", value: variableOffer }, { type: "percentSign", value: `%` }]
-  )
-const amountWithSuffix = new Part(
-    "amountWithSuffix", 
-    ({amountWithSuffix}) => [
-      { type: "amountWithSuffix", value: amountWithSuffix }, 
-      { type: "suffix", value: `${formatOrdinals(amountWithSuffix)}` }
-    ])
+const amountSuffix = new Part( "amountSuffix", ({amountSuffix}, {ordinalNumbers}) => ordinalNumbers.formatToParts(amountSuffix))
+const price = new Part("price", ({ price }, { currencyFormat }) => currencyFormat.formatToParts(Number(price)))
 
 type MechanicId = string
 type StyleId = string
 type MechanicTemplates = Record<MechanicId, Expressions | Expressions[]>
 type StylesMechanicTemplates = Record<StyleId, MechanicTemplates>
-  
-// TODO: preguntar cual es el maximo de unidades
 
 const defaultMechanicExpressions: MechanicTemplates = {
   "1": {
     exp: /^(?<discount>\d+)$/,
-    template: [template`${discount} Descuento`],
+    template: template`${discount} Descuento`,
   },
   "2": {
     exp: /^(?<nProducts>\d+)\*(?<m>\d+)$/,
-    template: [template`${nProducts}x${m}`],
+    template: template`${nProducts}x${m}`,
   },
   "4": [
     {
       exp: /^(?<offer>\d+)$/,
-      template: [template`${offer}`],
+      template: template`${offer}`,
     },
     {
       exp: /^(?<offer>\d+)\*(?<ref>\d+)$/,
-      template: [template`${offer} Antes: ${ref}`],
+      template: template`${offer} Antes: ${ref}`,
     },
   ],
   "7": {
     exp: /^(?<nProducts>\d+)\*(?<offer>\d+)$/,
-    template: [template`${nProducts} x ${offer}`],
+    template: template`${nProducts} x ${offer}`,
   },
   "11": {
     exp: /^(?<discountAmount>\d+)\*(?<minimumAmount>\d+)$/,
-    template: [template`${discountAmount} Por una compra sobre ${minimumAmount}`],
+    template: template`${discountAmount} Por una compra sobre ${minimumAmount}`,
   },
   "13": {
     exp: /^(?<input>.+)$/,
-    template: [template`${input}`],
+    template: template`${input}`,
   },
 };
 
@@ -76,7 +62,7 @@ export const mechanicExpressions: StylesMechanicTemplates = {
     ...defaultMechanicExpressions,
     "11": {
       exp: /^(?<discountAmount>\d+)\*(?<minimumAmount>\d+)$/,
-      template: [template`${discountAmount} de descuento${newLine}Por compras sobre ${minimumAmount}`],
+      template: template`${discountAmount} de descuento${newLine}Por compras sobre ${minimumAmount}`,
     },
   },
   "mobile-unimarc": {
@@ -84,20 +70,26 @@ export const mechanicExpressions: StylesMechanicTemplates = {
     "4": [
       {
         exp: /^(?<offer>\d+)$/,
-        template: [template`${offer}`],
+        template: template`${offer}`,
       },
       {
         exp: /^(?<offer>\d+)\*(?<ref>\d+)$/,
-        template: [template`${offer}${newLine}Antes: ${ref}`],
+        template: template`${offer}${newLine}Antes: ${ref}`,
       },
     ],
-    "8": {
-      exp: /^(?<amountWithSuffix>\d+)\*(?<variableOffer>\d+)$/,
-      template: [template`${amountWithSuffix} UN x ${variableOffer}`, template`${variableOffer} en ${amountWithSuffix} UN`]
-    },
+    "8": [
+      {
+        exp: /^(?<amountSuffix>\d+)\*(?<discount>\d{1,2})$/,
+        template: template`${discount} en ${amountSuffix} UN`,
+      },
+      {
+        exp: /^(?<amountSuffix>\d+)\*(?<price>\d{3,})$/,
+        template: template`${amountSuffix} UN x ${price}`,
+      }
+    ],
     "11": {
       exp: /^(?<discountAmount>\d+)\*(?<minimumAmount>\d+)$/,
-      template: [template`${discountAmount} de descuento${newLine}Por compras sobre ${minimumAmount}`],
+      template: template`${discountAmount} de descuento${newLine}Por compras sobre ${minimumAmount}`,
     }
   }
 }; 
