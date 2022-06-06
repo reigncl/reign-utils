@@ -1,7 +1,46 @@
-import { Mechanics } from "./mechanics";
 import { OrdinalNumbers } from "./OrdinalNumbers"
 
 describe("Ordinal Numbers", () => {
+
+  describe("should throw errors", () => {
+    it("number too long", () => {
+      expect(() => new OrdinalNumbers({style: 'short'}).format('12345')).toThrow();
+    })
+    it("text inpuit", () => {
+      expect(() => new OrdinalNumbers({style: 'short'}).format('test')).toThrow();
+    })
+  })
+
+  describe("should return 0", () => {
+    it("short format", () => {
+      const ordinalNumbers = new OrdinalNumbers({style: 'short'});
+      expect(ordinalNumbers.format('0')).toBe(`0ro`);
+      expect(ordinalNumbers.formatToParts('0')).toMatchInlineSnapshot(`
+        Array [
+          Object {
+            "type": "amount",
+            "value": "0",
+          },
+          Object {
+            "type": "suffix",
+            "value": "ro",
+          },
+        ]
+      `);
+    })
+    it("short format", () => {
+      const ordinalNumbers = new OrdinalNumbers({style: 'long'});
+      expect(ordinalNumbers.format('0')).toBe(`cero`);
+      expect(ordinalNumbers.formatToParts('0')).toMatchInlineSnapshot(`
+        Array [
+          Object {
+            "type": "unit",
+            "value": "cero",
+          },
+        ]
+      `);
+    })
+  })
 
   describe("long style, default noun", ()=>{
     it("should return one digit ordinal", () => {

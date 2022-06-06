@@ -29,6 +29,7 @@ export class OrdinalNumbers {
   }
 
   private toOrdinal(strNumber: string): string[] {
+    if(strNumber.length === 1 && strNumber === '0') return ['cero']
     const numArr = strNumber.split('').reverse()
     const ordinalArr: string[] = []
     numArr.forEach((num, index) => {
@@ -43,6 +44,7 @@ export class OrdinalNumbers {
     const ordinalArr: Path[] = []
 
     if(nums.length > MAX_NUM_LENGTH) throw new Error(`Number too long, try between 0 and ${MAX_NUM_LENGTH}`)
+    if(Number.isNaN(Number(nums))) throw new Error(`Given string is not a number`)
 
     let maxIndex = nums.length - 1;
 
