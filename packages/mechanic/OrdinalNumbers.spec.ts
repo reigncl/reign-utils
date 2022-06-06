@@ -11,8 +11,8 @@ describe("Ordinal Numbers", () => {
     })
   })
 
-  describe("should return 0", () => {
-    it("short format", () => {
+  describe("ended with 0", () => {
+    it("0 units short format", () => {
       const ordinalNumbers = new OrdinalNumbers({style: 'short'});
       expect(ordinalNumbers.format('0')).toBe(`0ro`);
       expect(ordinalNumbers.formatToParts('0')).toMatchInlineSnapshot(`
@@ -28,7 +28,7 @@ describe("Ordinal Numbers", () => {
         ]
       `);
     })
-    it("short format", () => {
+    it("0 units long format", () => {
       const ordinalNumbers = new OrdinalNumbers({style: 'long'});
       expect(ordinalNumbers.format('0')).toBe(`cero`);
       expect(ordinalNumbers.formatToParts('0')).toMatchInlineSnapshot(`
@@ -36,6 +36,102 @@ describe("Ordinal Numbers", () => {
           Object {
             "type": "unit",
             "value": "cero",
+          },
+        ]
+      `);
+    })
+    it("tens short format", () => {
+      const ordinalNumbers = new OrdinalNumbers({style: 'short'});
+      const num = '10';
+      const numOrdinal = "mo"
+      expect(ordinalNumbers.format(num)).toBe(`${num}${numOrdinal}`);
+      expect(ordinalNumbers.formatToParts(num)).toMatchInlineSnapshot(`
+        Array [
+          Object {
+            "type": "amount",
+            "value": "10",
+          },
+          Object {
+            "type": "suffix",
+            "value": "mo",
+          },
+        ]
+      `);
+    })
+    it("tens long format", () => {
+      const ordinalNumbers = new OrdinalNumbers({style: 'long'});
+      const num = '10';
+      const numOrdinal = "décimo"
+      expect(ordinalNumbers.format(num)).toBe(`${numOrdinal}`);
+      expect(ordinalNumbers.formatToParts(num)).toMatchInlineSnapshot(`
+        Array [
+          Object {
+            "type": "tens",
+            "value": "décimo",
+          },
+        ]
+      `);
+    })
+    it("hundreds short format", () => {
+      const ordinalNumbers = new OrdinalNumbers({style: 'short'});
+      const num = '100';
+      const numOrdinal = "mo"
+      expect(ordinalNumbers.format(num)).toBe(`${num}${numOrdinal}`);
+      expect(ordinalNumbers.formatToParts(num)).toMatchInlineSnapshot(`
+        Array [
+          Object {
+            "type": "amount",
+            "value": "100",
+          },
+          Object {
+            "type": "suffix",
+            "value": "mo",
+          },
+        ]
+      `);
+    })
+    it("hundreds long format", () => {
+      const ordinalNumbers = new OrdinalNumbers({style: 'long'});
+      const num = '100';
+      const numOrdinal = "centésimo"
+      expect(ordinalNumbers.format(num)).toBe(`${numOrdinal}`);
+      expect(ordinalNumbers.formatToParts(num)).toMatchInlineSnapshot(`
+        Array [
+          Object {
+            "type": "hundreds",
+            "value": "centésimo",
+          },
+        ]
+      `);
+    })
+    it("thousands short format", () => {
+      const ordinalNumbers = new OrdinalNumbers({style: 'short'});
+      const num = '1000';
+      const numOrdinal = "mo"
+      expect(ordinalNumbers.format(num)).toBe(`${num}${numOrdinal}`);
+      expect(ordinalNumbers.formatToParts(num)).toMatchInlineSnapshot(`
+        Array [
+          Object {
+            "type": "amount",
+            "value": "1000",
+          },
+          Object {
+            "type": "suffix",
+            "value": "mo",
+          },
+        ]
+      `);
+    })
+    it("thousands long format", () => {
+      const ordinalNumbers = new OrdinalNumbers({style: 'long'});
+      const num = '1000';
+      const numOrdinal = "milésimo"
+      expect(ordinalNumbers.format(num)).toBe(`${numOrdinal}`);
+      expect(ordinalNumbers.formatToParts(num)).toMatchInlineSnapshot(`
+        Array [
+          Object {
+            "type": "thousands",
+            "value": "milésimo",
           },
         ]
       `);

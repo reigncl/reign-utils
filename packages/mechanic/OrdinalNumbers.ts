@@ -40,26 +40,25 @@ export class OrdinalNumbers {
   }
 
   formatToParts(nums: string): Path[] {
-    
     const ordinalArr: Path[] = []
 
-    if(nums.length > MAX_NUM_LENGTH) throw new Error(`Number too long, try between 0 and ${MAX_NUM_LENGTH}`)
     if(Number.isNaN(Number(nums))) throw new Error(`Given string is not a number`)
+    if(nums.length > MAX_NUM_LENGTH) throw new Error(`Number too long, try between 0 and ${MAX_NUM_LENGTH}`)
 
     let maxIndex = nums.length - 1;
 
     this.toOrdinal(nums).forEach((num, index) => {
       const numberNoun = this.noun === 'm' ? num : this.changeNoun(num);
       const type = ordinalNames.get(maxIndex.toString());
-      maxIndex--
       if(type) ordinalArr.push({ type: type, value: numberNoun })
-      if(index < nums.length - 1) ordinalArr.push(this.spacePath)
+      maxIndex--
+      if(index < nums.length - 1 && nums[index + 1] != '0') ordinalArr.push(this.spacePath)
     })
     
     if(this.style === 'short') {
       return this.toShort(ordinalArr[ordinalArr.length-1], nums)
     }
-    
+
     return ordinalArr
   }
   
