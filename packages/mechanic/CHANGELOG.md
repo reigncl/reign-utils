@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/reigncl/reign-utils/compare/@reignmodule/mechanic-text@v1.1.1...@reignmodule/mechanic-text@v1.2.0) (2022-06-07)
+
+
+### Features
+
+* added mobile-unimarc style ([1084596](https://github.com/reigncl/reign-utils/commit/108459670d37ea960a1e6ca8bcbe36fa961d8e0e))
+* added ordinal number support ([679a175](https://github.com/reigncl/reign-utils/commit/679a175c16759009dc0f7b825fa55ab82cfdf1b4))
+
 ### [1.1.1](https://github.com/reigncl/reign-utils/compare/@reignmodule/mechanic-text@v1.1.0...@reignmodule/mechanic-text@v1.1.1) (2022-05-12)
 
 ## 1.1.0 (2022-05-10)
