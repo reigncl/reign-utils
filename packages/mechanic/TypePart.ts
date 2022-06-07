@@ -1,4 +1,3 @@
-
 export type TypePart = "discount" |
   "discountAmount" |
   "literal" |
@@ -9,4 +8,6 @@ export type TypePart = "discount" |
   "ref" |
   "input" |
   "nOffer" |
-  "new_line";
+  "new_line" |
+  "price" |
+  "amountSuffix";

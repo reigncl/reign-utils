@@ -1,6 +1,4 @@
 import { Mechanics } from "./mechanics";
-import { discount } from "./mechanics-expressions";
-import { template } from "./Template";
 
 describe("Mechanics", () => {
   it("should expect error in parseToParts", () => {
@@ -48,7 +46,7 @@ describe("Mechanics", () => {
     `);
   });
 
-  it("format MechanicsId 4", () => {
+  it("format MechanicsId 4 full", () => {
     let mechanics = new Mechanics();
 
     expect(mechanics.format("4", "10*100")).toBe("$10 Antes: $100");
@@ -77,6 +75,24 @@ describe("Mechanics", () => {
       ]
     `);
   });
+
+  it("format MechanicsId 4 single", () => {
+    let mechanics = new Mechanics();
+
+    expect(mechanics.format("4", "100")).toBe("$100");
+    expect(mechanics.formatToParts("4", "100")).toMatchInlineSnapshot(`
+      Array [
+        Object {
+          "type": "currency",
+          "value": "$",
+        },
+        Object {
+          "type": "integer",
+          "value": "100",
+        },
+      ]
+    `);
+  })
 
   it("format MechanicsId 13", () => {
     let mechanics = new Mechanics();
@@ -277,5 +293,162 @@ describe("Mechanics", () => {
       `);
     })
 
+  });
+
+  describe("style mobile-unimarc", () => {
+
+    it("format MechanicsId 4", () => {
+      const mechanics = new Mechanics("es-CL", { style: "mobile-unimarc" });
+  
+      expect(mechanics.format("4", "10*100")).toBe("$10\nAntes: $100");
+      expect(mechanics.formatToParts("4", "10*100")).toMatchInlineSnapshot(`
+        Array [
+          Object {
+            "type": "currency",
+            "value": "$",
+          },
+          Object {
+            "type": "integer",
+            "value": "10",
+          },
+          Object {
+            "type": "new_line",
+            "value": "
+        ",
+          },
+          Object {
+            "type": "literal",
+            "value": "Antes: ",
+          },
+          Object {
+            "type": "currency",
+            "value": "$",
+          },
+          Object {
+            "type": "integer",
+            "value": "100",
+          },
+        ]
+      `);
+    });
+
+    it("should format mechanics 11", () => {
+      const mechanic = new Mechanics("es-CL", { style: "mobile-unimarc" });
+
+      expect(mechanic.format("11", "15000*125000")).toBe("$15.000 de descuento\nPor compras sobre $125.000");
+      expect(mechanic.formatToParts("11", "15000*125000")).toMatchInlineSnapshot(`
+        Array [
+          Object {
+            "type": "currency",
+            "value": "$",
+          },
+          Object {
+            "type": "integer",
+            "value": "15",
+          },
+          Object {
+            "type": "group",
+            "value": ".",
+          },
+          Object {
+            "type": "integer",
+            "value": "000",
+          },
+          Object {
+            "type": "literal",
+            "value": " de descuento",
+          },
+          Object {
+            "type": "new_line",
+            "value": "
+        ",
+          },
+          Object {
+            "type": "literal",
+            "value": "Por compras sobre ",
+          },
+          Object {
+            "type": "currency",
+            "value": "$",
+          },
+          Object {
+            "type": "integer",
+            "value": "125",
+          },
+          Object {
+            "type": "group",
+            "value": ".",
+          },
+          Object {
+            "type": "integer",
+            "value": "000",
+          },
+        ]
+      `);
+    })
+
+    it("should format mechanics 8a", () => {
+      const mechanic = new Mechanics("es-CL", { style: "mobile-unimarc"});
+
+      expect(mechanic.format("8", "2*330")).toBe("2da UN x $330");
+      expect(mechanic.formatToParts("8", "2*330")).toMatchInlineSnapshot(`
+        Array [
+          Object {
+            "type": "amount",
+            "value": "2",
+          },
+          Object {
+            "type": "suffix",
+            "value": "da",
+          },
+          Object {
+            "type": "literal",
+            "value": " UN x ",
+          },
+          Object {
+            "type": "currency",
+            "value": "$",
+          },
+          Object {
+            "type": "integer",
+            "value": "330",
+          },
+        ]
+      `);
+    })
+
+    it("should format mechanics 8b", () => {
+      const mechanic = new Mechanics("es-CL", { style: "mobile-unimarc"});
+
+      expect(mechanic.format("8", "2*30")).toBe("30% en 2da UN");
+      expect(mechanic.formatToParts("8", "2*30")).toMatchInlineSnapshot(`
+        Array [
+          Object {
+            "type": "discount",
+            "value": "30",
+          },
+          Object {
+            "type": "percentSign",
+            "value": "%",
+          },
+          Object {
+            "type": "literal",
+            "value": " en ",
+          },
+          Object {
+            "type": "amount",
+            "value": "2",
+          },
+          Object {
+            "type": "suffix",
+            "value": "da",
+          },
+          Object {
+            "type": "literal",
+            "value": " UN",
+          },
+        ]
+      `);
+    })
   });
 });

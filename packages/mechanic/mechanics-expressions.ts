@@ -1,7 +1,5 @@
 import { Part } from "./Part";
 import { template, Template } from "./Template";
-
-
 export interface Expressions {
   exp: RegExp
   template: Template
@@ -17,6 +15,8 @@ export const newLine = new Part("new_line", () => `\n`)
 export const nOffer = new Part("nOffer", ({ nOffer }, { currencyFormat }) => currencyFormat.formatToParts(Number(nOffer)))
 export const discountAmount = new Part("discountAmount", ({ discountAmount }, { currencyFormat }) => currencyFormat.formatToParts(Number(discountAmount)))
 export const minimumAmount = new Part("minimumAmount", ({ minimumAmount }, { currencyFormat }) => currencyFormat.formatToParts(Number(minimumAmount)))
+const amountSuffix = new Part( "amountSuffix", ({amountSuffix}, {ordinalNumbers}) => ordinalNumbers.formatToParts(amountSuffix))
+const price = new Part("price", ({ price }, { currencyFormat }) => currencyFormat.formatToParts(Number(price)))
 
 type MechanicId = string
 type StyleId = string
@@ -28,6 +28,10 @@ const defaultMechanicExpressions: MechanicTemplates = {
     exp: /^(?<discount>\d+)$/,
     template: template`${discount} Descuento`,
   },
+  "2": {
+    exp: /^(?<nProducts>\d+)\*(?<m>\d+)$/,
+    template: template`${nProducts}x${m}`,
+  },
   "4": [
     {
       exp: /^(?<offer>\d+)$/,
@@ -38,21 +42,17 @@ const defaultMechanicExpressions: MechanicTemplates = {
       template: template`${offer} Antes: ${ref}`,
     },
   ],
-  "13": {
-    exp: /^(?<input>.+)$/,
-    template: template`${input}`,
+  "7": {
+    exp: /^(?<nProducts>\d+)\*(?<offer>\d+)$/,
+    template: template`${nProducts} x ${offer}`,
   },
   "11": {
     exp: /^(?<discountAmount>\d+)\*(?<minimumAmount>\d+)$/,
     template: template`${discountAmount} Por una compra sobre ${minimumAmount}`,
   },
-  "2": {
-    exp: /^(?<nProducts>\d+)\*(?<m>\d+)$/,
-    template: template`${nProducts}x${m}`,
-  },
-  "7": {
-    exp: /^(?<nProducts>\d+)\*(?<offer>\d+)$/,
-    template: template`${nProducts} x ${offer}`,
+  "13": {
+    exp: /^(?<input>.+)$/,
+    template: template`${input}`,
   },
 };
 
@@ -65,4 +65,31 @@ export const mechanicExpressions: StylesMechanicTemplates = {
       template: template`${discountAmount} de descuento${newLine}Por compras sobre ${minimumAmount}`,
     },
   },
-};
+  "mobile-unimarc": {
+    ...defaultMechanicExpressions,
+    "4": [
+      {
+        exp: /^(?<offer>\d+)$/,
+        template: template`${offer}`,
+      },
+      {
+        exp: /^(?<offer>\d+)\*(?<ref>\d+)$/,
+        template: template`${offer}${newLine}Antes: ${ref}`,
+      },
+    ],
+    "8": [
+      {
+        exp: /^(?<amountSuffix>\d+)\*(?<discount>\d{1,2})$/,
+        template: template`${discount} en ${amountSuffix} UN`,
+      },
+      {
+        exp: /^(?<amountSuffix>\d+)\*(?<price>\d{3,})$/,
+        template: template`${amountSuffix} UN x ${price}`,
+      }
+    ],
+    "11": {
+      exp: /^(?<discountAmount>\d+)\*(?<minimumAmount>\d+)$/,
+      template: template`${discountAmount} de descuento${newLine}Por compras sobre ${minimumAmount}`,
+    }
+  }
+}; 
