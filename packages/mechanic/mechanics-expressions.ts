@@ -80,11 +80,11 @@ export const mechanicExpressions: StylesMechanicTemplates = {
     "8": [
       {
         exp: /^(?<amountSuffix>\d+)\*(?<discount>\d{1,2})$/,
-        template: template`${discount} en ${amountSuffix} UN`,
+        template: template`${discount} en ${amountSuffix} un`,
       },
       {
         exp: /^(?<amountSuffix>\d+)\*(?<price>\d{3,})$/,
-        template: template`${amountSuffix} UN x ${price}`,
+        template: template`${amountSuffix} un x ${price}`,
       }
     ],
     "11": {
