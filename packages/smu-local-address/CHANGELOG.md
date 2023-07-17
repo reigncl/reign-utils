@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/reigncl/reign-utils/compare/@reignmodule/smu-local-address@1.4.1...@reignmodule/smu-local-address@1.5.0) (2023-07-17)
+
+
+### Features
+
+* add prepare script ([705a08e](https://github.com/reigncl/reign-utils/commit/705a08e83565b38a8d5c6f57afac743e7a5ba09d))
+* added local 3193 for alvi ([cfa4e83](https://github.com/reigncl/reign-utils/commit/cfa4e832d09310194110d00173b8f40565aac297))
+* added mobile-unimarc style ([1084596](https://github.com/reigncl/reign-utils/commit/108459670d37ea960a1e6ca8bcbe36fa961d8e0e))
+* added ordinal number support ([679a175](https://github.com/reigncl/reign-utils/commit/679a175c16759009dc0f7b825fa55ab82cfdf1b4))
+* configure github action to publish package ([51dade1](https://github.com/reigncl/reign-utils/commit/51dade16c32767d7d309ea33217f737875070130))
+* configure release with prerelease ([cf25a65](https://github.com/reigncl/reign-utils/commit/cf25a65448b6d02a08c8e9d8001e01b00ebbc6aa))
+* **contentful-util:** add option cache by query ([2478eb2](https://github.com/reigncl/reign-utils/commit/2478eb2380305ac393a8fa2da8ae1a21cb338ea9))
+* **contentful-util:** configure logger ([ab6349d](https://github.com/reigncl/reign-utils/commit/ab6349df327f1585e5a1f47dfb44de18597b95c1))
+* **contentful-util:** configure release latest ([384ca5d](https://github.com/reigncl/reign-utils/commit/384ca5da40f444166ce56612a6a4a092856e2904))
+* **contentful-util:** limit by values no cached ([32e4a4e](https://github.com/reigncl/reign-utils/commit/32e4a4ead85e9386abe51a6dae4b37d11e07a34c))
+* **contentful-util:** remove files compiled ([05e771b](https://github.com/reigncl/reign-utils/commit/05e771bffae5d707ed37d7616837c30dab345cb5))
+* **contentful-utils:** add paginate-utils lib ([6d26af3](https://github.com/reigncl/reign-utils/commit/6d26af3d5ac058076900d66f0787e370607b2060))
+* **contentful-utils:** configure npm package ([235543e](https://github.com/reigncl/reign-utils/commit/235543ea98274f45b28cc18cc04a93704572b86d))
+* **contentful-util:** update cache system control ([d0e715e](https://github.com/reigncl/reign-utils/commit/d0e715ec75f9ed17aa0ad891c7f91ae8142b6a50))
+* **contentful-util:** update name field ([e155174](https://github.com/reigncl/reign-utils/commit/e1551740399019e3cf5491e9068a51993ba6eeb9))
+* **contentful-util:** update typed ([fd90f45](https://github.com/reigncl/reign-utils/commit/fd90f45a3089afd43fb224cf9b47966119356860))
+* create feature get entries by field value ([a6da20b](https://github.com/reigncl/reign-utils/commit/a6da20b600ef6bfca0553c46a000b02b10ea5c05))
+* **mechanics:** add custom styles ([ea0e8bb](https://github.com/reigncl/reign-utils/commit/ea0e8bb15886e4868d55c887b445251b1ce7283f))
+* **mechanics:** add lib mechanics lib ([54cdf70](https://github.com/reigncl/reign-utils/commit/54cdf70f48a9c2a4719b7234d1d780c4735c3f09))
+* **mechanics:** add locales to template expresion ([afbe203](https://github.com/reigncl/reign-utils/commit/afbe203688e221327f717fcc8cb29b32e9d9b849))
+* **mechanics:** update mechanics 4 ([23a7c7e](https://github.com/reigncl/reign-utils/commit/23a7c7edd924a0c4d09960aa900400c793a5174e))
+* remove files compiled ([3397080](https://github.com/reigncl/reign-utils/commit/3397080ed9632025e4c5466f56d9a0184c87c6b7))
+* update paginator items with initial skip value ([14c58c7](https://github.com/reigncl/reign-utils/commit/14c58c700c09a948c1e06ececbf99c8931989b03))
+
+
+### Bug Fixes
+
+* **contentful-cache:** remove call to contentful always in function ([059a8d5](https://github.com/reigncl/reign-utils/commit/059a8d57a7c2f7d4f5d576fef8f0ab4bc101eaec))
+* **contentful-cache:** update source ([9be926d](https://github.com/reigncl/reign-utils/commit/9be926d046d6180dde80c50d571a8ccca26a5f0b))
+* **contentful-util:** filter values undefined ([feaebfa](https://github.com/reigncl/reign-utils/commit/feaebfa2681cd43b521f1e86ace19f056580cfac))
+* **contentful-utils:** remove credential contentful preview ([acb2de3](https://github.com/reigncl/reign-utils/commit/acb2de34a19f2bc5a6e7f899a99e787716983b57))
+
 ### [1.4.1](https://github.com/reigncl/reign-utils/compare/@reignmodule/smu-local-address@1.4.0...@reignmodule/smu-local-address@1.4.1) (2021-11-29)
 
 ## [1.4.0](https://github.com/reigncl/reign-utils/compare/@reignmodule/smu-local-address@1.3.0...@reignmodule/smu-local-address@1.4.0) (2021-11-29)
