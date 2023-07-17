@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.1](https://github.com/reigncl/reign-utils/compare/@reignmodule/smu-local-address@1.5.0...@reignmodule/smu-local-address@1.5.1) (2023-07-17)
+
 ## [1.5.0](https://github.com/reigncl/reign-utils/compare/@reignmodule/smu-local-address@1.4.1...@reignmodule/smu-local-address@1.5.0) (2023-07-17)
 
 
