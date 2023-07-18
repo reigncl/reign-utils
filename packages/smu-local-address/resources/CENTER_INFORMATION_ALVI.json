@@ -313,5 +313,14 @@
     "location": "Talca",
     "region": "VII Región del Maule",
     "_REGION_ID_NUM": "7"
+  },
+  {
+    "storeId": "3193",
+    "format": "ALVI",
+    "name": "ALVI TOBALABA",
+    "address": "AV. TOBALABA 11855 LOCAL B",
+    "location": "SANTIAGO",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
   }
 ]
