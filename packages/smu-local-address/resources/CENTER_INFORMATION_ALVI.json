@@ -322,5 +322,14 @@
     "location": "SANTIAGO",
     "region": "XIII Región Metropolitana",
     "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3206",
+    "format": "ALVI",
+    "name": "ALVI LOS ANDES",
+    "address": "HERMANOS CLARK 55",
+    "location": "LOS ANDES",
+    "region": "V Región de Valparaíso",
+    "_REGION_ID_NUM": "5"
   }
 ]
