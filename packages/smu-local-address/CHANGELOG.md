@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/reigncl/reign-utils/compare/@reignmodule/smu-local-address@1.6.0...@reignmodule/smu-local-address@1.7.0) (2024-09-09)
+
+
+### Features
+
+* add local 3206 alvi ([0e50630](https://github.com/reigncl/reign-utils/commit/0e50630d3adcc7f0156e7769ae584687945f966b))
+
 ## [1.6.0](https://github.com/reigncl/reign-utils/compare/@reignmodule/smu-local-address@1.5.1...@reignmodule/smu-local-address@1.6.0) (2023-07-18)
 
 
