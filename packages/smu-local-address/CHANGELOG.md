@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.7.1](https://github.com/reigncl/reign-utils/compare/@reignmodule/smu-local-address@1.6.1...@reignmodule/smu-local-address@1.7.1) (2024-09-10)
 
+### [1.7.1](https://github.com/reigncl/reign-utils/compare/@reignmodule/smu-local-address@1.6.1...@reignmodule/smu-local-address@1.7.1) (2024-09-10)
+
 ### [1.6.1](https://github.com/reigncl/reign-utils/compare/@reignmodule/smu-local-address@1.6.1...@reignmodule/smu-local-address@1.6.1) (2024-09-10)
 
 ### [1.6.1](https://github.com/reigncl/reign-utils/compare/@reignmodule/smu-local-address@1.7.2...@reignmodule/smu-local-address@1.6.1) (2024-09-09)
