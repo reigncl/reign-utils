@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/reigncl/reign-utils/compare/@reignmodule/smu-local-address@1.7.4...@reignmodule/smu-local-address@1.8.0) (2024-10-17)
+
+
+### Features
+
+* **fid-2892:** new alvi shops ([9d40f39](https://github.com/reigncl/reign-utils/commit/9d40f393dbbf567ba511363b4a323edc88682938))
+
 ### [1.7.4](https://github.com/reigncl/reign-utils/compare/@reignmodule/smu-local-address@1.7.3...@reignmodule/smu-local-address@1.7.4) (2024-09-10)
 
 ### [1.7.3](https://github.com/reigncl/reign-utils/compare/@reignmodule/smu-local-address@1.6.1...@reignmodule/smu-local-address@1.7.3) (2024-09-10)
