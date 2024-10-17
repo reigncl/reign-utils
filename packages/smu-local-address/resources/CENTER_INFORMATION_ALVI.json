@@ -331,5 +331,23 @@
     "location": "LOS ANDES",
     "region": "V Región de Valparaíso",
     "_REGION_ID_NUM": "5"
+  },
+  {
+    "storeId": "3205",
+    "format": "ALVI",
+    "name": "ALVI LOS ANDES",
+    "address": "BALMACEDA 503",
+    "location": "PEÑAFLOR",
+    "region": "XIII Región Metropolitana",
+    "_REGION_ID_NUM": "13"
+  },
+  {
+    "storeId": "3186",
+    "format": "ALVI",
+    "name": "ALVI GALVARINO",
+    "address": "RUTA SAN PEDRO CORONEL 6760",
+    "location": "CORONEL",
+    "region": "VIII Región del Bío-Bío",
+    "_REGION_ID_NUM": "8"
   }
 ]
